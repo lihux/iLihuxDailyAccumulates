@@ -1,27 +1,25 @@
 //
-//  ViewController.m
+//  A01InputConstraintViewController.m
 //  iLihuxDailyAccumulatesInOC
 //
 //  Created by lihux on 14/12/9.
 //  Copyright (c) 2014年 lihux. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "A01InputConstraintViewController.h"
 
-@interface ViewController ()
+@interface A01InputConstraintViewController ()
 
 @end
 
-@implementation ViewController
+@implementation A01InputConstraintViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

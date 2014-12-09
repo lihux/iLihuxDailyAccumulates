@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  A01InputConstraintViewController.h
 //  iLihuxDailyAccumulatesInOC
 //
 //  Created by lihux on 14/12/9.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface A01InputConstraintViewController : UIViewController
 
 @end
-

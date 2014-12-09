@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		6DE967861A371D4300436817 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE967851A371D4300436817 /* main.m */; };
 		6DE967891A371D4300436817 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE967881A371D4300436817 /* AppDelegate.m */; };
-		6DE9678C1A371D4300436817 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9678B1A371D4300436817 /* ViewController.m */; };
 		6DE9678F1A371D4300436817 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE9678D1A371D4300436817 /* Main.storyboard */; };
 		6DE967911A371D4300436817 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DE967901A371D4300436817 /* Images.xcassets */; };
 		6DE967941A371D4300436817 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE967921A371D4300436817 /* LaunchScreen.xib */; };
 		6DE967A01A371D4300436817 /* iLihuxDailyAccumulatesInOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9679F1A371D4300436817 /* iLihuxDailyAccumulatesInOCTests.m */; };
+		6DE967DA1A371FD900436817 /* LHMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE967D91A371FD900436817 /* LHMasterTableViewController.m */; };
+		6DE967DC1A37211600436817 /* accumulates.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DE967DB1A37211600436817 /* accumulates.plist */; };
+		6DE967E31A37229F00436817 /* A01InputConstraintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE967E21A37229F00436817 /* A01InputConstraintViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,17 @@
 		6DE967851A371D4300436817 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6DE967871A371D4300436817 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6DE967881A371D4300436817 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6DE9678A1A371D4300436817 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6DE9678B1A371D4300436817 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6DE9678E1A371D4300436817 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6DE967901A371D4300436817 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6DE967931A371D4300436817 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6DE967991A371D4300436817 /* iLihuxDailyAccumulatesInOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iLihuxDailyAccumulatesInOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DE9679E1A371D4300436817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DE9679F1A371D4300436817 /* iLihuxDailyAccumulatesInOCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iLihuxDailyAccumulatesInOCTests.m; sourceTree = "<group>"; };
+		6DE967D81A371FD900436817 /* LHMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHMasterTableViewController.h; sourceTree = "<group>"; };
+		6DE967D91A371FD900436817 /* LHMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHMasterTableViewController.m; sourceTree = "<group>"; };
+		6DE967DB1A37211600436817 /* accumulates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = accumulates.plist; sourceTree = "<group>"; };
+		6DE967E11A37229F00436817 /* A01InputConstraintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A01InputConstraintViewController.h; sourceTree = "<group>"; };
+		6DE967E21A37229F00436817 /* A01InputConstraintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A01InputConstraintViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +86,11 @@
 		6DE967821A371D4300436817 /* iLihuxDailyAccumulatesInOC */ = {
 			isa = PBXGroup;
 			children = (
+				6DE967D81A371FD900436817 /* LHMasterTableViewController.h */,
+				6DE967D91A371FD900436817 /* LHMasterTableViewController.m */,
+				6DE967D71A371FAD00436817 /* accumulates */,
 				6DE967871A371D4300436817 /* AppDelegate.h */,
 				6DE967881A371D4300436817 /* AppDelegate.m */,
-				6DE9678A1A371D4300436817 /* ViewController.h */,
-				6DE9678B1A371D4300436817 /* ViewController.m */,
 				6DE9678D1A371D4300436817 /* Main.storyboard */,
 				6DE967901A371D4300436817 /* Images.xcassets */,
 				6DE967921A371D4300436817 /* LaunchScreen.xib */,
@@ -117,6 +123,16 @@
 				6DE9679E1A371D4300436817 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6DE967D71A371FAD00436817 /* accumulates */ = {
+			isa = PBXGroup;
+			children = (
+				6DE967DB1A37211600436817 /* accumulates.plist */,
+				6DE967E11A37229F00436817 /* A01InputConstraintViewController.h */,
+				6DE967E21A37229F00436817 /* A01InputConstraintViewController.m */,
+			);
+			path = accumulates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +217,7 @@
 			files = (
 				6DE9678F1A371D4300436817 /* Main.storyboard in Resources */,
 				6DE967941A371D4300436817 /* LaunchScreen.xib in Resources */,
+				6DE967DC1A37211600436817 /* accumulates.plist in Resources */,
 				6DE967911A371D4300436817 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,9 +236,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DE9678C1A371D4300436817 /* ViewController.m in Sources */,
 				6DE967891A371D4300436817 /* AppDelegate.m in Sources */,
+				6DE967DA1A371FD900436817 /* LHMasterTableViewController.m in Sources */,
 				6DE967861A371D4300436817 /* main.m in Sources */,
+				6DE967E31A37229F00436817 /* A01InputConstraintViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +430,7 @@
 				6DE967A51A371D4300436817 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6DE967A61A371D4300436817 /* Build configuration list for PBXNativeTarget "iLihuxDailyAccumulatesInOCTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +439,7 @@
 				6DE967A81A371D4300436817 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
