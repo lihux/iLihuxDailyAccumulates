@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A19CE605-E3F3-483B-84ED-A5F166D243E5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iLihuxDailyAccumulatesInOC</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BA9A1E17819A44C9B21227A0E59A15212EC36322</key>
+		<string>github.com:lihux/iLihuxDailyAccumulates.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iLihuxDailyAccumulatesInOC/iLihuxDailyAccumulatesInOC.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BA9A1E17819A44C9B21227A0E59A15212EC36322</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:lihux/iLihuxDailyAccumulates.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BA9A1E17819A44C9B21227A0E59A15212EC36322</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BA9A1E17819A44C9B21227A0E59A15212EC36322</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iLihuxDailyAccumulates</string>
+		</dict>
+	</array>
+</dict>
+</plist>
