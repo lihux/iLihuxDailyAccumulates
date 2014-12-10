@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D8BAA791A37C9F700CDBA33 /* A01InputConstraintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8BAA761A37C9F700CDBA33 /* A01InputConstraintViewController.m */; };
 		6DE967861A371D4300436817 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE967851A371D4300436817 /* main.m */; };
 		6DE967891A371D4300436817 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE967881A371D4300436817 /* AppDelegate.m */; };
 		6DE9678F1A371D4300436817 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE9678D1A371D4300436817 /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		6DE967A01A371D4300436817 /* iLihuxDailyAccumulatesInOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9679F1A371D4300436817 /* iLihuxDailyAccumulatesInOCTests.m */; };
 		6DE967DA1A371FD900436817 /* LHMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE967D91A371FD900436817 /* LHMasterTableViewController.m */; };
 		6DE967DC1A37211600436817 /* accumulates.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DE967DB1A37211600436817 /* accumulates.plist */; };
-		6DE967E31A37229F00436817 /* A01InputConstraintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE967E21A37229F00436817 /* A01InputConstraintViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D8BAA751A37C9F700CDBA33 /* A01InputConstraintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A01InputConstraintViewController.h; sourceTree = "<group>"; };
+		6D8BAA761A37C9F700CDBA33 /* A01InputConstraintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A01InputConstraintViewController.m; sourceTree = "<group>"; };
 		6DE967801A371D4300436817 /* iLihuxDailyAccumulatesInOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLihuxDailyAccumulatesInOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DE967841A371D4300436817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DE967851A371D4300436817 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -43,8 +45,6 @@
 		6DE967D81A371FD900436817 /* LHMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHMasterTableViewController.h; sourceTree = "<group>"; };
 		6DE967D91A371FD900436817 /* LHMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHMasterTableViewController.m; sourceTree = "<group>"; };
 		6DE967DB1A37211600436817 /* accumulates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = accumulates.plist; sourceTree = "<group>"; };
-		6DE967E11A37229F00436817 /* A01InputConstraintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A01InputConstraintViewController.h; sourceTree = "<group>"; };
-		6DE967E21A37229F00436817 /* A01InputConstraintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A01InputConstraintViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +65,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D8BAA741A37C9F700CDBA33 /* A001 */ = {
+			isa = PBXGroup;
+			children = (
+				6D8BAA751A37C9F700CDBA33 /* A01InputConstraintViewController.h */,
+				6D8BAA761A37C9F700CDBA33 /* A01InputConstraintViewController.m */,
+			);
+			path = A001;
+			sourceTree = "<group>";
+		};
+		6D8BAA771A37C9F700CDBA33 /* A002 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = A002;
+			sourceTree = "<group>";
+		};
+		6D8BAA781A37C9F700CDBA33 /* A003 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = A003;
+			sourceTree = "<group>";
+		};
 		6DE967771A371D4300436817 = {
 			isa = PBXGroup;
 			children = (
@@ -128,9 +151,10 @@
 		6DE967D71A371FAD00436817 /* accumulates */ = {
 			isa = PBXGroup;
 			children = (
+				6D8BAA741A37C9F700CDBA33 /* A001 */,
+				6D8BAA771A37C9F700CDBA33 /* A002 */,
+				6D8BAA781A37C9F700CDBA33 /* A003 */,
 				6DE967DB1A37211600436817 /* accumulates.plist */,
-				6DE967E11A37229F00436817 /* A01InputConstraintViewController.h */,
-				6DE967E21A37229F00436817 /* A01InputConstraintViewController.m */,
 			);
 			path = accumulates;
 			sourceTree = "<group>";
@@ -239,7 +263,7 @@
 				6DE967891A371D4300436817 /* AppDelegate.m in Sources */,
 				6DE967DA1A371FD900436817 /* LHMasterTableViewController.m in Sources */,
 				6DE967861A371D4300436817 /* main.m in Sources */,
-				6DE967E31A37229F00436817 /* A01InputConstraintViewController.m in Sources */,
+				6D8BAA791A37C9F700CDBA33 /* A01InputConstraintViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
