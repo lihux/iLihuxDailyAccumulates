@@ -23,7 +23,7 @@
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
 {
-    NSLog(@"我擦，你敢摸我！%@", event);
+    NSLog(@"我擦，你敢摸我！%@, %d", event, [event subtype]);
     return [super hitTest:point withEvent:event];
 }
 
