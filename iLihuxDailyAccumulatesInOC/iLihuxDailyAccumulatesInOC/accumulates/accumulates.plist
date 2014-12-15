@@ -10,5 +10,13 @@
 		<key>storyboardID</key>
 		<string>A01InputConstraintViewController</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>002KVC学习记录</string>
+		<key>content</key>
+		<string>002KVC学习记录</string>
+		<key>storyboardID</key>
+		<string>A02KVCViewController</string>
+	</dict>
 </array>
 </plist>

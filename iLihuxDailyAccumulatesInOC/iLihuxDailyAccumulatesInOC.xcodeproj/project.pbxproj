@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6D8BAA791A37C9F700CDBA33 /* A01InputConstraintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8BAA761A37C9F700CDBA33 /* A01InputConstraintViewController.m */; };
+		6D8BAA871A38166900CDBA33 /* LHView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8BAA861A38166900CDBA33 /* LHView.m */; };
+		6DE61AE11A3E64FA0035C076 /* A02KVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE61AE01A3E64FA0035C076 /* A02KVCViewController.m */; };
+		6DE61AE41A3E6E190035C076 /* LHKVCPeople.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE61AE31A3E6E190035C076 /* LHKVCPeople.m */; };
+		6DE61AE71A3E6E270035C076 /* LHKVCAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE61AE61A3E6E270035C076 /* LHKVCAddress.m */; };
 		6DE967861A371D4300436817 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE967851A371D4300436817 /* main.m */; };
 		6DE967891A371D4300436817 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE967881A371D4300436817 /* AppDelegate.m */; };
 		6DE9678F1A371D4300436817 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE9678D1A371D4300436817 /* Main.storyboard */; };
@@ -31,6 +35,14 @@
 /* Begin PBXFileReference section */
 		6D8BAA751A37C9F700CDBA33 /* A01InputConstraintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A01InputConstraintViewController.h; sourceTree = "<group>"; };
 		6D8BAA761A37C9F700CDBA33 /* A01InputConstraintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A01InputConstraintViewController.m; sourceTree = "<group>"; };
+		6D8BAA851A38166900CDBA33 /* LHView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHView.h; sourceTree = "<group>"; };
+		6D8BAA861A38166900CDBA33 /* LHView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHView.m; sourceTree = "<group>"; };
+		6DE61ADF1A3E64FA0035C076 /* A02KVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A02KVCViewController.h; sourceTree = "<group>"; };
+		6DE61AE01A3E64FA0035C076 /* A02KVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A02KVCViewController.m; sourceTree = "<group>"; };
+		6DE61AE21A3E6E190035C076 /* LHKVCPeople.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHKVCPeople.h; sourceTree = "<group>"; };
+		6DE61AE31A3E6E190035C076 /* LHKVCPeople.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHKVCPeople.m; sourceTree = "<group>"; };
+		6DE61AE51A3E6E270035C076 /* LHKVCAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHKVCAddress.h; sourceTree = "<group>"; };
+		6DE61AE61A3E6E270035C076 /* LHKVCAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHKVCAddress.m; sourceTree = "<group>"; };
 		6DE967801A371D4300436817 /* iLihuxDailyAccumulatesInOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLihuxDailyAccumulatesInOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DE967841A371D4300436817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DE967851A371D4300436817 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -70,6 +82,8 @@
 			children = (
 				6D8BAA751A37C9F700CDBA33 /* A01InputConstraintViewController.h */,
 				6D8BAA761A37C9F700CDBA33 /* A01InputConstraintViewController.m */,
+				6D8BAA851A38166900CDBA33 /* LHView.h */,
+				6D8BAA861A38166900CDBA33 /* LHView.m */,
 			);
 			path = A001;
 			sourceTree = "<group>";
@@ -77,6 +91,12 @@
 		6D8BAA771A37C9F700CDBA33 /* A002 */ = {
 			isa = PBXGroup;
 			children = (
+				6DE61ADF1A3E64FA0035C076 /* A02KVCViewController.h */,
+				6DE61AE01A3E64FA0035C076 /* A02KVCViewController.m */,
+				6DE61AE21A3E6E190035C076 /* LHKVCPeople.h */,
+				6DE61AE31A3E6E190035C076 /* LHKVCPeople.m */,
+				6DE61AE51A3E6E270035C076 /* LHKVCAddress.h */,
+				6DE61AE61A3E6E270035C076 /* LHKVCAddress.m */,
 			);
 			path = A002;
 			sourceTree = "<group>";
@@ -263,7 +283,11 @@
 				6DE967891A371D4300436817 /* AppDelegate.m in Sources */,
 				6DE967DA1A371FD900436817 /* LHMasterTableViewController.m in Sources */,
 				6DE967861A371D4300436817 /* main.m in Sources */,
+				6DE61AE11A3E64FA0035C076 /* A02KVCViewController.m in Sources */,
+				6DE61AE41A3E6E190035C076 /* LHKVCPeople.m in Sources */,
 				6D8BAA791A37C9F700CDBA33 /* A01InputConstraintViewController.m in Sources */,
+				6D8BAA871A38166900CDBA33 /* LHView.m in Sources */,
+				6DE61AE71A3E6E270035C076 /* LHKVCAddress.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

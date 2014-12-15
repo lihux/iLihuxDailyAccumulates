@@ -8,6 +8,8 @@
 
 #import "A01InputConstraintViewController.h"
 
+#import "LHView.h"
+
 @interface A01InputConstraintViewController ()
 
 @end
@@ -16,6 +18,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    LHView *god = [LHView new];
+    [self.view addSubview:god];
 }
 
 - (void)didReceiveMemoryWarning {

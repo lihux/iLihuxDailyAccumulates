@@ -83,6 +83,7 @@
 {
     AccumulateObject *accumulate = self.accumulates[indexPath.row];
     UIViewController *accumulateViewController = [self.storyboard instantiateViewControllerWithIdentifier:accumulate.storyboardID];
+    accumulateViewController.title = accumulate.title;
     [self.navigationController pushViewController:accumulateViewController animated:YES];
 }
 
