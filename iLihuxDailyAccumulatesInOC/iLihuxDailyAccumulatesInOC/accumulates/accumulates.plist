@@ -18,5 +18,13 @@
 		<key>storyboardID</key>
 		<string>A02KVCViewController</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>003Touch事件测试</string>
+		<key>content</key>
+		<string>003Touch事件测试</string>
+		<key>storyboardID</key>
+		<string>A03TouchEventTableViewController</string>
+	</dict>
 </array>
 </plist>

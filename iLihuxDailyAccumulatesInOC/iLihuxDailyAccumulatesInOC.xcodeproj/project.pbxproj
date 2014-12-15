@@ -12,6 +12,10 @@
 		6DE61AE11A3E64FA0035C076 /* A02KVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE61AE01A3E64FA0035C076 /* A02KVCViewController.m */; };
 		6DE61AE41A3E6E190035C076 /* LHKVCPeople.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE61AE31A3E6E190035C076 /* LHKVCPeople.m */; };
 		6DE61AE71A3E6E270035C076 /* LHKVCAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE61AE61A3E6E270035C076 /* LHKVCAddress.m */; };
+		6DE61AEE1A3EA8C70035C076 /* A03TouchEventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE61AED1A3EA8C70035C076 /* A03TouchEventTableViewController.m */; };
+		6DE61AF11A3EA8F70035C076 /* LHTouchEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE61AF01A3EA8F70035C076 /* LHTouchEventTableViewCell.m */; };
+		6DE61AF41A3EA9100035C076 /* LHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE61AF31A3EA9100035C076 /* LHTextView.m */; };
+		6DE61AF71A3EBC340035C076 /* LHTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE61AF61A3EBC340035C076 /* LHTouchView.m */; };
 		6DE967861A371D4300436817 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE967851A371D4300436817 /* main.m */; };
 		6DE967891A371D4300436817 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE967881A371D4300436817 /* AppDelegate.m */; };
 		6DE9678F1A371D4300436817 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE9678D1A371D4300436817 /* Main.storyboard */; };
@@ -43,6 +47,14 @@
 		6DE61AE31A3E6E190035C076 /* LHKVCPeople.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHKVCPeople.m; sourceTree = "<group>"; };
 		6DE61AE51A3E6E270035C076 /* LHKVCAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHKVCAddress.h; sourceTree = "<group>"; };
 		6DE61AE61A3E6E270035C076 /* LHKVCAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHKVCAddress.m; sourceTree = "<group>"; };
+		6DE61AEC1A3EA8C70035C076 /* A03TouchEventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A03TouchEventTableViewController.h; sourceTree = "<group>"; };
+		6DE61AED1A3EA8C70035C076 /* A03TouchEventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A03TouchEventTableViewController.m; sourceTree = "<group>"; };
+		6DE61AEF1A3EA8F70035C076 /* LHTouchEventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHTouchEventTableViewCell.h; sourceTree = "<group>"; };
+		6DE61AF01A3EA8F70035C076 /* LHTouchEventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHTouchEventTableViewCell.m; sourceTree = "<group>"; };
+		6DE61AF21A3EA9100035C076 /* LHTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHTextView.h; sourceTree = "<group>"; };
+		6DE61AF31A3EA9100035C076 /* LHTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHTextView.m; sourceTree = "<group>"; };
+		6DE61AF51A3EBC340035C076 /* LHTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHTouchView.h; sourceTree = "<group>"; };
+		6DE61AF61A3EBC340035C076 /* LHTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHTouchView.m; sourceTree = "<group>"; };
 		6DE967801A371D4300436817 /* iLihuxDailyAccumulatesInOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLihuxDailyAccumulatesInOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DE967841A371D4300436817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DE967851A371D4300436817 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -104,6 +116,14 @@
 		6D8BAA781A37C9F700CDBA33 /* A003 */ = {
 			isa = PBXGroup;
 			children = (
+				6DE61AEC1A3EA8C70035C076 /* A03TouchEventTableViewController.h */,
+				6DE61AED1A3EA8C70035C076 /* A03TouchEventTableViewController.m */,
+				6DE61AEF1A3EA8F70035C076 /* LHTouchEventTableViewCell.h */,
+				6DE61AF01A3EA8F70035C076 /* LHTouchEventTableViewCell.m */,
+				6DE61AF21A3EA9100035C076 /* LHTextView.h */,
+				6DE61AF31A3EA9100035C076 /* LHTextView.m */,
+				6DE61AF51A3EBC340035C076 /* LHTouchView.h */,
+				6DE61AF61A3EBC340035C076 /* LHTouchView.m */,
 			);
 			path = A003;
 			sourceTree = "<group>";
@@ -281,11 +301,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DE967891A371D4300436817 /* AppDelegate.m in Sources */,
+				6DE61AEE1A3EA8C70035C076 /* A03TouchEventTableViewController.m in Sources */,
+				6DE61AF71A3EBC340035C076 /* LHTouchView.m in Sources */,
 				6DE967DA1A371FD900436817 /* LHMasterTableViewController.m in Sources */,
 				6DE967861A371D4300436817 /* main.m in Sources */,
+				6DE61AF11A3EA8F70035C076 /* LHTouchEventTableViewCell.m in Sources */,
 				6DE61AE11A3E64FA0035C076 /* A02KVCViewController.m in Sources */,
 				6DE61AE41A3E6E190035C076 /* LHKVCPeople.m in Sources */,
 				6D8BAA791A37C9F700CDBA33 /* A01InputConstraintViewController.m in Sources */,
+				6DE61AF41A3EA9100035C076 /* LHTextView.m in Sources */,
 				6D8BAA871A38166900CDBA33 /* LHView.m in Sources */,
 				6DE61AE71A3E6E270035C076 /* LHKVCAddress.m in Sources */,
 			);
