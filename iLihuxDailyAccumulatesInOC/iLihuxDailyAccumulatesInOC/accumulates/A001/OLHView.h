@@ -1,13 +1,13 @@
 //
-//  A02KVCViewController.h
+//  OLHView.h
 //  iLihuxDailyAccumulatesInOC
 //
-//  Created by lihux on 14/12/15.
+//  Created by lihux on 14/12/10.
 //  Copyright (c) 2014年 lihux. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface A02KVCViewController : UIViewController
+@interface OLHView : UIView
 
 @end

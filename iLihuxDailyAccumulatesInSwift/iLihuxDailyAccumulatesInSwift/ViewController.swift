@@ -18,7 +18,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.test()
+        self.testString()
+    }
+
+    func testString()
+    {
+        let s:NSString = "假如给我三天光明\n我将要用它来寻找希望\\n加入给我十年，我就会用它来颓废\\\n多么讽刺的事实啊！"
+        println("出事前：\(s)")
+        let b = s.stringByReplacingOccurrencesOfString("\\n", withString: "\n")
+        println("出事后：\(b)")
     }
 
     override func viewDidAppear(animated: Bool) {

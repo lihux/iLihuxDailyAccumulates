@@ -1,14 +1,14 @@
 //
-//  LHTextView.m
+//  OLHTextView.m
 //  iLihuxDailyAccumulatesInOC
 //
 //  Created by lihux on 14/12/15.
 //  Copyright (c) 2014年 lihux. All rights reserved.
 //
 
-#import "LHTextView.h"
+#import "OLHTextView.h"
 
-@implementation LHTextView
+@implementation OLHTextView
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
 {

@@ -1,5 +1,5 @@
 //
-//  LHTextView.h
+//  OA02KVCViewController.h
 //  iLihuxDailyAccumulatesInOC
 //
 //  Created by lihux on 14/12/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LHTextView : UITextView
+@interface OA02KVCViewController : UIViewController
 
 @end

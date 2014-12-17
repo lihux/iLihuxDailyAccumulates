@@ -1,20 +1,20 @@
 //
-//  A01InputConstraintViewController.m
+//  OA01InputConstraintViewController.m
 //  iLihuxDailyAccumulatesInOC
 //
 //  Created by lihux on 14/12/9.
 //  Copyright (c) 2014年 lihux. All rights reserved.
 //
 
-#import "A01InputConstraintViewController.h"
+#import "OA01InputConstraintViewController.h"
 
-#import "LHView.h"
+#import "OLHView.h"
 
-@interface A01InputConstraintViewController ()
+@interface OA01InputConstraintViewController ()
 
 @end
 
-@implementation A01InputConstraintViewController
+@implementation OA01InputConstraintViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,7 +23,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    LHView *god = [LHView new];
+    OLHView *god = [OLHView new];
     [self.view addSubview:god];
 }
 

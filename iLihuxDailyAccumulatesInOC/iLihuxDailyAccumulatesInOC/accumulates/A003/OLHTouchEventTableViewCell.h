@@ -1,5 +1,5 @@
 //
-//  A03TouchEventTableViewController.h
+//  OLHTouchEventTableViewCell.h
 //  iLihuxDailyAccumulatesInOC
 //
 //  Created by lihux on 14/12/15.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface A03TouchEventTableViewController : UITableViewController
+@interface OLHTouchEventTableViewCell : UITableViewCell
+
+- (void)configCell;
 
 @end

@@ -1,22 +1,22 @@
 //
-//  LHTouchEventTableViewCell.m
+//  OLHTouchEventTableViewCell.m
 //  iLihuxDailyAccumulatesInOC
 //
 //  Created by lihux on 14/12/15.
 //  Copyright (c) 2014年 lihux. All rights reserved.
 //
 
-#import "LHTouchEventTableViewCell.h"
+#import "OLHTouchEventTableViewCell.h"
 
-#import "LHTextView.h"
+#import "OLHTextView.h"
 
-@interface LHTouchEventTableViewCell ()
+@interface OLHTouchEventTableViewCell ()
 
-@property (weak, nonatomic) IBOutlet LHTextView *textView;
+@property (weak, nonatomic) IBOutlet OLHTextView *textView;
 
 @end
 
-@implementation LHTouchEventTableViewCell
+@implementation OLHTouchEventTableViewCell
 
 - (void)awakeFromNib {
 //    let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: tapSelector)

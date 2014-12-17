@@ -1,5 +1,5 @@
 //
-//  LHMasterTableViewController.h
+//  OLHMasterTableViewController.h
 //  iLihuxDailyAccumulatesInOC
 //
 //  Created by lihux on 14/12/9.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LHMasterTableViewController : UITableViewController
+@interface OLHMasterTableViewController : UITableViewController
 
 @end

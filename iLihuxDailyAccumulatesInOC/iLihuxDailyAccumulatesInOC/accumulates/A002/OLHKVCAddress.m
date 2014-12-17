@@ -1,14 +1,14 @@
 //
-//  LHKVCAddress.m
+//  OLHKVCAddress.m
 //  iLihuxDailyAccumulatesInOC
 //
 //  Created by lihux on 14/12/15.
 //  Copyright (c) 2014年 lihux. All rights reserved.
 //
 
-#import "LHKVCAddress.h"
+#import "OLHKVCAddress.h"
 
-@implementation LHKVCAddress
+@implementation OLHKVCAddress
 
 - (instancetype)init
 {

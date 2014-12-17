@@ -1,5 +1,5 @@
 //
-//  LHKVCAddress.h
+//  OLHKVCAddress.h
 //  iLihuxDailyAccumulatesInOC
 //
 //  Created by lihux on 14/12/15.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LHKVCAddress : NSObject
+@interface OLHKVCAddress : NSObject
 
 @property (nonatomic, strong) NSString* streetName;
 @property (nonatomic, assign) int streetNumber;

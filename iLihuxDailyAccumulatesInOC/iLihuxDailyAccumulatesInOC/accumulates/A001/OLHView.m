@@ -1,14 +1,14 @@
 //
-//  LHView.m
+//  OLHView.m
 //  iLihuxDailyAccumulatesInOC
 //
 //  Created by lihux on 14/12/10.
 //  Copyright (c) 2014年 lihux. All rights reserved.
 //
 
-#import "LHView.h"
+#import "OLHView.h"
 
-@implementation LHView
+@implementation OLHView
 
 - (void)willMoveToSuperview:(UIView *)newSuperview
 {

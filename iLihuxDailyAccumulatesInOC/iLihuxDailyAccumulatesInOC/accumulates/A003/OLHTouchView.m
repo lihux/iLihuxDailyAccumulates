@@ -1,14 +1,14 @@
 //
-//  LHView.m
+//  OLHView.m
 //  iLihuxDailyAccumulatesInOC
 //
 //  Created by lihux on 14/12/15.
 //  Copyright (c) 2014年 lihux. All rights reserved.
 //
 
-#import "LHTouchView.h"
+#import "OLHTouchView.h"
 
-@implementation LHTouchView
+@implementation OLHTouchView
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {

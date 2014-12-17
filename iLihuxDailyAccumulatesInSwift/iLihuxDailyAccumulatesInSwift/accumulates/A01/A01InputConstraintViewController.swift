@@ -1,17 +1,18 @@
 //
-//  A002AnimationViewController.swift
+//  A01InputConstraintViewController.swift
 //  iLihuxDailyAccumulatesInSwift
 //
-//  Created by lihux on 14/12/12.
+//  Created by lihux on 14/12/17.
 //  Copyright (c) 2014年 lihux. All rights reserved.
 //
 
 import UIKit
 
-class A002AnimationViewController: UIViewController {
+class A01InputConstraintViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 

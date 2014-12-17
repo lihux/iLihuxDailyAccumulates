@@ -1,27 +1,27 @@
 //
-//  LHKVCPeople.m
+//  OLHKVCPeople.m
 //  iLihuxDailyAccumulatesInOC
 //
 //  Created by lihux on 14/12/15.
 //  Copyright (c) 2014年 lihux. All rights reserved.
 //
 
-#import "LHKVCPeople.h"
+#import "OLHKVCPeople.h"
 
-#include "LHKVCAddress.h"
+#include "OLHKVCAddress.h"
 
-@interface LHKVCPeople ()
+@interface OLHKVCPeople ()
 
 @property (nonatomic, strong) NSString* name;
 @property (nonatomic, assign) int age;
 @property (nonatomic, assign) int gender; //male:0  female:1
-@property (nonatomic, assign) LHKVCAddress* address;
+@property (nonatomic, assign) OLHKVCAddress* address;
 
 @end
 
-@implementation LHKVCPeople
+@implementation OLHKVCPeople
 
-- (instancetype)initWithAddress:(LHKVCAddress *)address name:(NSString *)name
+- (instancetype)initWithAddress:(OLHKVCAddress *)address name:(NSString *)name
 {
     if (self = [super init]) {
         self.address = address;

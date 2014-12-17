@@ -1,5 +1,5 @@
 //
-//  LHKVCPeople.h
+//  OLHKVCPeople.h
 //  iLihuxDailyAccumulatesInOC
 //
 //  Created by lihux on 14/12/15.
@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@class LHKVCAddress;
+@class OLHKVCAddress;
 
-@interface LHKVCPeople : NSObject
+@interface OLHKVCPeople : NSObject
 
-- (instancetype)initWithAddress:(LHKVCAddress *)address name:(NSString *)name;
+- (instancetype)initWithAddress:(OLHKVCAddress *)address name:(NSString *)name;
 
 @end
