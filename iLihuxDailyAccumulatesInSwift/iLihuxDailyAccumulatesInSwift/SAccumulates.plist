@@ -4,11 +4,11 @@
 <array>
 	<dict>
 		<key>title</key>
-		<string>SA01掌握Class Init流程</string>
+		<string>SA01定制一像素宽的线</string>
 		<key>content</key>
-		<string>SA01掌握Class Init流程</string>
+		<string>SA01定制一像素宽的线</string>
 		<key>storyboardID</key>
-		<string>SA01CassInitViewController</string>
+		<string>SA01OnePixLineViewController</string>
 	</dict>
 </array>
 </plist>

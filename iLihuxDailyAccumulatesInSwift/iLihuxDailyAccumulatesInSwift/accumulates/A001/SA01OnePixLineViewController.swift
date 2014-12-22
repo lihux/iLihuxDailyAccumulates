@@ -1,5 +1,5 @@
 //
-//  SA01CassInitViewController.swift
+//  SA01OnePixLineViewController.swift
 //  iLihuxDailyAccumulatesInSwift
 //
 //  Created by lihux on 14/12/18.
@@ -8,13 +8,10 @@
 
 import UIKit
 
-class SA01CassInitViewController: UIViewController {
+class SA01OnePixLineViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let lineview = UIView(frame: CGRectMake(40, 310, 200, 0.5))
-        lineview.backgroundColor = UIColor.redColor()
-        self.view.addSubview(lineview)
     }
 
     override func didReceiveMemoryWarning() {
