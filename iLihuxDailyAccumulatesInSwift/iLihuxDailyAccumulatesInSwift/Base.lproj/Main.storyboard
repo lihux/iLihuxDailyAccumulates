@@ -162,7 +162,6 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="iLihuxDailyAccumulatesInSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
@@ -217,6 +216,7 @@
                         <outlet property="textView" destination="lLN-uM-pM6" id="s6h-dU-gMG"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="492.5" y="368.5"/>
         </scene>

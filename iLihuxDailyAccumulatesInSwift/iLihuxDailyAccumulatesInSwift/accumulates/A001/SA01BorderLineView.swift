@@ -19,7 +19,7 @@ import UIKit
             let constraint = item as NSLayoutConstraint
             if constraint.firstItem as UIView == self && constraint.firstAttribute == layoutAttribute {
                 self.removeConstraint(constraint)
-                constraint.constant = UIScreen.mainScreen().scale == 2 ? 0.5 : 1
+                constraint.constant = 1 / UIScreen.mainScreen().scale
                 self.addConstraint(constraint)
             }
         }
