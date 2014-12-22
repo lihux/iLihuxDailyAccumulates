@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D0225111A43ED47009A83A9 /* SA01BorderLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0225101A43ED47009A83A9 /* SA01BorderLineView.swift */; };
 		6D176D831A426B6400FA3D38 /* SAccumulates.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D176D821A426B6400FA3D38 /* SAccumulates.plist */; };
 		6D176D8F1A426CBB00FA3D38 /* SA01CassInitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D176D8E1A426CBB00FA3D38 /* SA01CassInitViewController.swift */; };
 		6DA2E9B71A3A85E700F9F8C0 /* A002AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA2E9B61A3A85E700F9F8C0 /* A002AnimationViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D0225101A43ED47009A83A9 /* SA01BorderLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SA01BorderLineView.swift; sourceTree = "<group>"; };
 		6D176D821A426B6400FA3D38 /* SAccumulates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SAccumulates.plist; sourceTree = "<group>"; };
 		6D176D8E1A426CBB00FA3D38 /* SA01CassInitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SA01CassInitViewController.swift; sourceTree = "<group>"; };
 		6DA2E9B61A3A85E700F9F8C0 /* A002AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = A002AnimationViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		6D176D841A426C7800FA3D38 /* A001 */ = {
 			isa = PBXGroup;
 			children = (
+				6D0225101A43ED47009A83A9 /* SA01BorderLineView.swift */,
 				6D176D8E1A426CBB00FA3D38 /* SA01CassInitViewController.swift */,
 			);
 			path = A001;
@@ -328,6 +331,7 @@
 				6D176D8F1A426CBB00FA3D38 /* SA01CassInitViewController.swift in Sources */,
 				6DA8435B1A41147F006F79C6 /* SLHMasterTableViewController.swift in Sources */,
 				6DA2E9B71A3A85E700F9F8C0 /* A002AnimationViewController.swift in Sources */,
+				6D0225111A43ED47009A83A9 /* SA01BorderLineView.swift in Sources */,
 				6DA843591A411002006F79C6 /* A01InputConstraintViewController.swift in Sources */,
 				6DD1C8AF1A41199A00F8E12C /* SAccumulate.swift in Sources */,
 				6DA2E9B91A3A8B1E00F9F8C0 /* LHLayerAnimationView.swift in Sources */,
@@ -457,6 +461,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iLihuxDailyAccumulatesInSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -467,6 +472,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iLihuxDailyAccumulatesInSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

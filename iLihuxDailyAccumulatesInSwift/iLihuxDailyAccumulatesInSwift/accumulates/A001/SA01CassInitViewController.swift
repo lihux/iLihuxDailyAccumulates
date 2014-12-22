@@ -12,6 +12,9 @@ class SA01CassInitViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let lineview = UIView(frame: CGRectMake(40, 310, 200, 0.5))
+        lineview.backgroundColor = UIColor.redColor()
+        self.view.addSubview(lineview)
     }
 
     override func didReceiveMemoryWarning() {
