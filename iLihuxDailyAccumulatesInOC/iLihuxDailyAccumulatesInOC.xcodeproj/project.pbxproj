@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D5A83551A4A3D86001DC86C /* OA04ArchiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5A83541A4A3D86001DC86C /* OA04ArchiveViewController.m */; };
+		6D5A83581A4A3DAD001DC86C /* OA04ArchivedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5A83571A4A3DAD001DC86C /* OA04ArchivedObject.m */; };
 		6D8BAA791A37C9F700CDBA33 /* OA01InputConstraintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8BAA761A37C9F700CDBA33 /* OA01InputConstraintViewController.m */; };
 		6D8BAA871A38166900CDBA33 /* OLHView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8BAA861A38166900CDBA33 /* OLHView.m */; };
 		6DD1C8AD1A41172700F8E12C /* OAccumulate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD1C8AC1A41172700F8E12C /* OAccumulate.m */; };
@@ -38,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D5A83531A4A3D86001DC86C /* OA04ArchiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA04ArchiveViewController.h; sourceTree = "<group>"; };
+		6D5A83541A4A3D86001DC86C /* OA04ArchiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA04ArchiveViewController.m; sourceTree = "<group>"; };
+		6D5A83561A4A3DAD001DC86C /* OA04ArchivedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA04ArchivedObject.h; sourceTree = "<group>"; };
+		6D5A83571A4A3DAD001DC86C /* OA04ArchivedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA04ArchivedObject.m; sourceTree = "<group>"; };
 		6D8BAA751A37C9F700CDBA33 /* OA01InputConstraintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA01InputConstraintViewController.h; sourceTree = "<group>"; };
 		6D8BAA761A37C9F700CDBA33 /* OA01InputConstraintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA01InputConstraintViewController.m; sourceTree = "<group>"; };
 		6D8BAA851A38166900CDBA33 /* OLHView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLHView.h; sourceTree = "<group>"; };
@@ -92,6 +98,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D5A83451A4A3CFE001DC86C /* OA02 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OA02;
+			sourceTree = "<group>";
+		};
+		6D5A83461A4A3CFE001DC86C /* OA03 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OA03;
+			sourceTree = "<group>";
+		};
+		6D5A834A1A4A3CFE001DC86C /* OA05 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OA05;
+			sourceTree = "<group>";
+		};
+		6D5A834B1A4A3CFE001DC86C /* OA06 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OA06;
+			sourceTree = "<group>";
+		};
+		6D5A834C1A4A3CFE001DC86C /* OA07 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OA07;
+			sourceTree = "<group>";
+		};
+		6D5A834D1A4A3CFE001DC86C /* OA08 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OA08;
+			sourceTree = "<group>";
+		};
+		6D5A834E1A4A3CFE001DC86C /* OA09 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OA09;
+			sourceTree = "<group>";
+		};
+		6D5A834F1A4A3CFE001DC86C /* OA10 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OA10;
+			sourceTree = "<group>";
+		};
+		6D5A83501A4A3CFE001DC86C /* OA11 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OA11;
+			sourceTree = "<group>";
+		};
+		6D5A83521A4A3D79001DC86C /* OA04 */ = {
+			isa = PBXGroup;
+			children = (
+				6D5A83531A4A3D86001DC86C /* OA04ArchiveViewController.h */,
+				6D5A83541A4A3D86001DC86C /* OA04ArchiveViewController.m */,
+				6D5A83561A4A3DAD001DC86C /* OA04ArchivedObject.h */,
+				6D5A83571A4A3DAD001DC86C /* OA04ArchivedObject.m */,
+			);
+			path = OA04;
+			sourceTree = "<group>";
+		};
 		6D8BAA741A37C9F700CDBA33 /* A001 */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +276,16 @@
 		6DE967D71A371FAD00436817 /* accumulates */ = {
 			isa = PBXGroup;
 			children = (
+				6D5A83521A4A3D79001DC86C /* OA04 */,
+				6D5A83451A4A3CFE001DC86C /* OA02 */,
+				6D5A83461A4A3CFE001DC86C /* OA03 */,
+				6D5A834A1A4A3CFE001DC86C /* OA05 */,
+				6D5A834B1A4A3CFE001DC86C /* OA06 */,
+				6D5A834C1A4A3CFE001DC86C /* OA07 */,
+				6D5A834D1A4A3CFE001DC86C /* OA08 */,
+				6D5A834E1A4A3CFE001DC86C /* OA09 */,
+				6D5A834F1A4A3CFE001DC86C /* OA10 */,
+				6D5A83501A4A3CFE001DC86C /* OA11 */,
 				6D8BAA741A37C9F700CDBA33 /* A001 */,
 				6D8BAA771A37C9F700CDBA33 /* A002 */,
 				6D8BAA781A37C9F700CDBA33 /* A003 */,
@@ -312,9 +402,11 @@
 				6DD1C8AD1A41172700F8E12C /* OAccumulate.m in Sources */,
 				6DE967861A371D4300436817 /* main.m in Sources */,
 				6DE61AF11A3EA8F70035C076 /* OLHTouchEventTableViewCell.m in Sources */,
+				6D5A83551A4A3D86001DC86C /* OA04ArchiveViewController.m in Sources */,
 				6DE61AE11A3E64FA0035C076 /* OA02KVCViewController.m in Sources */,
 				6DE61AE41A3E6E190035C076 /* OLHKVCPeople.m in Sources */,
 				6D8BAA791A37C9F700CDBA33 /* OA01InputConstraintViewController.m in Sources */,
+				6D5A83581A4A3DAD001DC86C /* OA04ArchivedObject.m in Sources */,
 				6DE61AF41A3EA9100035C076 /* OLHTextView.m in Sources */,
 				6D8BAA871A38166900CDBA33 /* OLHView.m in Sources */,
 				6DE61AE71A3E6E270035C076 /* OLHKVCAddress.m in Sources */,

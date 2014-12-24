@@ -26,5 +26,13 @@
 		<key>storyboardID</key>
 		<string>A03TouchEventTableViewController</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>04Archive学习</string>
+		<key>content</key>
+		<string>04Archive学习</string>
+		<key>storyboardID</key>
+		<string>OA04ArchiveViewController</string>
+	</dict>
 </array>
 </plist>
