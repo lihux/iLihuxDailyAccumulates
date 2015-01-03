@@ -10,4 +10,6 @@
 
 @interface OA04ArchivedObject : NSObject
 
+- (instancetype)initWithName:(NSString *)name school:(NSString *)school birthday:(NSTimeInterval)birthday age:(NSInteger)age headImageData:(NSData *)headImageData;
+
 @end

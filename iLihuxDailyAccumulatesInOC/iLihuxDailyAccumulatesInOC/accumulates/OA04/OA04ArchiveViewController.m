@@ -14,6 +14,8 @@
 
 @property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *inputTextFields;
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
+@property (nonatomic, strong) OA04ArchivedObject *object;
+@property (nonatomic, strong) NSData *archivedData;
 
 @end
 
@@ -22,19 +24,37 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self test];
+    [self createObjectFromScratch];
 }
 
-- (void)test
+- (void)createObjectFromScratch
 {
-    OA04ArchivedObject *object = [OA04ArchivedObject new];
-    NSLog(@"%@", object);
+    self.object = [[OA04ArchivedObject alloc] initWithName:@"李辉" school:@"中国石油大学" birthday:NSTimeIntervalSince1970 age:27 headImageData:UIImageJPEGRepresentation([UIImage imageNamed:@"qq"], 1)];
+    NSLog(@"%@", self.object);
 }
 
 - (IBAction)didTapOnReadButton:(id)sender {
+    if (self.archivedData) {
+        NSArray *directories = [[NSFileManager defaultManager] URLForDirectory:<#(NSSearchPathDirectory)#> inDomain:<#(NSSearchPathDomainMask)#> appropriateForURL:<#(NSURL *)#> create:<#(BOOL)#> error:<#(NSError *__autoreleasing *)#>]
+        OA04ArchivedObject *object = [NSKeyedUnarchiver unarchiveObjectWithData:self.archivedData];
+//        NSLog(@"\n\nunarchive之后：%@", object);
+
+        OA04ArchivedObject *objectFromFile = [NSKeyedUnarchiver unarchiveObjectWithFile:@"happy.birthday"];
+        NSLog(@"\n\n从文件读取成功！%@", objectFromFile);
+    }
 }
 
 - (IBAction)didTapOnWriteButton:(id)sender {
+    if (self.object) {
+        NSURL *url = [NSURL new];
+        [url setResourceValue:[NSNumber numberWithBool:YES] forKey:NSURLIsExcludedFromBackupKey error:nil];
+        self.archivedData = [NSKeyedArchiver archivedDataWithRootObject:self.object];
+//        NSLog(@"\n\narchive之后：%@", self.archivedData);
+
+        if ([NSKeyedArchiver archiveRootObject:self.object toFile:@"happy.birthday"]) {
+            NSLog(@"\n\narchive到文件成功！");
+        }
+    }
 }
 
 
