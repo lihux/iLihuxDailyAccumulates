@@ -10,5 +10,13 @@
 		<key>storyboardID</key>
 		<string>SA01OnePixLineViewController</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>SA02登陆注册输入判断逻辑</string>
+		<key>content</key>
+		<string>SA02登陆注册输入判断逻辑</string>
+		<key>storyboardID</key>
+		<string>SA02LoginAndRegisterViewController</string>
+	</dict>
 </array>
 </plist>
