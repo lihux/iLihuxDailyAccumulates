@@ -18,5 +18,13 @@
 		<key>storyboardID</key>
 		<string>SA02LoginAndRegisterViewController</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>SA03GCD多线程学习</string>
+		<key>content</key>
+		<string>SA03GCD多线程学习</string>
+		<key>storyboardID</key>
+		<string>SA03GCDViewController</string>
+	</dict>
 </array>
 </plist>

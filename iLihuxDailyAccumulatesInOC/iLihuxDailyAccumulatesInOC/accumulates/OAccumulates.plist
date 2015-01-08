@@ -34,5 +34,13 @@
 		<key>storyboardID</key>
 		<string>OA04ArchiveViewController</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>05GCD、Operation多线程学习</string>
+		<key>content</key>
+		<string>05GCD、Operation多线程学习</string>
+		<key>storyboardID</key>
+		<string>OA05GCDViewController</string>
+	</dict>
 </array>
 </plist>

@@ -251,6 +251,26 @@
             </objects>
             <point key="canvasLocation" x="318.5" y="161.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="1KT-R8-czq">
+            <objects>
+                <viewController storyboardIdentifier="SA03GCDViewController" id="dBg-V4-Qaa" customClass="SA03GCDViewController" customModule="iLihuxDailyAccumulatesInSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MiT-Py-n7K"/>
+                        <viewControllerLayoutGuide type="bottom" id="ta7-eD-ulp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iFD-23-YqB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tf6-cg-XGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750.5" y="161.5"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="rdv-Dm-gxM">
             <objects>

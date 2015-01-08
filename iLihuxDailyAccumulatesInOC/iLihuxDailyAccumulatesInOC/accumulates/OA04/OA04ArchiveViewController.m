@@ -35,7 +35,6 @@
 
 - (IBAction)didTapOnReadButton:(id)sender {
     if (self.archivedData) {
-        NSArray *directories = [[NSFileManager defaultManager] URLForDirectory:<#(NSSearchPathDirectory)#> inDomain:<#(NSSearchPathDomainMask)#> appropriateForURL:<#(NSURL *)#> create:<#(BOOL)#> error:<#(NSError *__autoreleasing *)#>]
         OA04ArchivedObject *object = [NSKeyedUnarchiver unarchiveObjectWithData:self.archivedData];
 //        NSLog(@"\n\nunarchive之后：%@", object);
 
