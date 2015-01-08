@@ -9,12 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface OA05CustomCurrentOperation : NSOperation
-{
-    BOOL finished;
-    NSInteger god;
-}
-
-@property (nonatomic, assign) NSInteger god;
-- (void)test;
 
 @end
