@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>1.NSInvocationOperation 的基本使用学习
+
+- (void)taskForLearningNSInvocationOperation
+{
+    NSInvocationOperation *invocationOperation = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(invocationOperationMethod:) object:@&quot;天苍苍，野茫茫，风吹草低见牛羊&quot;];
+    NSOperationQueue *operationQueue = [[NSOperationQueue alloc] init];
+    [operationQueue addOperation:invocationOperation];
+}
+
+- (void)invocationOperationMethod:(NSString *)result
+{
+    //更新UI的操作必须dispatch到主线程中执行，否则程序异常、退出：
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.resultTextView.text = result;
+    });
+}
+
+The NSInvocationOperation class is a concrete subclass of NSOperation that, when run, invokes the selector you specify on the object you specify. Use this class to avoid defining large numbers of custom operation objects for each task in your application; especially if you are modifying an existing application and already have the objects and methods needed to perform the necessary tasks. You can also use it when the method you want to call can change depending on the circumstances. For example, you could use an invocation operation to perform a selector that is chosen dynamically based on user input.
+
+The process for creating an invocation operation is straightforward. You create and initialize a new instance of the class, passing the desired object and selector to execute to the initialization method. Listing 2-1 shows two methods from a custom class that demonstrate the creation process. The taskWithData: method creates a new invocation object and supplies it with the name of another method, which contains the task implementation.
+
+</string>
+	<string>2.NSBlockOperation 的基本使用学习
+- (void)taskForLearningNSBlockOperation
+{
+    NSBlockOperation *blockOperation = [NSBlockOperation blockOperationWithBlock:^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.resultTextView.text = @&quot;天苍苍，野茫茫，风吹草低见牛羊&quot;;
+        });
+    }];
+    NSOperationQueue *operationQueue = [[NSOperationQueue alloc] init];
+    [operationQueue addOperation:blockOperation];
+}
+
+
+The NSBlockOperation class is a concrete subclass of NSOperation that acts as a wrapper for one or more block objects. This class provides an object-oriented wrapper for applications that are already using operation queues and do not want to create dispatch queues as well. You can also use block operations to take advantage of operation dependencies, KVO notifications, and other features that might not be available with dispatch queues.
+
+When you create a block operation, you typically add at least one block at initialization time; you can add more blocks as needed later. When it comes time to execute an NSBlockOperation object, the object submits all of its blocks to the default-priority, concurrent dispatch queue. The object then waits until all of the blocks finish executing. When the last block finishes executing, the operation object marks itself as finished. Thus, you can use a block operation to track a group of executing blocks, much like you would use a thread join to merge the results from multiple threads. The difference is that because the block operation itself runs on a separate thread, your application’s other threads can continue doing work while waiting for the block operation to complete.
+
+</string>
+	<string>3.自己定制的NSOperation基本使用学习
+
+- (void)taskForLearningNSOperation
+{
+    OA05CustomOperation *operaton = [[OA05CustomOperation alloc] initWithName:@&quot;定制的operation&quot;];
+    operaton.delegate = self;
+    NSOperationQueue *operationQueue = [[NSOperationQueue alloc] init];
+    [operationQueue addOperation:operaton];
+}
+
+#pragma mark - OA05CustomOperationDelegate
+
+- (void)finishWork:(NSString *)name
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.resultTextView.text = name;
+    });
+}
+
+苹果官方文档说明：
+If the block operation and invocation operation objects do not quite meet the needs of your application, you can subclass NSOperation directly and add whatever behavior you need. The NSOperation class provides a general subclassing point for all operation objects. The class also provides a significant amount of infrastructure to handle most of the work needed for dependencies and KVO notifications. However, there may still be times when you need to supplement the existing infrastructure to ensure that your operations behave correctly. The amount of extra work you have to do depends on whether you are implementing a nonconcurrent or a concurrent operation.
+
+Defining a nonconcurrent operation is much simpler than defining a concurrent operation. For a nonconcurrent operation, all you have to do is perform your main task and respond appropriately to cancellation events; the existing class infrastructure does all of the other work for you. For a concurrent operation, you must replace some of the existing infrastructure with your custom code. The following sections show you how to implement both types of object.</string>
+	<string>4. NSOperation 综合使用（依赖关系等）
+
+- (void)taskForLearningNSOperationDepedency
+{
+    OA05CustomOperation *smallOperation = [[OA05CustomOperation alloc] initWithName:@&quot;一开始我是小学生啊&quot;];
+    OA05CustomOperation *middleOperation = [[OA05CustomOperation alloc] initWithName:@&quot;现在我成了中学生&quot;];
+    OA05CustomOperation *bigOperation = [[OA05CustomOperation alloc] initWithName:@&quot;哈哈，我终于成了大学生&quot;];
+    smallOperation.delegate = self;
+    middleOperation.delegate = self;
+    bigOperation.delegate = self;
+    [bigOperation addDependency:middleOperation];
+    [middleOperation addDependency:smallOperation];
+    NSOperationQueue *operationQueue = [[NSOperationQueue alloc] init];
+    [operationQueue addOperation:bigOperation];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1ull * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [operationQueue addOperation:smallOperation];
+    });
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2ull * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [operationQueue addOperation:middleOperation];
+    });
+}
+
+苹果文档说明：
+
+Dependencies are a way for you to serialize the execution of distinct operation objects. An operation that is dependent on other operations cannot begin executing until all of the operations on which it depends have finished executing. Thus, you can use dependencies to create simple one-to-one dependencies between two operation objects or to build complex object dependency graphs.
+
+To establish dependencies between two operation objects, you use the addDependency: method of NSOperation. This method creates a one-way dependency from the current operation object to the target operation you specify as a parameter. This dependency means that the current object cannot begin executing until the target object finishes executing. Dependencies are also not limited to operations in the same queue. Operation objects manage their own dependencies and so it is perfectly acceptable to create dependencies between operations and add them all to different queues. One thing that is not acceptable, however, is to create circular dependencies between operations. Doing so is a programmer error that will prevent the affected operations from ever running.
+
+When all of an operation’s dependencies have themselves finished executing, an operation object normally becomes ready to execute. (If you customize the behavior of the isReady method, the readiness of the operation is determined by the criteria you set.) If the operation object is in a queue, the queue may start executing that operation at any time. If you plan to execute the operation manually, it is up to you to call the operation’s start method.</string>
+	<string>5. dispatch_queue的基本使用
+
+- (void)taskForLearningDispatchQueue
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self longTimeTaskWithName:@&quot;后台子线程&quot; seconds:3];
+    });
+}
+
+- (void)longTimeTaskWithName:(NSString *)name seconds:(NSInteger)seconds
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self appendStringToResultTextViewWithString:[NSString stringWithFormat:@&quot;%@ 开始干活啦！&quot;, name]];
+    });
+    NSInteger total = NSIntegerMax;
+    for (int i = 0; i &lt; 1000 * seconds; i ++) {
+        for (int j = 0; j &lt; 10000; j ++) {
+            total = total / 1.9;
+        }
+    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self appendStringToResultTextViewWithString:[NSString stringWithFormat:@&quot;OMG,终于干完了，累死我了(%@)&quot;, name]];
+    });
+}
+
+苹果文档说明：
+
+Dispatch queues are an easy way to perform tasks asynchronously and concurrently in your application. A task is simply some work that your application needs to perform. For example, you could define a task to perform some calculations, create or modify a data structure, process some data read from a file, or any number of things. You define tasks by placing the corresponding code inside either a function or a block object and adding it to a dispatch queue.
+
+A dispatch queue is an object-like structure that manages the tasks you submit to it. All dispatch queues are first-in, first-out data structures. Thus, the tasks you add to a queue are always started in the same order that they were added. GCD provides some dispatch queues for you automatically, but others you can create for specific purposes. Table 3-1 lists the types of dispatch queues available to your application and how you use them.</string>
+	<string>6. dispatch_group的基本使用
+
+- (void)taskForLearningDispatchGroup
+{
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_group_async(group, queue, ^{
+        [self longTimeTaskWithName:@&quot;小作文2秒&quot; seconds:2];
+    });
+    dispatch_group_async(group, queue, ^{
+        [self longTimeTaskWithName:@&quot;大作文10秒&quot; seconds:10];
+    });
+    dispatch_group_async(group, queue, ^{
+        [self longTimeTaskWithName:@&quot;阅读理解20秒&quot; seconds:20];
+    });
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        [self appendStringToResultTextViewWithString:@&quot;OMG,全组同学终于干完了，累死我了！&quot;];
+    });
+}
+
+苹果文档说明：
+
+Dispatch groups are a way to block a thread until one or more tasks finish executing. You can use this behavior in places where you cannot make progress until all of the specified tasks are complete. For example, after dispatching several tasks to compute some data, you might use a group to wait on those tasks and then process the results when they are done. Another way to use dispatch groups is as an alternative to thread joins. Instead of starting several child threads and then joining with each of them, you could add the corresponding tasks to a dispatch group and wait on the entire group.
+
+Listing 3-6 shows the basic process for setting up a group, dispatching tasks to it, and waiting on the results. Instead of dispatching tasks to a queue using the dispatch_async function, you use the dispatch_group_async function instead. This function associates the task with the group and queues it for execution. To wait on a group of tasks to finish, you then use the dispatch_group_wait function, passing in the appropriate group.</string>
+	<string>7. dispatch_source的基本使用
+
+- (void)taskForLearningDispatchSource
+{
+    // 使用self强持有timer，否则其在当前函数执行完后就被释放了，无法运行：
+    self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0));
+    dispatch_source_set_timer(self.timer, dispatch_walltime(NULL, 0), 1 * NSEC_PER_SEC, 0.2 * NSEC_PER_SEC);
+    dispatch_source_set_event_handler(self.timer, ^{
+        [self appendStringToResultTextViewWithString:@&quot;啊，时间去哪儿了呢！&quot;];
+    });
+    dispatch_resume(self.timer);
+}
+
+苹果文档说明：
+
+Timer dispatch sources generate events at regular, time-based intervals. You can use timers to initiate specific tasks that need to be performed regularly. For example, games and other graphics-intensive applications might use timers to initiate screen or animation updates. You could also set up a timer and use the resulting events to check for new information on a frequently updated server.
+
+All timer dispatch sources are interval timers—that is, once created, they deliver regular events at the interval you specify. When you create a timer dispatch source, one of the values you must specify is a leeway value to give the system some idea of the desired accuracy for timer events. Leeway values give the system some flexibility in how it manages power and wakes up cores. For example, the system might use the leeway value to advance or delay the fire time and align it better with other system events. You should therefore specify a leeway value whenever possible for your own timers.
+
+Note: Even if you specify a leeway value of 0, you should never expect a timer to fire at the exact nanosecond you requested. The system does its best to accommodate your needs but cannot guarantee exact firing times.
+When a computer goes to sleep, all timer dispatch sources are suspended. When the computer wakes up, those timer dispatch sources are automatically woken up as well. Depending on the configuration of the timer, pauses of this nature may affect when your timer fires next. If you set up your timer dispatch source using the dispatch_time function or the DISPATCH_TIME_NOW constant, the timer dispatch source uses the default system clock to determine when to fire. However, the default clock does not advance while the computer is asleep. By contrast, when you set up your timer dispatch source using the dispatch_walltime function, the timer dispatch source tracks its firing time to the wall clock time. This latter option is typically appropriate for timers whose firing interval is relatively large because it prevents there from being too much drift between event times.
+
+Listing 4-1 shows an example of a timer that fires once every 30 seconds and has a leeway value of 1 second. Because the timer interval is relatively large, the dispatch source is created using the dispatch_walltime function. The first firing of the timer occurs immediately and subsequent events arrive every 30 seconds. The MyPeriodicTask and MyStoreTimer symbols represent custom functions that you would write to implement the timer behavior and to store the timer somewhere in your application’s data structures.</string>
+</array>
+</plist>
