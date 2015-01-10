@@ -13,6 +13,8 @@
 		6D8B63251A5E107E00735E2E /* OA05CustomCurrentOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8B63241A5E107E00735E2E /* OA05CustomCurrentOperation.m */; };
 		6D8BAA791A37C9F700CDBA33 /* OA01InputConstraintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8BAA761A37C9F700CDBA33 /* OA01InputConstraintViewController.m */; };
 		6D8BAA871A38166900CDBA33 /* OLHView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8BAA861A38166900CDBA33 /* OLHView.m */; };
+		6DA68D1D1A5FB989009384A9 /* OA05GCD.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DA68D1C1A5FB989009384A9 /* OA05GCD.plist */; };
+		6DA68D201A5FBFAE009384A9 /* OA05TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA68D1F1A5FBFAE009384A9 /* OA05TableViewCell.m */; };
 		6DD1C8AD1A41172700F8E12C /* OAccumulate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD1C8AC1A41172700F8E12C /* OAccumulate.m */; };
 		6DE61AE11A3E64FA0035C076 /* OA02KVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE61AE01A3E64FA0035C076 /* OA02KVCViewController.m */; };
 		6DE61AE41A3E6E190035C076 /* OLHKVCPeople.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE61AE31A3E6E190035C076 /* OLHKVCPeople.m */; };
@@ -54,6 +56,9 @@
 		6D8BAA761A37C9F700CDBA33 /* OA01InputConstraintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA01InputConstraintViewController.m; sourceTree = "<group>"; };
 		6D8BAA851A38166900CDBA33 /* OLHView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLHView.h; sourceTree = "<group>"; };
 		6D8BAA861A38166900CDBA33 /* OLHView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLHView.m; sourceTree = "<group>"; };
+		6DA68D1C1A5FB989009384A9 /* OA05GCD.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OA05GCD.plist; sourceTree = "<group>"; };
+		6DA68D1E1A5FBFAE009384A9 /* OA05TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA05TableViewCell.h; sourceTree = "<group>"; };
+		6DA68D1F1A5FBFAE009384A9 /* OA05TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA05TableViewCell.m; sourceTree = "<group>"; };
 		6DD1C8AB1A41172700F8E12C /* OAccumulate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAccumulate.h; sourceTree = "<group>"; };
 		6DD1C8AC1A41172700F8E12C /* OAccumulate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAccumulate.m; sourceTree = "<group>"; };
 		6DE61ADF1A3E64FA0035C076 /* OA02KVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA02KVCViewController.h; sourceTree = "<group>"; };
@@ -125,6 +130,9 @@
 				6D8B63211A5E0F9A00735E2E /* OA05GCDViewController.m */,
 				6D8B63231A5E107E00735E2E /* OA05CustomCurrentOperation.h */,
 				6D8B63241A5E107E00735E2E /* OA05CustomCurrentOperation.m */,
+				6DA68D1C1A5FB989009384A9 /* OA05GCD.plist */,
+				6DA68D1E1A5FBFAE009384A9 /* OA05TableViewCell.h */,
+				6DA68D1F1A5FBFAE009384A9 /* OA05TableViewCell.m */,
 			);
 			path = OA05;
 			sourceTree = "<group>";
@@ -384,6 +392,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DA68D1D1A5FB989009384A9 /* OA05GCD.plist in Resources */,
 				6DE9678F1A371D4300436817 /* Main.storyboard in Resources */,
 				6DE967941A371D4300436817 /* LaunchScreen.xib in Resources */,
 				6DE967DC1A37211600436817 /* OAccumulates.plist in Resources */,
@@ -407,6 +416,7 @@
 			files = (
 				6DE967891A371D4300436817 /* AppDelegate.m in Sources */,
 				6DE61AEE1A3EA8C70035C076 /* OA03TouchEventTableViewController.m in Sources */,
+				6DA68D201A5FBFAE009384A9 /* OA05TableViewCell.m in Sources */,
 				6D8B63251A5E107E00735E2E /* OA05CustomCurrentOperation.m in Sources */,
 				6DE61AF71A3EBC340035C076 /* OLHTouchView.m in Sources */,
 				6DE967DA1A371FD900436817 /* OLHMasterTableViewController.m in Sources */,

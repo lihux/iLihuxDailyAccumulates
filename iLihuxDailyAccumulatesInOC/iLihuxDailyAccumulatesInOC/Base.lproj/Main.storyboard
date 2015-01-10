@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="82C-DL-DuK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--日积月累-->
@@ -227,10 +228,10 @@
             </objects>
             <point key="canvasLocation" x="666.5" y="1027.5"/>
         </scene>
-        <!--View Controller-->
+        <!--OA05-->
         <scene sceneID="raM-Iw-FDh">
             <objects>
-                <viewController storyboardIdentifier="OA05GCDViewController" id="K5E-4e-mfm" customClass="OA05GCDViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OA05GCDViewController" title="OA05" id="K5E-4e-mfm" customClass="OA05GCDViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fL5-0h-C8v"/>
                         <viewControllerLayoutGuide type="bottom" id="j7e-SS-yP7"/>
@@ -238,10 +239,109 @@
                     <view key="view" contentMode="scaleToFill" id="8kc-QZ-jBi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Npa-oX-SUI" userLabel="index view">
+                                <rect key="frame" x="20" y="40" width="335" height="543"/>
+                                <subviews>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2PN-5M-iaZ" userLabel="mask View">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="543"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Jio-xX-42g">
+                                        <rect key="frame" x="0.0" y="20" width="335" height="523"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="cell" id="KGF-dR-9Pv" customClass="OA05TableViewCell">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGF-dR-9Pv" id="XyE-bV-q2i">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="K5E-4e-mfm" id="qAk-g5-Ahe"/>
+                                            <outlet property="delegate" destination="K5E-4e-mfm" id="ucr-2I-DyM"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Jio-xX-42g" firstAttribute="top" secondItem="Npa-oX-SUI" secondAttribute="top" constant="20" id="2re-qt-ikM"/>
+                                    <constraint firstAttribute="height" priority="750" constant="44" id="Pjm-aq-Pah"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jio-xX-42g" secondAttribute="bottom" id="YRK-cy-Gbo"/>
+                                    <constraint firstAttribute="bottom" secondItem="2PN-5M-iaZ" secondAttribute="bottom" id="cow-zS-gcc"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jio-xX-42g" secondAttribute="trailing" id="kPg-MC-7PQ"/>
+                                    <constraint firstItem="2PN-5M-iaZ" firstAttribute="top" secondItem="Npa-oX-SUI" secondAttribute="top" id="pSi-nu-Gi5"/>
+                                    <constraint firstItem="Jio-xX-42g" firstAttribute="leading" secondItem="Npa-oX-SUI" secondAttribute="leading" id="rvP-a3-lY5"/>
+                                    <constraint firstAttribute="width" priority="750" constant="44" id="um2-N4-uG5"/>
+                                    <constraint firstAttribute="trailing" secondItem="2PN-5M-iaZ" secondAttribute="trailing" id="wRH-SX-TFk"/>
+                                    <constraint firstItem="2PN-5M-iaZ" firstAttribute="leading" secondItem="Npa-oX-SUI" secondAttribute="leading" id="ydG-iN-Le5"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waq-DI-yab">
+                                <rect key="frame" x="20" y="603" width="44" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="euG-CX-HFf"/>
+                                    <constraint firstAttribute="width" constant="44" id="pFI-Xp-8a6"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapOnIndexButton:" destination="K5E-4e-mfm" eventType="touchUpInside" id="sci-Jz-I4g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63529411759999999" green="0.25490196079999999" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="waq-DI-yab" firstAttribute="top" secondItem="Npa-oX-SUI" secondAttribute="bottom" constant="20" id="2pf-IH-rdd">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="identifier" value="下边"/>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="waq-DI-yab" firstAttribute="leading" secondItem="8kc-QZ-jBi" secondAttribute="leadingMargin" constant="4" id="NqL-Jg-X8p"/>
+                            <constraint firstItem="j7e-SS-yP7" firstAttribute="top" secondItem="waq-DI-yab" secondAttribute="bottom" constant="20" id="gQh-Dh-ecq"/>
+                            <constraint firstItem="Npa-oX-SUI" firstAttribute="leading" secondItem="8kc-QZ-jBi" secondAttribute="leadingMargin" constant="4" id="su0-Bs-Eww">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="identifier" value="左边"/>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="Npa-oX-SUI" firstAttribute="top" secondItem="fL5-0h-C8v" secondAttribute="bottom" constant="20" id="uac-fk-uY3">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="identifier" value="上边"/>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="Npa-oX-SUI" secondAttribute="trailing" constant="4" id="vkl-EK-EiC">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="identifier" value="右边"/>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                        </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="indexButton" destination="waq-DI-yab" id="W3t-9X-d1u"/>
+                        <outlet property="indexContainerView" destination="Npa-oX-SUI" id="Q4r-5h-1Ru"/>
+                        <outlet property="indexViewBottomConstraint" destination="2pf-IH-rdd" id="LYG-mf-ko0"/>
+                        <outlet property="indexViewTopConstraint" destination="uac-fk-uY3" id="4kK-eA-b5G"/>
+                        <outlet property="indexViewTrailingConstraint" destination="vkl-EK-EiC" id="uPh-zK-C9G"/>
+                        <outlet property="tableview" destination="Jio-xX-42g" id="730-VB-1Wv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aXf-Na-O3D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>1.NSInvocationOperation 的基本使用学习</string>
+	<string>2.NSBlockOperation 的基本使用学习</string>
+	<string>3.自己定制的NSOperation基本使用学习</string>
+	<string>4. NSOperation 综合使用（依赖关系等）</string>
+	<string>5. dispatch_queue的基本使用</string>
+	<string>6. dispatch_group的基本使用</string>
+	<string>7. dispatch_source的基本使用</string>
+</array>
+</plist>
