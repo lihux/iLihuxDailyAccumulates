@@ -245,7 +245,7 @@ const CGFloat kAnimationDuration = 0.25;
     [operationQueue addOperation:operaton];
 }
 
-4. NSOperation 综合使用（依赖关系等）
+//4. NSOperation 综合使用（依赖关系等）
 
 - (void)taskForLearningNSOperationDepedency
 {
@@ -266,8 +266,6 @@ const CGFloat kAnimationDuration = 0.25;
         [operationQueue addOperation:middleOperation];
     });
 }
-
-苹果文档说明：
 
 #pragma mark - OA05CustomOperationDelegate
 
