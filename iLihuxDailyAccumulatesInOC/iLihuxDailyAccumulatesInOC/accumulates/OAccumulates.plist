@@ -42,5 +42,13 @@
 		<key>storyboardID</key>
 		<string>OA05GCDViewController</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>06UIView、UIResponder事件响应的学习</string>
+		<key>content</key>
+		<string>06UIView、UIResponder事件响应的学习</string>
+		<key>storyboardID</key>
+		<string>OA06EventViewController</string>
+	</dict>
 </array>
 </plist>
