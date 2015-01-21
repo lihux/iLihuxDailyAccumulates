@@ -8,6 +8,8 @@
 
 #import "OA06EventViewController.h"
 
+#import "OA06ChildViewViewController.h"
+
 @interface OA06EventViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *orangeView;
@@ -15,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (nonatomic, strong) UIView *greenView;
 @property (nonatomic, strong) UIView *yellowView;
+@property (nonatomic, strong) UIView *childControllerView;
+@property (nonatomic, strong) OA06ChildViewViewController *childController;
 
 @end
 
@@ -22,6 +26,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.childController = (OA06ChildViewViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"childviewcontroller"];
+//    [self addChildViewController:self.childController];
+//    [self.orangeView addSubview:self.childController.view];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -36,6 +43,8 @@
     [self printResponder:@"self.view" responder:self.view];
     [self printResponder:@"self.button" responder:self.button];
     [self printResponder:@"self.label" responder:self.label];
+    [self printResponder:@"child controller view:" responder:self.childController.view];
+    NSLog(@"\n\n孩儿他爹：%@", self.childController);
 }
 
 - (IBAction)didTapOnButton:(id)sender
@@ -64,9 +73,29 @@
             bounds.origin.y = -20;
             self.greenView.bounds = bounds;
         } completion:^(BOOL finished) {
-            NSLog(@"看看吧：%@,dlkdkldssd %@", self.yellowView, self.greenView);
+            NSLog(@"看看吧：%@,前黄后绿 %@", self.yellowView, self.greenView);
+            self.button.tag = 3;
+        }];
+    } else if (self.button.tag == 3) {
+        self.button.tag = 4;
+        UIView *yellowView = self.yellowView;
+        NSLog(@"\n改变黄色view的transform之前：\nframe = %@bounds = %@center = %f, %f\n", [self printFrame:yellowView.frame], [self printFrame:yellowView.bounds], yellowView.center.x, yellowView.center.y);
+        [UIView animateWithDuration:1 animations:^{
+            yellowView.transform = CGAffineTransformMakeRotation(0.5);
+        } completion:^(BOOL finished) {
+            NSLog(@"\n改变黄色view的transform之后：\nframe = %@bounds = %@center = %f, %f\n", [self printFrame:yellowView.frame], [self printFrame:yellowView.bounds], yellowView.center.x, yellowView.center.y);
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1ull * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+                yellowView.clipsToBounds = YES;
+                yellowView.backgroundColor = [UIColor clearColor];
+                NSLog(@"看看黄view的alpha = %f", yellowView.alpha);
+            });
         }];
     }
+}
+
+- (NSString *)printFrame:(CGRect)frame
+{
+    return [NSString stringWithFormat:@"x=%f, y=%f, width=%f, height=%f\n", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height];
 }
 
 - (void)printResponder:(NSString *)info responder: (UIResponder *)responder

@@ -26,5 +26,13 @@
 		<key>storyboardID</key>
 		<string>SA03GCDViewController</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>SA04实现炫酷动画</string>
+		<key>content</key>
+		<string>SA04实现炫酷动画</string>
+		<key>storyboardID</key>
+		<string>SA04AnimationViewController</string>
+	</dict>
 </array>
 </plist>

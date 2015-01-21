@@ -9,7 +9,6 @@
 import UIKit
 
 class SA03CustomOperation: NSOperation {
-    var finish: Bool
     override func start() {
         if self.cancelled {
         }

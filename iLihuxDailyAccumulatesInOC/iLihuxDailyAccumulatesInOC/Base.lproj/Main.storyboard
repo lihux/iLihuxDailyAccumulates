@@ -494,7 +494,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Fw-jT-6zO">
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Fw-jT-6zO" customClass="OA06TouchLogView">
                                 <rect key="frame" x="37" y="184" width="300" height="300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hed-8u-ylP">
@@ -517,14 +517,15 @@
                                     <constraint firstAttribute="centerY" secondItem="hed-8u-ylP" secondAttribute="centerY" id="sgR-p1-wmB"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbB-W4-NQo">
-                                <rect key="frame" x="151" y="239" width="73" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbB-W4-NQo">
+                                <rect key="frame" x="151" y="239" width="98" height="33"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="1TH-yj-JX9"/>
                                     <constraint firstAttribute="width" constant="73" id="x4D-qS-eHV"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="最长的一个名字">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -551,6 +552,106 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qfK-sv-nYR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1536.5" y="1027.5"/>
+        </scene>
+        <!--Child View View Controller-->
+        <scene sceneID="iJ7-ou-5hz">
+            <objects>
+                <viewController storyboardIdentifier="childviewcontroller" id="691-Fq-FOV" customClass="OA06ChildViewViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pPM-bZ-TtH"/>
+                        <viewControllerLayoutGuide type="bottom" id="p5d-GX-f9X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="esC-tv-hPN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oH0-Gd-SBr" customClass="OA06TouchLogView">
+                                <rect key="frame" x="138" y="284" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="g0p-BT-fXC"/>
+                                    <constraint firstAttribute="width" constant="100" id="kDh-yN-vqa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63529411759999999" green="0.25490196079999999" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="oH0-Gd-SBr" secondAttribute="centerX" id="KfQ-Sq-NI6"/>
+                            <constraint firstAttribute="centerY" secondItem="oH0-Gd-SBr" secondAttribute="centerY" id="ORt-2W-Sek"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="blueView" destination="oH0-Gd-SBr" id="KMw-01-95m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SkY-0f-IhY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1949.5" y="1027.5"/>
+        </scene>
+        <!--OA07-->
+        <scene sceneID="gOP-27-8LM">
+            <objects>
+                <viewController storyboardIdentifier="OA07CoreAnimationViewController" title="OA07" id="YTL-E6-oah" customClass="OA07CoreAnimationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uuo-DX-lS7"/>
+                        <viewControllerLayoutGuide type="bottom" id="kFr-f0-0Ei"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dI9-bT-rdc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDE-I8-FzI">
+                                <rect key="frame" x="164" y="319" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fd5-0o-gQ4"/>
+                                    <constraint firstAttribute="width" constant="46" id="mjG-VU-Qfc"/>
+                                </constraints>
+                                <state key="normal" title="点我">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapOnBlueButton:" destination="YTL-E6-oah" eventType="touchUpInside" id="JQS-OD-6B0"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSO-bY-Tuw" customClass="OA07View">
+                                <rect key="frame" x="117" y="172" width="140" height="105"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="TrX-43-vCL"/>
+                                    <constraint firstAttribute="width" constant="140" id="yYO-tW-Mno"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hCf-by-BBV" appends="YES" id="PnZ-vq-Eas"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63529411759999999" green="0.25490196079999999" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="aSO-bY-Tuw" secondAttribute="centerX" id="4Ks-q6-TcB"/>
+                            <constraint firstItem="ZDE-I8-FzI" firstAttribute="top" secondItem="aSO-bY-Tuw" secondAttribute="bottom" constant="42" id="Gf3-NY-AyQ"/>
+                            <constraint firstAttribute="centerX" secondItem="ZDE-I8-FzI" secondAttribute="centerX" id="LCy-q6-csh"/>
+                            <constraint firstAttribute="centerY" secondItem="ZDE-I8-FzI" secondAttribute="centerY" id="o8G-Zm-ArL"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="whiteView" destination="aSO-bY-Tuw" id="MvU-lL-DVr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EJ1-Uz-3zI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hCf-by-BBV">
+                    <connections>
+                        <action selector="didTapOnWhiteView:" destination="YTL-E6-oah" id="9iJ-nM-LN0"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2357.5" y="1027.5"/>
         </scene>
         <!--A02-->
         <scene sceneID="9xl-bK-Xbu">

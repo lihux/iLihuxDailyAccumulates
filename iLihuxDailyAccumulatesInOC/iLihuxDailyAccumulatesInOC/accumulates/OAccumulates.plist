@@ -50,5 +50,13 @@
 		<key>storyboardID</key>
 		<string>OA06EventViewController</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>07CoreAnimation&amp;CLayer的学习</string>
+		<key>content</key>
+		<string>07CoreAnimation&amp;CLayer的学习</string>
+		<key>storyboardID</key>
+		<string>OA07CoreAnimationViewController</string>
+	</dict>
 </array>
 </plist>
