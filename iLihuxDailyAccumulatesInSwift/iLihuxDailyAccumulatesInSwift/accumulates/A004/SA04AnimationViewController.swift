@@ -48,6 +48,11 @@ class SA04AnimationViewController: UIViewController {
     func animatingConstraint(constrait: NSLayoutConstraint, constant: CGFloat, duration: NSTimeInterval, delay:NSTimeInterval)
     {
         constrait.constant = constant
+        if delay == 0.1 {
+            var frame = self.titleView.frame
+            frame.size.height += 30
+            self.titleView.frame = frame
+        }
         UIView.animateWithDuration(duration, delay: delay, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.7, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
             self.view.layoutIfNeeded()
             }) { (stop) -> Void in

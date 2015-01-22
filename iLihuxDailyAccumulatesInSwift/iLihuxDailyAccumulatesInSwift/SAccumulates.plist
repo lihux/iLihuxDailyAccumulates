@@ -34,5 +34,13 @@
 		<key>storyboardID</key>
 		<string>SA04AnimationViewController</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>SA05CALayer实现可交互动画</string>
+		<key>content</key>
+		<string>SA05CALayer实现可交互动画</string>
+		<key>storyboardID</key>
+		<string>SA05LayerAnimationViewController</string>
+	</dict>
 </array>
 </plist>

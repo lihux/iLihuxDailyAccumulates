@@ -376,6 +376,42 @@
             </objects>
             <point key="canvasLocation" x="1189.5" y="161.5"/>
         </scene>
+        <!--Layer Animation View Controller-->
+        <scene sceneID="LzY-fz-u11">
+            <objects>
+                <viewController storyboardIdentifier="SA05LayerAnimationViewController" id="4E7-ig-Rvc" customClass="SA05LayerAnimationViewController" customModule="iLihuxDailyAccumulatesInSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="31I-bm-oYP"/>
+                        <viewControllerLayoutGuide type="bottom" id="kfA-nB-hh3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CR0-6h-55o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weixin" translatesAutoresizingMaskIntoConstraints="NO" id="hNu-zf-UlB">
+                                <rect key="frame" x="113" y="259" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="9fo-tE-BYZ"/>
+                                    <constraint firstAttribute="width" constant="150" id="pHa-kU-Bps"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="hNu-zf-UlB" secondAttribute="centerY" id="Est-jB-fID"/>
+                            <constraint firstAttribute="centerX" secondItem="hNu-zf-UlB" secondAttribute="centerX" id="avI-II-U6r"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="imageView" destination="hNu-zf-UlB" id="jWC-iR-fqf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B4w-Jw-5fk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1611.5" y="161.5"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="rdv-Dm-gxM">
             <objects>
@@ -476,4 +512,7 @@
             <point key="canvasLocation" x="-104.5" y="1432.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="weixin" width="67" height="80"/>
+    </resources>
 </document>
