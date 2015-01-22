@@ -10,11 +10,8 @@ import UIKit
 
 class SA04AnimationViewController: UIViewController {
 
-    @IBOutlet weak var leve1BottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var leve2BottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var leve3BottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var leve4BottomConstraint: NSLayoutConstraint!
-
+    @IBOutlet var bottomConstraints: [NSLayoutConstraint]!
+    
     @IBOutlet weak var logoView: UIView!
     @IBOutlet weak var titleView: UIView!
 
@@ -22,24 +19,15 @@ class SA04AnimationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadConstraintConstants()
         self.shiftViewsForBouncingUp()
-    }
-
-    func loadConstraintConstants()
-    {
-        self.bottomConstraintConstants = [self.leve1BottomConstraint.constant,
-                                          self.leve2BottomConstraint.constant,
-                                          self.leve3BottomConstraint.constant,
-                                          self.leve4BottomConstraint.constant]
     }
 
     func shiftViewsForBouncingUp()
     {
-        self.leve1BottomConstraint.constant = -44
-        self.leve2BottomConstraint.constant = -44
-        self.leve3BottomConstraint.constant = -44
-        self.leve4BottomConstraint.constant = -44
+        for constraint in self.bottomConstraints {
+            self.bottomConstraintConstants.append(constraint.constant)
+            constraint.constant = -44
+        }
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -50,11 +38,11 @@ class SA04AnimationViewController: UIViewController {
     func bouncingUpViews()
     {
         let kAnimationDuration = 1.35
-        let kAnimationDelay = 0.1
-        self.animatingConstraint(self.leve4BottomConstraint, constant: self.bottomConstraintConstants[3], duration: kAnimationDuration, delay: 0.1)
-        self.animatingConstraint(self.leve3BottomConstraint, constant: self.bottomConstraintConstants[2], duration: kAnimationDuration, delay: 0.2)
-        self.animatingConstraint(self.leve2BottomConstraint, constant: self.bottomConstraintConstants[1], duration: kAnimationDuration, delay: 0.3)
-        self.animatingConstraint(self.leve1BottomConstraint, constant: self.bottomConstraintConstants[0], duration: kAnimationDuration, delay: 0.4)
+        var animationDelay = 0.1
+        for (var i = 0 as Int; i < self.bottomConstraints.count; i++) {
+            self.animatingConstraint(self.bottomConstraints[3 - i], constant: self.bottomConstraintConstants[3 - i], duration: kAnimationDuration, delay: animationDelay)
+            animationDelay = animationDelay + 0.1
+        }
     }
 
     func animatingConstraint(constrait: NSLayoutConstraint, constant: CGFloat, duration: NSTimeInterval, delay:NSTimeInterval)

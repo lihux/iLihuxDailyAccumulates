@@ -364,12 +364,12 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
-                        <outlet property="leve1BottomConstraint" destination="TgE-G4-eFg" id="AtH-p3-fox"/>
-                        <outlet property="leve2BottomConstraint" destination="38m-kF-HGT" id="Kke-Dd-pP4"/>
-                        <outlet property="leve3BottomConstraint" destination="bfl-3g-7Yd" id="9Rp-n4-0z0"/>
-                        <outlet property="leve4BottomConstraint" destination="hlu-TG-npL" id="3rD-og-9Zb"/>
                         <outlet property="logoView" destination="iLF-5x-puP" id="9lu-R2-diT"/>
                         <outlet property="titleView" destination="bQm-G3-h14" id="zEC-c7-sj5"/>
+                        <outletCollection property="bottomConstraints" destination="TgE-G4-eFg" collectionClass="NSMutableArray" id="Rja-6X-KJL"/>
+                        <outletCollection property="bottomConstraints" destination="38m-kF-HGT" collectionClass="NSMutableArray" id="VnH-oc-vzA"/>
+                        <outletCollection property="bottomConstraints" destination="bfl-3g-7Yd" collectionClass="NSMutableArray" id="Dsc-ci-RUn"/>
+                        <outletCollection property="bottomConstraints" destination="hlu-TG-npL" collectionClass="NSMutableArray" id="oh3-Kw-jvf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVM-fj-RV9" userLabel="First Responder" sceneMemberID="firstResponder"/>
