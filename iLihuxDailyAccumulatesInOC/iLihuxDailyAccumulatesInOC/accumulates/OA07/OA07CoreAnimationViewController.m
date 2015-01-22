@@ -14,36 +14,77 @@
 
 @property (nonatomic, strong) CALayer *movingLayer;
 
-@property (weak, nonatomic) IBOutlet OA07View *whiteView;
-
 @end
 
 @implementation OA07CoreAnimationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    CGPoint center = self.whiteView.center;
-    center.x = 0;
-    self.whiteView.center = center;
+    [self customUI];
 }
+
+- (void)customUI
+{
+    self.movingLayer = [CALayer layer];
+    UIImage *image = [UIImage imageNamed:@"qq"];
+    self.movingLayer.contents = (__bridge id)(image.CGImage);
+    self.movingLayer.position = CGPointMake(100, 200);
+    self.movingLayer.bounds = CGRectMake(0, 0, image.size.width, image.size.height);
+    self.movingLayer.backgroundColor = [UIColor yellowColor].CGColor;
+    [self.view.layer addSublayer:self.movingLayer];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self multiAnimationTest2];
+}
+
+- (void)multiAnimationTest1
+{
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position.x"];
+    CGFloat currentX = self.movingLayer.position.x;
+    CGFloat targetX = currentX + 150;
+    animation.fromValue = [NSNumber numberWithFloat:currentX];
+    animation.toValue = [NSNumber numberWithFloat:(targetX)];
+    animation.duration = 2.0;
+    animation.additive = YES;
+    [self.movingLayer addAnimation:animation forKey:@"position.x"];
+    self.movingLayer.position = CGPointMake(targetX, self.movingLayer.position.y);
+}
+
+- (void) multiAnimationTest2
+{
+    UIBezierPath *circlePath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, 30, 30)];
+    UIBezierPath *rectPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(100, 200, 200, 200)];
+    CAShapeLayer *roundLayer = [CAShapeLayer layer];
+    roundLayer.path = rectPath.CGPath;
+    roundLayer.strokeColor = [UIColor whiteColor].CGColor;
+    roundLayer.lineDashPattern = @[@3, @3];
+    roundLayer.fillColor = [UIColor clearColor].CGColor;
+    [self.view.layer insertSublayer:roundLayer below:self.movingLayer];
+
+    CAKeyframeAnimation *rectAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    rectAnimation.path = rectPath.CGPath;
+    rectAnimation.duration = 10;
+    rectAnimation.repeatCount = HUGE;
+    rectAnimation.calculationMode = kCAAnimationPaced;
+    
+    CAKeyframeAnimation *circleAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    circleAnimation.path = circlePath.CGPath;
+    circleAnimation.duration = 1;
+    circleAnimation.repeatCount = HUGE;
+    circleAnimation.additive = YES;
+    circleAnimation.calculationMode = kCAAnimationPaced;
+    
+    [self.movingLayer addAnimation:rectAnimation forKey:@"follow a rect shape"];
+    [self.movingLayer addAnimation:circleAnimation forKey:@"loop around"];
+}
+
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self hitTestAnimatingLayerTest];
-}
-
-- (IBAction)didTapOnBlueButton:(id)sender {
-    __block CGPoint center = self.whiteView.center;
-    self.whiteView.center = center;
-    self.whiteView.backgroundColor = [UIColor clearColor];
-    NSLog(@"门西：%@", self.whiteView.layer.presentationLayer);
-    [UIView animateWithDuration:1 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0.5 options:UIViewAnimationOptionAllowUserInteraction animations:^{
-        center.x = 300;
-        self.whiteView.center = center;
-        NSLog(@"门：%@", self.whiteView.layer.presentationLayer);
-    } completion:^(BOOL finished) {
-    }];
 }
 
 - (void)hitTestAnimatingLayerTest

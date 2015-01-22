@@ -601,48 +601,11 @@
                     <view key="view" contentMode="scaleToFill" id="dI9-bT-rdc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDE-I8-FzI">
-                                <rect key="frame" x="164" y="319" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="fd5-0o-gQ4"/>
-                                    <constraint firstAttribute="width" constant="46" id="mjG-VU-Qfc"/>
-                                </constraints>
-                                <state key="normal" title="点我">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapOnBlueButton:" destination="YTL-E6-oah" eventType="touchUpInside" id="JQS-OD-6B0"/>
-                                </connections>
-                            </button>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSO-bY-Tuw" customClass="OA07View">
-                                <rect key="frame" x="117" y="172" width="140" height="105"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="105" id="TrX-43-vCL"/>
-                                    <constraint firstAttribute="width" constant="140" id="yYO-tW-Mno"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="hCf-by-BBV" appends="YES" id="PnZ-vq-Eas"/>
-                                </connections>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" red="0.63529411759999999" green="0.25490196079999999" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="aSO-bY-Tuw" secondAttribute="centerX" id="4Ks-q6-TcB"/>
-                            <constraint firstItem="ZDE-I8-FzI" firstAttribute="top" secondItem="aSO-bY-Tuw" secondAttribute="bottom" constant="42" id="Gf3-NY-AyQ"/>
-                            <constraint firstAttribute="centerX" secondItem="ZDE-I8-FzI" secondAttribute="centerX" id="LCy-q6-csh"/>
-                            <constraint firstAttribute="centerY" secondItem="ZDE-I8-FzI" secondAttribute="centerY" id="o8G-Zm-ArL"/>
-                        </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
-                    <connections>
-                        <outlet property="whiteView" destination="aSO-bY-Tuw" id="MvU-lL-DVr"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJ1-Uz-3zI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="hCf-by-BBV">
