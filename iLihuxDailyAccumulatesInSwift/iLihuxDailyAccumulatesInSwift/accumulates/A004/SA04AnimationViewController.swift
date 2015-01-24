@@ -8,7 +8,7 @@
 
 import UIKit
 
-var sliderValues: [Float] = [0.1, 0.3, 0.5, 0.2]
+var sliderValues: [Float] = [0.1, 0.3, 0.5, 0.2, 0.6]
 
 class SA04AnimationViewController: UIViewController {
 
@@ -112,7 +112,7 @@ class SA04AnimationViewController: UIViewController {
         self.blueView2LeftConstraint.constant = constant
         sender.enabled = false
         sender.tag = isStageOne ? 1 : 0
-        UIView.animateWithDuration(1.5, animations: { () -> Void in
+        UIView.animateWithDuration(Double(sliderValues[4]), animations: { () -> Void in
             self.view.layoutIfNeeded()
             }, completion: { (stop) -> Void in
                 sender.enabled = true

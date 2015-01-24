@@ -12,7 +12,7 @@ class SA04Layer: CALayer {
 
     override func addAnimation(anim: CAAnimation!, forKey key: String!) {
         var timeFunctionControlPoints: [Float] = [0.1, 0.3, 0.5, 0.2]
-        for var i = 0; i < sliderValues.count; i++ {
+        for var i = 0; i < 4; i++ {
             timeFunctionControlPoints[i] = sliderValues[i]
         }
         println("\n层SA04Layer中：addAnimation(anim: \(anim), forKey key: \(key))\n")
