@@ -10,15 +10,40 @@ import UIKit
 
 class SA05LayerAnimationViewController: UIViewController {
 
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var photoView: SA05PhotoView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style:UIBlurEffectStyle.Dark))
-        blurEffectView.frame = self.imageView.bounds
-        self.imageView.addSubview(blurEffectView)
+//        self.customUI()
     }
 
+//    CGSize size = CGSizeMake(self.bounds.size.width,self.bounds.size.height);
+//    UIGraphicsBeginImageContext(size);
+//    [parentView drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];
+//    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    self.originalImage = image;
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.customUI()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+//        self.customUI()
+    }
+    func customUI()
+    {
+        self.photoView.imageView.image = UIImage(named: "weixin")
+        UIGraphicsBeginImageContext(self.photoView.bounds.size)
+        self.photoView.drawViewHierarchyInRect(self.photoView.bounds, afterScreenUpdates: false)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        self.photoView.imageView.image = image.applyLightEffect()
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

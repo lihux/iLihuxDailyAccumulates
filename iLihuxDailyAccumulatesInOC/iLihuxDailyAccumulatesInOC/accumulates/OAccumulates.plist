@@ -58,5 +58,13 @@
 		<key>storyboardID</key>
 		<string>OA07CoreAnimationViewController</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>08Layer可交互动画的学习</string>
+		<key>content</key>
+		<string>08Layer可交互动画的学习</string>
+		<key>storyboardID</key>
+		<string>OA08LayerAnimationViewController</string>
+	</dict>
 </array>
 </plist>

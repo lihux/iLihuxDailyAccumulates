@@ -23,6 +23,8 @@
 		6D9901231A64A78F009A57AF /* OA06TouchLogView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9901221A64A78F009A57AF /* OA06TouchLogView.m */; };
 		6DA68D1D1A5FB989009384A9 /* OA05GCD.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DA68D1C1A5FB989009384A9 /* OA05GCD.plist */; };
 		6DA68D201A5FBFAE009384A9 /* OA05TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA68D1F1A5FBFAE009384A9 /* OA05TableViewCell.m */; };
+		6DB068091A7140BD0029C8E6 /* OA08LayerAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB068081A7140BD0029C8E6 /* OA08LayerAnimationViewController.m */; };
+		6DB0680C1A7140F90029C8E6 /* OA08AlbumImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB0680B1A7140F90029C8E6 /* OA08AlbumImageView.m */; };
 		6DBC0B3A1A6134D700A17904 /* OA05Text.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DBC0B391A6134D700A17904 /* OA05Text.plist */; };
 		6DBC0B401A61477900A17904 /* OA05CustomOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DBC0B3F1A61477900A17904 /* OA05CustomOperation.m */; };
 		6DD1C8AD1A41172700F8E12C /* OAccumulate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD1C8AC1A41172700F8E12C /* OAccumulate.m */; };
@@ -85,6 +87,10 @@
 		6DA68D1C1A5FB989009384A9 /* OA05GCD.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OA05GCD.plist; sourceTree = "<group>"; };
 		6DA68D1E1A5FBFAE009384A9 /* OA05TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA05TableViewCell.h; sourceTree = "<group>"; };
 		6DA68D1F1A5FBFAE009384A9 /* OA05TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA05TableViewCell.m; sourceTree = "<group>"; };
+		6DB068071A7140BD0029C8E6 /* OA08LayerAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA08LayerAnimationViewController.h; sourceTree = "<group>"; };
+		6DB068081A7140BD0029C8E6 /* OA08LayerAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA08LayerAnimationViewController.m; sourceTree = "<group>"; };
+		6DB0680A1A7140F90029C8E6 /* OA08AlbumImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA08AlbumImageView.h; sourceTree = "<group>"; };
+		6DB0680B1A7140F90029C8E6 /* OA08AlbumImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA08AlbumImageView.m; sourceTree = "<group>"; };
 		6DBC0B391A6134D700A17904 /* OA05Text.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OA05Text.plist; sourceTree = "<group>"; };
 		6DBC0B3E1A61477900A17904 /* OA05CustomOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA05CustomOperation.h; sourceTree = "<group>"; };
 		6DBC0B3F1A61477900A17904 /* OA05CustomOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA05CustomOperation.m; sourceTree = "<group>"; };
@@ -202,6 +208,10 @@
 		6D5A834D1A4A3CFE001DC86C /* OA08 */ = {
 			isa = PBXGroup;
 			children = (
+				6DB068071A7140BD0029C8E6 /* OA08LayerAnimationViewController.h */,
+				6DB068081A7140BD0029C8E6 /* OA08LayerAnimationViewController.m */,
+				6DB0680A1A7140F90029C8E6 /* OA08AlbumImageView.h */,
+				6DB0680B1A7140F90029C8E6 /* OA08AlbumImageView.m */,
 			);
 			path = OA08;
 			sourceTree = "<group>";
@@ -476,6 +486,7 @@
 				6D8B63221A5E0F9A00735E2E /* OA05GCDViewController.m in Sources */,
 				6D8FEC361A65FEE000F23585 /* OA06ChildViewViewController.m in Sources */,
 				6DD1C8AD1A41172700F8E12C /* OAccumulate.m in Sources */,
+				6DB068091A7140BD0029C8E6 /* OA08LayerAnimationViewController.m in Sources */,
 				6DE967861A371D4300436817 /* main.m in Sources */,
 				6D31B4F91A6CD2860011E6C0 /* OA07CoreAnimationViewController.m in Sources */,
 				6D9901231A64A78F009A57AF /* OA06TouchLogView.m in Sources */,
@@ -484,6 +495,7 @@
 				6D5A83551A4A3D86001DC86C /* OA04ArchiveViewController.m in Sources */,
 				6DE61AE11A3E64FA0035C076 /* OA02KVCViewController.m in Sources */,
 				6DE61AE41A3E6E190035C076 /* OLHKVCPeople.m in Sources */,
+				6DB0680C1A7140F90029C8E6 /* OA08AlbumImageView.m in Sources */,
 				6D8BAA791A37C9F700CDBA33 /* OA01InputConstraintViewController.m in Sources */,
 				6D5A83581A4A3DAD001DC86C /* OA04ArchivedObject.m in Sources */,
 				6DE61AF41A3EA9100035C076 /* OLHTextView.m in Sources */,

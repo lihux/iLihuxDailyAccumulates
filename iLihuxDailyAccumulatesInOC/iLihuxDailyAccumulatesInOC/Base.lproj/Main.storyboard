@@ -616,6 +616,42 @@
             </objects>
             <point key="canvasLocation" x="2357.5" y="1027.5"/>
         </scene>
+        <!--Layer Animation View Controller-->
+        <scene sceneID="NyI-w2-aU7">
+            <objects>
+                <viewController storyboardIdentifier="OA08LayerAnimationViewController" id="cEL-iu-OMa" customClass="OA08LayerAnimationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B7t-4X-d6R"/>
+                        <viewControllerLayoutGuide type="bottom" id="6fn-j2-guA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UZn-mq-d7e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MGA-ct-79q" customClass="OA08AlbumImageView">
+                                <rect key="frame" x="113" y="259" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="J4M-at-dqE"/>
+                                    <constraint firstAttribute="width" constant="150" id="WxS-qW-w4U"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63529411759999999" green="0.25490196079999999" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="MGA-ct-79q" secondAttribute="centerY" id="Hqk-P5-Nqy"/>
+                            <constraint firstAttribute="centerX" secondItem="MGA-ct-79q" secondAttribute="centerX" id="KMv-bC-qqZ"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="imageView" destination="MGA-ct-79q" id="BkV-fJ-N7f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aRV-5T-zGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2840.5" y="1027.5"/>
+        </scene>
         <!--A02-->
         <scene sceneID="9xl-bK-Xbu">
             <objects>
