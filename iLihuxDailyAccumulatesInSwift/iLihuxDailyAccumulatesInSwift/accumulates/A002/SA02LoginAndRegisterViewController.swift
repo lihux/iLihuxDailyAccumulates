@@ -85,6 +85,7 @@ class SA02LoginAndRegisterViewController: UIViewController, UITextFieldDelegate 
     func userNameStringCount(string: String) -> Int
     {
         return 0;
+        //warning :countElements已被swift2删除，最新的替代函数暂未找到，此处逻辑被破坏，择日修复
 //        return (countElements(string.utf8) + string.utf16Count) / 2
     }
 
