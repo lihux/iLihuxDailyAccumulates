@@ -33,8 +33,8 @@ class SA02LoginAndRegisterViewController: UIViewController, UITextFieldDelegate 
     @IBAction func editingDidChanged(sender: AnyObject)
     {
         self.updateInfoLabel(sender)
-        let textField = sender as UITextField
-        let text = textField.text
+        let textField = sender as! UITextField
+        let text = textField.text!
         text.printUnicode()
 
         if textField.markedTextRange == nil {
@@ -60,7 +60,7 @@ class SA02LoginAndRegisterViewController: UIViewController, UITextFieldDelegate 
 
     func updateInfoLabel(sender: AnyObject)
     {
-        if sender as NSObject == self.userNameTextField {
+        if sender as! NSObject == self.userNameTextField {
             self.infoLabel.text = "\(self.userNameInfo[0])\n\(self.userNameInfo[1])\n\(self.userNameInfo[2])\n\(self.userNameInfo[3])"
         } else {
             self.infoLabel.text = "\(self.passwordInfo[0])\n\(self.passwordInfo[1])"
@@ -84,19 +84,20 @@ class SA02LoginAndRegisterViewController: UIViewController, UITextFieldDelegate 
     //统计用户名字符数，规则是：中文占2字符、英文1字符
     func userNameStringCount(string: String) -> Int
     {
-        return (countElements(string.utf8) + string.utf16Count) / 2
+        return 0;
+//        return (countElements(string.utf8) + string.utf16Count) / 2
     }
 
     //program mark - UITextFieldDelegate
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        println("标记：\(textField.markedTextRange)")
+        print("标记：\(textField.markedTextRange)")
         self.hasUserNameChecked = false
         if string == "" {
             self.hasUserNameChecked = true
             return true
         }
 
-        let text = textField.text
+        let text = textField.text!
         if textField.markedTextRange == nil {
             if textField == self.userNameTextField {
                 self.hasUserNameChecked = true

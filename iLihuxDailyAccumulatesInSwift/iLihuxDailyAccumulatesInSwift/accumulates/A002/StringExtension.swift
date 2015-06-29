@@ -58,7 +58,7 @@ extension String {
     func printUnicode()
     {
         for unicode in self.unicodeScalars {
-            println(unicode.value)
+            print(unicode.value)
         }
     }
 }

@@ -24,11 +24,11 @@ class SA05PhotoView: UIView {
     func adjustImageViewFrame()
     {
         self.addSubview(self.imageView)
-        self.imageView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.imageView.translatesAutoresizingMaskIntoConstraints = false
         self.imageView.clipsToBounds = true
         self.imageView.contentMode = UIViewContentMode.ScaleAspectFill
-        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("|-10-[imageView]-10-|", options: NSLayoutFormatOptions.allZeros, metrics: nil, views: ["imageView": self.imageView]))
-        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-10-[imageView]-20-|", options: NSLayoutFormatOptions.allZeros, metrics: nil, views: ["imageView": self.imageView]))
+        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("|-10-[imageView]-10-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["imageView": self.imageView]))
+        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-10-[imageView]-20-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["imageView": self.imageView]))
         self.layoutIfNeeded()
     }
 }

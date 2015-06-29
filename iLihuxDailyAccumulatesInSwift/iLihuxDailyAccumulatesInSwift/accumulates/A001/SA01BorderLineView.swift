@@ -15,9 +15,9 @@ import UIKit
     override func layoutSubviews() {
         super.layoutSubviews()
         let layoutAttribute = self.isHorizontal ? NSLayoutAttribute.Height : NSLayoutAttribute.Width
-        for item in self.constraints() {
+        for item in self.constraints {
             let constraint = item as NSLayoutConstraint
-            if constraint.firstItem as UIView == self && constraint.firstAttribute == layoutAttribute {
+            if constraint.firstItem as! UIView == self && constraint.firstAttribute == layoutAttribute {
                 self.removeConstraint(constraint)
                 constraint.constant = 1 / UIScreen.mainScreen().scale
                 self.addConstraint(constraint)

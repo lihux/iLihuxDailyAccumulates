@@ -16,9 +16,9 @@ import UIKit
     {
         super.layoutSubviews()
         let layoutAttribute = self.isHorizontal ? NSLayoutAttribute.Height : NSLayoutAttribute.Width
-        for item in self.constraints() {
+        for item in self.constraints {
             let constraint = item as NSLayoutConstraint
-            if constraint.firstItem as UIView == self && constraint.firstAttribute == layoutAttribute && constraint.secondItem == nil {
+            if constraint.firstItem as! UIView == self && constraint.firstAttribute == layoutAttribute && constraint.secondItem == nil {
                 self.removeConstraint(constraint)
                 constraint.constant = 1 / UIScreen.mainScreen().scale
                 self.addConstraint(constraint)

@@ -10,7 +10,7 @@ import UIKit
 
 class SA05PhotoWallLayer: CALayer {
     
-    override func addSublayer(layer: CALayer!) {
+    override func addSublayer(layer: CALayer) {
         layer.position = self.randomPosition()
         super.addSublayer(layer)
     }

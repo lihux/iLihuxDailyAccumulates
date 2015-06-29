@@ -20,7 +20,7 @@ import UIKit
         self.addObserverForImageChange()
     }
 
-    override init(image: UIImage!) {
+    override init(image: UIImage?) {
         super.init(image: image)
         self.addObserverForImageChange()
     }
@@ -29,10 +29,10 @@ import UIKit
         self.addObserver(self, forKeyPath: "image", options: NSKeyValueObservingOptions.New, context: nil)
     }
 
-    override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [NSObject : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         if keyPath == "image" {
-            if let image = change[NSKeyValueChangeNewKey] as? UIImage {
-                println("我靠，进来了")
+            if let image = change![NSKeyValueChangeNewKey] as? UIImage {
+                print("我靠，进来了")
                 image.resizableImageWithCapInsets(UIEdgeInsets(top: 10, left: 10, bottom: 20, right: 10))
             }
         }

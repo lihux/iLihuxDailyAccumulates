@@ -41,7 +41,7 @@ class SLHMasterTableViewController: UITableViewController {
         if let temp = tempArray {
             var tempAccumulates = [SAccumulate]()
             for item in temp {
-                let dictionary = item as Dictionary<String, String>
+                let dictionary = item as! Dictionary<String, String>
                 let title = dictionary["title"]
                 let content = dictionary["content"]
                 let storyboardID = dictionary["storyboardID"]
@@ -70,7 +70,7 @@ class SLHMasterTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell!
         let accumulate = self.accumulates[indexPath.row]
         cell.textLabel?.text = accumulate.title
         return cell
