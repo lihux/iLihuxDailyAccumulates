@@ -8,12 +8,6 @@
 
 #import "OA05CustomOperation.h"
 
-@interface OA05CustomOperation ()
-
-@property (nonatomic, strong) NSString* name;
-
-@end
-
 @implementation OA05CustomOperation
 
 - (instancetype)initWithName:(NSString *)name

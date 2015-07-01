@@ -35,7 +35,6 @@
 
 - (IBAction)didTapOnReadButton:(id)sender {
     if (self.archivedData) {
-        OA04ArchivedObject *object = [NSKeyedUnarchiver unarchiveObjectWithData:self.archivedData];
 //        NSLog(@"\n\nunarchive之后：%@", object);
 
         OA04ArchivedObject *objectFromFile = [NSKeyedUnarchiver unarchiveObjectWithFile:@"happy.birthday"];
