@@ -9,5 +9,6 @@
 	<string>5. dispatch_queue的基本使用</string>
 	<string>6. dispatch_group的基本使用</string>
 	<string>7. dispatch_source的基本使用</string>
+	<string>8. Idle time notification的基本使用</string>
 </array>
 </plist>

@@ -43,6 +43,7 @@
 		6DE967A01A371D4300436817 /* iLihuxDailyAccumulatesInOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9679F1A371D4300436817 /* iLihuxDailyAccumulatesInOCTests.m */; };
 		6DE967DA1A371FD900436817 /* OLHMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE967D91A371FD900436817 /* OLHMasterTableViewController.m */; };
 		6DE967DC1A37211600436817 /* OAccumulates.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DE967DB1A37211600436817 /* OAccumulates.plist */; };
+		9CEA9E171B441E3500075C66 /* OA09NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA9E161B441E3500075C66 /* OA09NotificationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,7 +124,9 @@
 		6DE9679F1A371D4300436817 /* iLihuxDailyAccumulatesInOCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iLihuxDailyAccumulatesInOCTests.m; sourceTree = "<group>"; };
 		6DE967D81A371FD900436817 /* OLHMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLHMasterTableViewController.h; sourceTree = "<group>"; };
 		6DE967D91A371FD900436817 /* OLHMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLHMasterTableViewController.m; sourceTree = "<group>"; };
-		6DE967DB1A37211600436817 /* OAccumulates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OAccumulates.plist; sourceTree = "<group>"; };
+		6DE967DB1A37211600436817 /* OAccumulates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = OAccumulates.plist; path = accumulates/OAccumulates.plist; sourceTree = "<group>"; };
+		9CEA9E151B441E3500075C66 /* OA09NotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA09NotificationViewController.h; sourceTree = "<group>"; };
+		9CEA9E161B441E3500075C66 /* OA09NotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA09NotificationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +222,8 @@
 		6D5A834E1A4A3CFE001DC86C /* OA09 */ = {
 			isa = PBXGroup;
 			children = (
+				9CEA9E151B441E3500075C66 /* OA09NotificationViewController.h */,
+				9CEA9E161B441E3500075C66 /* OA09NotificationViewController.m */,
 			);
 			path = OA09;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 				6DE967D91A371FD900436817 /* OLHMasterTableViewController.m */,
 				6DD1C8AB1A41172700F8E12C /* OAccumulate.h */,
 				6DD1C8AC1A41172700F8E12C /* OAccumulate.m */,
+				6DE967DB1A37211600436817 /* OAccumulates.plist */,
 				6DE967D71A371FAD00436817 /* accumulates */,
 				6DE967871A371D4300436817 /* AppDelegate.h */,
 				6DE967881A371D4300436817 /* AppDelegate.m */,
@@ -365,7 +371,6 @@
 				6D8BAA741A37C9F700CDBA33 /* A001 */,
 				6D8BAA771A37C9F700CDBA33 /* A002 */,
 				6D8BAA781A37C9F700CDBA33 /* A003 */,
-				6DE967DB1A37211600436817 /* OAccumulates.plist */,
 			);
 			path = accumulates;
 			sourceTree = "<group>";
@@ -487,6 +492,7 @@
 				6D8FEC361A65FEE000F23585 /* OA06ChildViewViewController.m in Sources */,
 				6DD1C8AD1A41172700F8E12C /* OAccumulate.m in Sources */,
 				6DB068091A7140BD0029C8E6 /* OA08LayerAnimationViewController.m in Sources */,
+				9CEA9E171B441E3500075C66 /* OA09NotificationViewController.m in Sources */,
 				6DE967861A371D4300436817 /* main.m in Sources */,
 				6D31B4F91A6CD2860011E6C0 /* OA07CoreAnimationViewController.m in Sources */,
 				6D9901231A64A78F009A57AF /* OA06TouchLogView.m in Sources */,

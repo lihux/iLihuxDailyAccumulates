@@ -36,9 +36,9 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>05GCD、Operation多线程学习</string>
+		<string>05MultiThreading多线程学习</string>
 		<key>content</key>
-		<string>05GCD、Operation多线程学习</string>
+		<string>05MultiThreading多线程学习</string>
 		<key>storyboardID</key>
 		<string>OA05GCDViewController</string>
 	</dict>
@@ -65,6 +65,14 @@
 		<string>08Layer可交互动画的学习</string>
 		<key>storyboardID</key>
 		<string>OA08LayerAnimationViewController</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>09Notification通知的高级使用</string>
+		<key>content</key>
+		<string>09Notification通知的高级使用</string>
+		<key>storyboardID</key>
+		<string>OA09NotificationViewController</string>
 	</dict>
 </array>
 </plist>

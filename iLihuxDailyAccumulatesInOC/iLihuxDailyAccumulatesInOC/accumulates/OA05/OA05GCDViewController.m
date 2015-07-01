@@ -191,6 +191,9 @@ const CGFloat kAnimationDuration = 0.25;
             case 6:
                 [self taskForLearningDispatchSource];
                 break;
+            case 7:
+                [self taskForLearningIdleTimeNofitication];
+                break;
 
             default:
                 break;
@@ -334,6 +337,18 @@ const CGFloat kAnimationDuration = 0.25;
         [self appendStringToResultTextViewWithString:@"啊，时间去哪儿了呢！"];
     });
     dispatch_resume(self.timer);
+}
+
+//8. idle-time notifications
+- (void)taskForLearningIdleTimeNofitication
+{
+    NSNotificationQueue *queue = [NSNotificationQueue defaultQueue];
+    [queue enqueueNotification:[NSNotification notificationWithName:@"kLihuxIdleTimeNotification" object:nil userInfo:@{@"kgod": @"小强，你妈喊你回家吃饭了！"}] postingStyle:NSPostASAP];
+}
+
+- (void)receiveIdleTimeNotification:(NSNotification *)notification
+{
+    [self appendStringToResultTextViewWithString:[NSString stringWithFormat:@"闲时通知到达了，传递的信息是：%@", notification.userInfo]];
 }
 
 @end
