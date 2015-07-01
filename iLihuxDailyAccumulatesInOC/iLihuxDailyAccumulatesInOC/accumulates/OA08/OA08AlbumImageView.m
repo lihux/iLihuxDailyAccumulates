@@ -34,7 +34,7 @@
 {
     if (context == nil) {
         if ([keyPath isEqualToString:@"image"]) {
-            [self setValue:[self.image resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 20, 10)] forKey:@"image"];
+            [self setValue:[NSValue valueWithUIEdgeInsets:UIEdgeInsetsMake(10, 10, 20, 10)] forKeyPath:@"image.capInsets"];
         }
     }
 }
