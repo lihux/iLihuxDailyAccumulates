@@ -505,6 +505,25 @@
             </objects>
             <point key="canvasLocation" x="666.5" y="1756.5"/>
         </scene>
+        <!--Web Image View Controller-->
+        <scene sceneID="SIp-Hx-Rn4">
+            <objects>
+                <viewController storyboardIdentifier="OA10SDWebImageViewController" id="uTM-yz-Fvq" customClass="OA10SDWebImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x60-ET-1vH"/>
+                        <viewControllerLayoutGuide type="bottom" id="TEm-5Q-DRx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wUh-lf-pCC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="izs-gM-HQJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1098.5" y="1756.5"/>
+        </scene>
         <!--Event View Controller-->
         <scene sceneID="J2N-uN-QQ1">
             <objects>

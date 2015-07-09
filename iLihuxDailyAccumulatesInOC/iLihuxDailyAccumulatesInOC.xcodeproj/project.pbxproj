@@ -44,6 +44,7 @@
 		6DE967DA1A371FD900436817 /* OLHMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE967D91A371FD900436817 /* OLHMasterTableViewController.m */; };
 		6DE967DC1A37211600436817 /* OAccumulates.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DE967DB1A37211600436817 /* OAccumulates.plist */; };
 		9CEA9E171B441E3500075C66 /* OA09NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA9E161B441E3500075C66 /* OA09NotificationViewController.m */; };
+		9CF2E7661B44D91D00CFA63F /* OA10SDWebImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF2E7651B44D91D00CFA63F /* OA10SDWebImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,8 @@
 		6DE967DB1A37211600436817 /* OAccumulates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = OAccumulates.plist; path = accumulates/OAccumulates.plist; sourceTree = "<group>"; };
 		9CEA9E151B441E3500075C66 /* OA09NotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA09NotificationViewController.h; sourceTree = "<group>"; };
 		9CEA9E161B441E3500075C66 /* OA09NotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA09NotificationViewController.m; sourceTree = "<group>"; };
+		9CF2E7641B44D91D00CFA63F /* OA10SDWebImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA10SDWebImageViewController.h; sourceTree = "<group>"; };
+		9CF2E7651B44D91D00CFA63F /* OA10SDWebImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA10SDWebImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +234,8 @@
 		6D5A834F1A4A3CFE001DC86C /* OA10 */ = {
 			isa = PBXGroup;
 			children = (
+				9CF2E7641B44D91D00CFA63F /* OA10SDWebImageViewController.h */,
+				9CF2E7651B44D91D00CFA63F /* OA10SDWebImageViewController.m */,
 			);
 			path = OA10;
 			sourceTree = "<group>";
@@ -495,6 +500,7 @@
 				9CEA9E171B441E3500075C66 /* OA09NotificationViewController.m in Sources */,
 				6DE967861A371D4300436817 /* main.m in Sources */,
 				6D31B4F91A6CD2860011E6C0 /* OA07CoreAnimationViewController.m in Sources */,
+				9CF2E7661B44D91D00CFA63F /* OA10SDWebImageViewController.m in Sources */,
 				6D9901231A64A78F009A57AF /* OA06TouchLogView.m in Sources */,
 				6DE61AF11A3EA8F70035C076 /* OLHTouchEventTableViewCell.m in Sources */,
 				6D7AEFFB1A63568100ACBD85 /* OA06EventViewController.m in Sources */,
