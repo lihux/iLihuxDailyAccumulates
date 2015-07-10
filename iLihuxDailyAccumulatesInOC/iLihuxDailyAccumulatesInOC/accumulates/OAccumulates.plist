@@ -80,7 +80,7 @@
 		<key>content</key>
 		<string>10SDWebImage第三方库的使用</string>
 		<key>storyboardID</key>
-		<string>OA09NotificationViewController</string>
+		<string>OA10SDWebImageViewController</string>
 	</dict>
 </array>
 </plist>
