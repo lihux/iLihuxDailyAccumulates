@@ -11,6 +11,7 @@
 @interface OA10SDWebImageViewController ()
 
 @property (nonatomic, strong) NSURLSession *session;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -23,12 +24,25 @@
 
 - (void)loadImagesFromAliYunServer
 {
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://120.24.70.94:4000/superCarPhotos/superCar1.jpg"]];
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    NSURLSessionTask *task = [session dataTaskWithURL:imageURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://120.24.70.94:4000/superCarPhotos/superCar1.jpg"]];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        self.imageView.image = [UIImage imageWithData:data];
         NSLog(@"%@", data);
     }];
-    [task resume];
+    
+//    request.HTTPMethod = @"get";
+//    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+//    NSURLSessionTask *sessionTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+//        NSLog(@"%@", data);
+//    }];
+//    [sessionTask resume];
+//    NSMutableURLRequest *request = [nsmuta requestWithURL:[NSURL URLWithString:@"http://120.24.70.94:4000/superCarPhotos/superCar1.jpg"]];
+//    request.HTTPMethod = @"get";
+//    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+//    NSURLSessionTask *task = [session dataTaskWithURL:imageURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+//        NSLog(@"%@", data);
+//    }];
+//    [task resume];
 //    [self.session dataTaskWithURL:imageURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
 //        NSLog(@"收到数据：%@, \n********************\n response = %@ \n\n\n error = %@", data, response, error);
 //    }];
