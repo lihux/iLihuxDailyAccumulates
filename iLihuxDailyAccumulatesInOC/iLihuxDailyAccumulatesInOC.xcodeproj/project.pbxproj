@@ -43,6 +43,7 @@
 		6DE967A01A371D4300436817 /* iLihuxDailyAccumulatesInOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9679F1A371D4300436817 /* iLihuxDailyAccumulatesInOCTests.m */; };
 		6DE967DA1A371FD900436817 /* OLHMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE967D91A371FD900436817 /* OLHMasterTableViewController.m */; };
 		6DE967DC1A37211600436817 /* OAccumulates.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DE967DB1A37211600436817 /* OAccumulates.plist */; };
+		9C621C021B5553E9002A0D3E /* OA11AllAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C621C011B5553E9002A0D3E /* OA11AllAnimationViewController.m */; };
 		9CEA9E171B441E3500075C66 /* OA09NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA9E161B441E3500075C66 /* OA09NotificationViewController.m */; };
 		9CF2E7661B44D91D00CFA63F /* OA10SDWebImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF2E7651B44D91D00CFA63F /* OA10SDWebImageViewController.m */; };
 /* End PBXBuildFile section */
@@ -126,6 +127,8 @@
 		6DE967D81A371FD900436817 /* OLHMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLHMasterTableViewController.h; sourceTree = "<group>"; };
 		6DE967D91A371FD900436817 /* OLHMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLHMasterTableViewController.m; sourceTree = "<group>"; };
 		6DE967DB1A37211600436817 /* OAccumulates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = OAccumulates.plist; path = accumulates/OAccumulates.plist; sourceTree = "<group>"; };
+		9C621C001B5553E9002A0D3E /* OA11AllAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA11AllAnimationViewController.h; sourceTree = "<group>"; };
+		9C621C011B5553E9002A0D3E /* OA11AllAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA11AllAnimationViewController.m; sourceTree = "<group>"; };
 		9CEA9E151B441E3500075C66 /* OA09NotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA09NotificationViewController.h; sourceTree = "<group>"; };
 		9CEA9E161B441E3500075C66 /* OA09NotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA09NotificationViewController.m; sourceTree = "<group>"; };
 		9CF2E7641B44D91D00CFA63F /* OA10SDWebImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA10SDWebImageViewController.h; sourceTree = "<group>"; };
@@ -243,6 +246,8 @@
 		6D5A83501A4A3CFE001DC86C /* OA11 */ = {
 			isa = PBXGroup;
 			children = (
+				9C621C001B5553E9002A0D3E /* OA11AllAnimationViewController.h */,
+				9C621C011B5553E9002A0D3E /* OA11AllAnimationViewController.m */,
 			);
 			path = OA11;
 			sourceTree = "<group>";
@@ -493,6 +498,7 @@
 				6DE61AF71A3EBC340035C076 /* OLHTouchView.m in Sources */,
 				6D31B5081A6CD4D00011E6C0 /* OA07BasicAnimation.m in Sources */,
 				6DE967DA1A371FD900436817 /* OLHMasterTableViewController.m in Sources */,
+				9C621C021B5553E9002A0D3E /* OA11AllAnimationViewController.m in Sources */,
 				6D8B63221A5E0F9A00735E2E /* OA05GCDViewController.m in Sources */,
 				6D8FEC361A65FEE000F23585 /* OA06ChildViewViewController.m in Sources */,
 				6DD1C8AD1A41172700F8E12C /* OAccumulate.m in Sources */,

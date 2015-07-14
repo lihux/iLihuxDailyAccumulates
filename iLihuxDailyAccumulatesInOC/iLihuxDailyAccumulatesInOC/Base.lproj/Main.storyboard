@@ -544,6 +544,25 @@
             </objects>
             <point key="canvasLocation" x="1098.5" y="1756.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="EUf-7X-PAM">
+            <objects>
+                <viewController storyboardIdentifier="OA11AllAnimationViewController" id="OK0-gp-4Q4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e2P-IZ-Jvi"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Zk-rT-Tbs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l09-KF-9wW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jYh-fq-fJ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1536.5" y="1756.5"/>
+        </scene>
         <!--Event View Controller-->
         <scene sceneID="J2N-uN-QQ1">
             <objects>

@@ -82,5 +82,13 @@
 		<key>storyboardID</key>
 		<string>OA10SDWebImageViewController</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>11动画合集</string>
+		<key>content</key>
+		<string>11动画合集</string>
+		<key>storyboardID</key>
+		<string>OA11AllAnimationViewController</string>
+	</dict>
 </array>
 </plist>
