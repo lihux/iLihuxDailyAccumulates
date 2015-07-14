@@ -9,11 +9,11 @@
 #import "OLHMasterTableViewController.h"
 
 #import "OAccumulate.h"
-#import "Utilities.h"
+#import "OAccumulatesManager.h"
 
 @interface OLHMasterTableViewController ()
 
-@property (nonatomic, strong) NSArray *accumulates;
+@property (nonatomic, strong) OAccumulatesManager *accumulatesManager;
 
 @end
 
@@ -27,7 +27,7 @@
 
 - (void)loadAccumulatesFromPlist
 {
-    self.accumulates = [Utilities loadAccumulatesFromPlistWithPlistFileName:@"OAccumulates"];
+    self.accumulatesManager = [[OAccumulatesManager alloc] initWithPlistFileName:@"OAccumulates"];
     [self.tableView reloadData];
 }
 
@@ -42,19 +42,19 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.accumulates.count;
+    return self.accumulatesManager.accumulates.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"accumulateCell" forIndexPath:indexPath];
-    OAccumulate *accumulate = self.accumulates[indexPath.row];
+    OAccumulate *accumulate = self.accumulatesManager.accumulates[indexPath.row];
     cell.textLabel.text = accumulate.title;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    OAccumulate *accumulate = self.accumulates[indexPath.row];
+    OAccumulate *accumulate = self.accumulatesManager.accumulates[indexPath.row];
     UIViewController *accumulateViewController = [self.storyboard instantiateViewControllerWithIdentifier:accumulate.storyboardID];
     accumulateViewController.title = accumulate.title;
     [self.navigationController pushViewController:accumulateViewController animated:YES];
