@@ -9,6 +9,7 @@
 #import "OLHMasterTableViewController.h"
 
 #import "OAccumulate.h"
+#import "Utilities.h"
 
 @interface OLHMasterTableViewController ()
 
@@ -26,18 +27,7 @@
 
 - (void)loadAccumulatesFromPlist
 {
-    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"OAccumulates" ofType:@"plist"];
-    NSArray *tempArray = [NSArray arrayWithContentsOfFile:plistPath];
-    if (tempArray.count > 0) {
-        NSMutableArray *tempAccumulates = [NSMutableArray array];
-        for (NSDictionary* dic in tempArray) {
-            NSString *title = dic[@"title"];
-            NSString *content = dic[@"content"];
-            NSString *storyboardID = dic[@"storyboardID"];
-            [tempAccumulates addObject:[[OAccumulate alloc] initWith:title content:content storyboardID:storyboardID]];
-        }
-        self.accumulates = [NSArray arrayWithArray:tempAccumulates];
-    }
+    self.accumulates = [Utilities loadAccumulatesFromPlistWithPlistFileName:@"OAccumulates"];
     [self.tableView reloadData];
 }
 
