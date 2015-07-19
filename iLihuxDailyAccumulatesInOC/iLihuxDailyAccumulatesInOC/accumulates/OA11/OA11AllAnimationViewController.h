@@ -1,13 +1,13 @@
 //
-//  OA11AllAnimationViewController.h
+//  OA11AllAnimationTableViewController.h
 //  iLihuxDailyAccumulatesInOC
 //
-//  Created by lihui on 15/7/14.
+//  Created by lihui on 15/7/15.
 //  Copyright (c) 2015年 lihux. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "OAAccumulateTableViewController.h"
 
-@interface OA11AllAnimationViewController : UIViewController
+@interface OA11AllAnimationViewController : OAAccumulateTableViewController
 
 @end

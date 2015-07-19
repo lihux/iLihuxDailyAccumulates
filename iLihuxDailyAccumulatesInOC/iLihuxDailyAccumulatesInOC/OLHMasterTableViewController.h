@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OLHMasterTableViewController : UITableViewController
+#import "OAAccumulateTableViewController.h"
+
+@interface OLHMasterTableViewController : OAAccumulateTableViewController
 
 @end

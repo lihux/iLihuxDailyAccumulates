@@ -544,25 +544,6 @@
             </objects>
             <point key="canvasLocation" x="1098.5" y="1756.5"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="EUf-7X-PAM">
-            <objects>
-                <viewController storyboardIdentifier="OA11AllAnimationViewController" id="OK0-gp-4Q4" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="e2P-IZ-Jvi"/>
-                        <viewControllerLayoutGuide type="bottom" id="0Zk-rT-Tbs"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="l09-KF-9wW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jYh-fq-fJ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1536.5" y="1756.5"/>
-        </scene>
         <!--Event View Controller-->
         <scene sceneID="J2N-uN-QQ1">
             <objects>
@@ -844,6 +825,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pKq-bX-cXm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="666.5" y="306.5"/>
+        </scene>
+        <!--日积月累-->
+        <scene sceneID="6Nf-Id-SbZ">
+            <objects>
+                <tableViewController storyboardIdentifier="OA11AllAnimationViewController" title="日积月累" id="AMJ-c7-9S6" customClass="OA11AllAnimationViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xcS-fl-FYg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="accumulateCell" id="6w1-JW-RCi">
+                                <rect key="frame" x="0.0" y="86" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6w1-JW-RCi" id="FEJ-2U-WTi">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="AMJ-c7-9S6" id="Q1g-nJ-az7"/>
+                            <outlet property="delegate" destination="AMJ-c7-9S6" id="xFZ-Xt-UQt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="日积月累" id="KNI-Ak-n94"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jEX-3k-4ck" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1536.5" y="1756.5"/>
         </scene>
     </scenes>
     <resources>

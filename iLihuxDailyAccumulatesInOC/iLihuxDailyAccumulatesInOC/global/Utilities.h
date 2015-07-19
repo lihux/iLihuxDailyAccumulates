@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@class UIViewController;
+@class OAccumulate;
+
 @interface Utilities : NSObject
 
 + (NSArray *)loadAccumulatesFromPlistWithPlistFileName:(NSString *)fileName;
++ (UIViewController *)viewControllerForAccumulate:(OAccumulate *)accumulate storyboardName:(NSString *)storyboardName;
 
 @end

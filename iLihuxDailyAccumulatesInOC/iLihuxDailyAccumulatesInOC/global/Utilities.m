@@ -9,6 +9,7 @@
 #import "Utilities.h"
 
 #import "OAccumulate.h"
+#import <UIKit/UIKit.h>
 
 @implementation Utilities
 
@@ -30,5 +31,11 @@
     return accumulates;
 }
 
++ (UIViewController *)viewControllerForAccumulate:(OAccumulate *)accumulate storyboardName:(NSString *)storyboardName
+{
+    UIViewController *accumulateViewController = [[UIStoryboard storyboardWithName:storyboardName bundle: nil] instantiateViewControllerWithIdentifier:accumulate.storyboardID];
+    accumulateViewController.title = accumulate.title;
+    return accumulateViewController;
+}
 
 @end
