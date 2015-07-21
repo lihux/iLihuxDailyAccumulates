@@ -8,8 +8,6 @@
 
 #import "LHPullToRefreshView.h"
 
-static const CGFloat kPullToRefreshViewDefaultHeight = 40;
-
 typedef enum : NSUInteger {
     LHPullToRefreshViewStateNormal,
     LHPullToRefreshViewStateDragging,
@@ -24,57 +22,9 @@ typedef enum : NSUInteger {
 
 @implementation LHPullToRefreshView
 
-- (void)setScrollView:(UIScrollView *)scrollView
+- (CGFloat)refreshViewHeight
 {
-    self.frame = CGRectMake(0, -kPullToRefreshViewDefaultHeight, scrollView.bounds.size.width, kPullToRefreshViewDefaultHeight);
-    self.backgroundColor = [UIColor greenColor];
-    _scrollView = scrollView;
-    [self observeScrollView];
-}
-
-- (void)willMoveToSuperview:(UIView *)newSuperview
-{
-    [super willMoveToSuperview:newSuperview];
-    if (!newSuperview) {
-        [self.scrollView removeObserver:self forKeyPath:@"contentOffset"];
-    } else if (newSuperview && [newSuperview isKindOfClass:[UIScrollView class]]) {
-        self.scrollView = (UIScrollView *)newSuperview;
-    }
-}
-
-- (void) observeScrollView
-{
-    [self.scrollView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-    if ([keyPath isEqualToString:@"contentOffset"]) {
-        [self scrollViewDidScroll:self.scrollView];
-    }
-}
-
-- (CGFloat)contentOffsetYForScrollView:(UIScrollView *)scrollView
-{
-    return scrollView.contentOffset.y + self.scrollView.contentInset.top;
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    CGFloat y = [self contentOffsetYForScrollView:scrollView];
-    if (y < -1 * kPullToRefreshViewDefaultHeight) {
-        NSLog(@"你太过分了啊！！！");
-    }
-}
-
-- (void)closePullToRefresh
-{
-    [self.scrollView removeObserver:self forKeyPath:@"contentOffset"];
-}
-
-- (void)dealloc
-{
-    NSLog(@"正宗的开始释放啦");
+    return 50;
 }
 
 @end

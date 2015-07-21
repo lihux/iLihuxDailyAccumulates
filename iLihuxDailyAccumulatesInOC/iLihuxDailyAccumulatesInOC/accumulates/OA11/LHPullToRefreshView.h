@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LHPullToRefreshView : UIView
+@protocol LHPullToRefreshViewPrococal <NSObject>
 
-- (void)closePullToRefresh;
+@property (nonatomic, assign) CGFloat refreshViewHeight;
+
+
+@end
+
+@interface LHPullToRefreshView : UIView <LHPullToRefreshViewPrococal>
+
+@property (nonatomic, assign) CGFloat refreshViewHeight;
 
 @end

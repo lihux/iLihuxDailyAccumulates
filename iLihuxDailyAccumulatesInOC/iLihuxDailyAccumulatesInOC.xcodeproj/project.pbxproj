@@ -49,12 +49,11 @@
 		9C621C081B555596002A0D3E /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C621C071B555596002A0D3E /* Utilities.m */; };
 		9C621C0B1B555853002A0D3E /* OAccumulate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C621C0A1B555853002A0D3E /* OAccumulate.m */; };
 		9C621C0E1B555880002A0D3E /* OAccumulatesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C621C0D1B555880002A0D3E /* OAccumulatesManager.m */; };
-		9CE8FD0F1B59DE1800C49326 /* LHPullToRefreshView+Dealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE8FD0E1B59DE1800C49326 /* LHPullToRefreshView+Dealloc.m */; };
-		9CE8FD121B59DE6000C49326 /* LHPullToRefreshView+DDealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE8FD111B59DE6000C49326 /* LHPullToRefreshView+DDealloc.m */; };
 		9CEA9E171B441E3500075C66 /* OA09NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA9E161B441E3500075C66 /* OA09NotificationViewController.m */; };
 		9CECDCC71B58D04400291F45 /* OA11PullToRefreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CECDCC61B58D04400291F45 /* OA11PullToRefreshViewController.m */; };
 		9CECDCCA1B58DBDB00291F45 /* LHPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CECDCC91B58DBDB00291F45 /* LHPullToRefreshView.m */; };
 		9CF2E7661B44D91D00CFA63F /* OA10SDWebImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF2E7651B44D91D00CFA63F /* OA10SDWebImageViewController.m */; };
+		9CF304061B5C897900FDD6C1 /* UIScrollView+LHPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF304051B5C897900FDD6C1 /* UIScrollView+LHPullToRefresh.m */; };
 		9CF72DFA1B55DF9B00C2FFB5 /* OA11.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF72DF91B55DF9B00C2FFB5 /* OA11.storyboard */; };
 		9CF72DFC1B55DFFF00C2FFB5 /* OA11.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CF72DFB1B55DFFF00C2FFB5 /* OA11.plist */; };
 /* End PBXBuildFile section */
@@ -150,10 +149,6 @@
 		9C621C0A1B555853002A0D3E /* OAccumulate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAccumulate.m; path = global/OAccumulate.m; sourceTree = "<group>"; };
 		9C621C0C1B555880002A0D3E /* OAccumulatesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAccumulatesManager.h; path = global/OAccumulatesManager.h; sourceTree = "<group>"; };
 		9C621C0D1B555880002A0D3E /* OAccumulatesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAccumulatesManager.m; path = global/OAccumulatesManager.m; sourceTree = "<group>"; };
-		9CE8FD0D1B59DE1800C49326 /* LHPullToRefreshView+Dealloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LHPullToRefreshView+Dealloc.h"; sourceTree = "<group>"; };
-		9CE8FD0E1B59DE1800C49326 /* LHPullToRefreshView+Dealloc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LHPullToRefreshView+Dealloc.m"; sourceTree = "<group>"; };
-		9CE8FD101B59DE6000C49326 /* LHPullToRefreshView+DDealloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LHPullToRefreshView+DDealloc.h"; sourceTree = "<group>"; };
-		9CE8FD111B59DE6000C49326 /* LHPullToRefreshView+DDealloc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LHPullToRefreshView+DDealloc.m"; sourceTree = "<group>"; };
 		9CEA9E151B441E3500075C66 /* OA09NotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA09NotificationViewController.h; sourceTree = "<group>"; };
 		9CEA9E161B441E3500075C66 /* OA09NotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA09NotificationViewController.m; sourceTree = "<group>"; };
 		9CECDCC51B58D04400291F45 /* OA11PullToRefreshViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA11PullToRefreshViewController.h; sourceTree = "<group>"; };
@@ -162,6 +157,8 @@
 		9CECDCC91B58DBDB00291F45 /* LHPullToRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHPullToRefreshView.m; sourceTree = "<group>"; };
 		9CF2E7641B44D91D00CFA63F /* OA10SDWebImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA10SDWebImageViewController.h; sourceTree = "<group>"; };
 		9CF2E7651B44D91D00CFA63F /* OA10SDWebImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA10SDWebImageViewController.m; sourceTree = "<group>"; };
+		9CF304041B5C897900FDD6C1 /* UIScrollView+LHPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+LHPullToRefresh.h"; sourceTree = "<group>"; };
+		9CF304051B5C897900FDD6C1 /* UIScrollView+LHPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+LHPullToRefresh.m"; sourceTree = "<group>"; };
 		9CF72DF91B55DF9B00C2FFB5 /* OA11.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OA11.storyboard; sourceTree = "<group>"; };
 		9CF72DFB1B55DFFF00C2FFB5 /* OA11.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OA11.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -452,10 +449,8 @@
 				9CECDCC61B58D04400291F45 /* OA11PullToRefreshViewController.m */,
 				9CECDCC81B58DBDB00291F45 /* LHPullToRefreshView.h */,
 				9CECDCC91B58DBDB00291F45 /* LHPullToRefreshView.m */,
-				9CE8FD101B59DE6000C49326 /* LHPullToRefreshView+DDealloc.h */,
-				9CE8FD111B59DE6000C49326 /* LHPullToRefreshView+DDealloc.m */,
-				9CE8FD0D1B59DE1800C49326 /* LHPullToRefreshView+Dealloc.h */,
-				9CE8FD0E1B59DE1800C49326 /* LHPullToRefreshView+Dealloc.m */,
+				9CF304041B5C897900FDD6C1 /* UIScrollView+LHPullToRefresh.h */,
+				9CF304051B5C897900FDD6C1 /* UIScrollView+LHPullToRefresh.m */,
 			);
 			name = "OA11-6";
 			sourceTree = "<group>";
@@ -588,14 +583,13 @@
 				9CF2E7661B44D91D00CFA63F /* OA10SDWebImageViewController.m in Sources */,
 				6D9901231A64A78F009A57AF /* OA06TouchLogView.m in Sources */,
 				6DE61AF11A3EA8F70035C076 /* OLHTouchEventTableViewCell.m in Sources */,
+				9CF304061B5C897900FDD6C1 /* UIScrollView+LHPullToRefresh.m in Sources */,
 				9C0C8F3A1B55FC50003FC977 /* OA11AllAnimationViewController.m in Sources */,
 				6D7AEFFB1A63568100ACBD85 /* OA06EventViewController.m in Sources */,
-				9CE8FD121B59DE6000C49326 /* LHPullToRefreshView+DDealloc.m in Sources */,
 				6D5A83551A4A3D86001DC86C /* OA04ArchiveViewController.m in Sources */,
 				6DE61AE11A3E64FA0035C076 /* OA02KVCViewController.m in Sources */,
 				6DE61AE41A3E6E190035C076 /* OLHKVCPeople.m in Sources */,
 				9C621C0E1B555880002A0D3E /* OAccumulatesManager.m in Sources */,
-				9CE8FD0F1B59DE1800C49326 /* LHPullToRefreshView+Dealloc.m in Sources */,
 				6DB0680C1A7140F90029C8E6 /* OA08AlbumImageView.m in Sources */,
 				9C0C8F3D1B5600CF003FC977 /* OA11TabbarTransitionViewController.m in Sources */,
 				6D8BAA791A37C9F700CDBA33 /* OA01InputConstraintViewController.m in Sources */,

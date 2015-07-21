@@ -175,17 +175,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="acb-Xf-Eui">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="acb-Xf-Eui">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SBq-cy-YN4" userLabel="content view">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBq-cy-YN4" userLabel="content view">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <color key="backgroundColor" red="0.4823529412" green="0.83529411760000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="SBq-cy-YN4" secondAttribute="bottom" id="37e-xp-Wp9"/>
+                                    <constraint firstItem="SBq-cy-YN4" firstAttribute="leading" secondItem="acb-Xf-Eui" secondAttribute="leading" id="N35-RR-fLc"/>
+                                    <constraint firstAttribute="trailing" secondItem="SBq-cy-YN4" secondAttribute="trailing" id="Psr-kV-Uwk"/>
+                                    <constraint firstItem="SBq-cy-YN4" firstAttribute="top" secondItem="acb-Xf-Eui" secondAttribute="top" id="YNb-1n-XN7"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SBq-cy-YN4" firstAttribute="height" secondItem="rm7-VF-8ZX" secondAttribute="height" id="5Cd-FD-WtZ"/>
+                            <constraint firstItem="yrB-hA-5Il" firstAttribute="top" secondItem="acb-Xf-Eui" secondAttribute="bottom" id="6d8-Ky-StV"/>
+                            <constraint firstItem="SBq-cy-YN4" firstAttribute="width" secondItem="rm7-VF-8ZX" secondAttribute="width" id="ISK-EU-BOC"/>
+                            <constraint firstAttribute="trailing" secondItem="acb-Xf-Eui" secondAttribute="trailing" id="NUb-p0-tbG"/>
+                            <constraint firstItem="acb-Xf-Eui" firstAttribute="top" secondItem="rm7-VF-8ZX" secondAttribute="top" id="pTN-mY-CUw"/>
+                            <constraint firstItem="acb-Xf-Eui" firstAttribute="leading" secondItem="rm7-VF-8ZX" secondAttribute="leading" id="qdA-iD-l6W"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
