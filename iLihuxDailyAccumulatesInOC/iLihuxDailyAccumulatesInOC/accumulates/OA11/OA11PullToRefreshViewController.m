@@ -15,6 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, strong) LHPullToRefreshView *refreshView;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 
 @end
 
@@ -44,7 +45,7 @@
             temp.backgroundColor = [UIColor greenColor];
             [temp removeFromSuperview];
             [self.scrollView addSubview:temp];
-            NSLog(@"我勒个去：%@", temp);
+//            NSLog(@"我勒个去：%@", temp);
         }
     }
 }
@@ -52,7 +53,8 @@
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    NSLog(@"滑动：%lf", scrollView.contentOffset.y + scrollView.contentInset.top);
+    NSLog(@"%@", self.scrollView.pullToRefreshView);
+//    NSLog(@"滑动：%lf", scrollView.contentOffset.y + scrollView.contentInset.top);
 }
 
 @end

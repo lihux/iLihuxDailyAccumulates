@@ -203,6 +203,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="contentView" destination="SBq-cy-YN4" id="5WV-tW-zAX"/>
                         <outlet property="scrollView" destination="acb-Xf-Eui" id="Q24-4i-bEX"/>
                     </connections>
                 </viewController>

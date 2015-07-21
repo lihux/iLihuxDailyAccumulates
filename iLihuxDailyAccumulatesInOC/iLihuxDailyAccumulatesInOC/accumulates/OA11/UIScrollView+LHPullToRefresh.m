@@ -38,7 +38,7 @@ static char kLHPullToRefreshView;
         if (self.constraints) {
             [self customRefreshViewUsingConstraint];
         } else {
-            [self customRefreshViewUsingAutoResizing];
+//            [self customRefreshViewUsingAutoResizing];
         }
     }
 }
@@ -47,6 +47,7 @@ static char kLHPullToRefreshView;
 {
     LHPullToRefreshView *refreshView = self.pullToRefreshView;
     refreshView.translatesAutoresizingMaskIntoConstraints = NO;
+    refreshView.backgroundColor = [UIColor redColor];
     UIView *contentView = [self realContentView];
     NSDictionary *views = NSDictionaryOfVariableBindings(refreshView, contentView);
     NSDictionary *metrics = @{@"kRefreshViewHeight": @50.0};
@@ -59,7 +60,7 @@ static char kLHPullToRefreshView;
                                                                          toItem:contentView
                                                                       attribute:NSLayoutAttributeTop
                                                                      multiplier:1.0 constant:0];
-        [refreshView addConstraint:constraint];
+        [self addConstraint:constraint];
     }
     [self setNeedsLayout];
 }
