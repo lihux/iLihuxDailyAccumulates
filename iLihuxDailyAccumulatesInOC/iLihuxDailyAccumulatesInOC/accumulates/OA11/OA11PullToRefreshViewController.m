@@ -11,7 +11,9 @@
 #import "LHPullToRefreshView.h"
 #import "UIScrollView+LHPullToRefresh.h"
 
-@interface OA11PullToRefreshViewController () <UIScrollViewDelegate>
+@interface OA11PullToRefreshViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, strong) LHPullToRefreshView *refreshView;
@@ -28,9 +30,7 @@
 
 - (void)configScrollView
 {
-    self.scrollView.delegate = self;
-    self.scrollView.superview.tag = 1000;
-    [self.scrollView addPullToRefreshWithBlock:^{
+    [self.tableView addPullToRefreshWithBlock:^{
         NSLog(@"下拉刷新进行中，我在干活，哈哈哈哈");
     }];
 }
@@ -45,7 +45,6 @@
             temp.backgroundColor = [UIColor greenColor];
             [temp removeFromSuperview];
             [self.scrollView addSubview:temp];
-//            NSLog(@"我勒个去：%@", temp);
         }
     }
 }
@@ -53,8 +52,23 @@
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    NSLog(@"%@", self.scrollView.pullToRefreshView);
+//    NSLog(@"%@", scrollView);
+//    NSLog(@"%@", self.tableView.pullToRefreshView);
 //    NSLog(@"滑动：%lf", scrollView.contentOffset.y + scrollView.contentInset.top);
+}
+
+#pragma mark - UITableViewDelegate
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"god"];
+    cell.textLabel.text = @"天蓬元帅";
+    return cell;
+}
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 20;
 }
 
 @end
