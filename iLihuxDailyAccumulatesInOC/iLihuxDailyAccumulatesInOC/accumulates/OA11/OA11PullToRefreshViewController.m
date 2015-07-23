@@ -65,6 +65,16 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //使用纯代码的方式测试下拉刷新view的布局是否有问题：
+    UITableViewController *tableViewController = [UITableViewController new];
+    [tableViewController.tableView addPullToRefreshWithBlock:^{
+        NSLog(@"我欲乘风归去");
+    }];
+    [self.navigationController pushViewController:tableViewController animated:YES];
+}
+
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

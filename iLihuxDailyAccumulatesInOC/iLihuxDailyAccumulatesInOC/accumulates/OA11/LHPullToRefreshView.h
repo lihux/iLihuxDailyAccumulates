@@ -19,4 +19,6 @@
 
 @property (nonatomic, assign) CGFloat refreshViewHeight;
 
+- (void)reframeRefreshView;
+
 @end
