@@ -14,10 +14,7 @@
 @interface OA11PullToRefreshViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, strong) LHPullToRefreshView *refreshView;
-@property (weak, nonatomic) IBOutlet UIView *contentView;
 
 @end
 
@@ -38,23 +35,6 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    for (UIView *view in self.scrollView.subviews) {
-        if ([view isKindOfClass:[UIImageView class]]) {
-            UIImageView *temp = (UIImageView *)view;
-            temp.alpha = 1;
-            temp.backgroundColor = [UIColor greenColor];
-            [temp removeFromSuperview];
-            [self.scrollView addSubview:temp];
-        }
-    }
-}
-
-#pragma mark - UIScrollViewDelegate
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-//    NSLog(@"%@", scrollView);
-//    NSLog(@"%@", self.tableView.pullToRefreshView);
-//    NSLog(@"滑动：%lf", scrollView.contentOffset.y + scrollView.contentInset.top);
 }
 
 #pragma mark - UITableViewDelegate
