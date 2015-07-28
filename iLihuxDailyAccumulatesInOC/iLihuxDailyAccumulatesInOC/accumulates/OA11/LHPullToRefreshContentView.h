@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import "LHPullToRefreshView.h"
+
 @interface LHPullToRefreshContentView : UIView
 
 @property (nonatomic, assign) BOOL loading;
 @property (nonatomic, strong) UILabel *infoLabel;
+@property (nonatomic, assign) LHPullToRefreshViewState pullToRefreshState;
 
 @end

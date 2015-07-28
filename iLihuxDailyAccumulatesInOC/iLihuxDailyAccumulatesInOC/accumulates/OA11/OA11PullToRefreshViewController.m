@@ -29,12 +29,11 @@
 
 - (void)configScrollView
 {
-//    [self.tableView addPullToRefreshWithActionHandler:^{
-//        [self insertRowAtTop];
-//        NSLog(@"下拉刷新进行中，我在干活，哈哈哈哈");
-//    }];
     [self.tableView addPullToRefreshWithBlock:^{
         NSLog(@"下拉刷新进行中，我在干活，哈哈哈哈");
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.tableView finishPullToRefresh];
+        });
     }];
     [self.tableView triggerPullToRefresh];
 }

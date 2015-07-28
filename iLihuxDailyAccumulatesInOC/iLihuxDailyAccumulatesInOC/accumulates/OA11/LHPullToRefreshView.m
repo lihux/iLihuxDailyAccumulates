@@ -12,12 +12,6 @@
 
 #import "LHPullToRefreshContentView.h"
 
-typedef enum : NSUInteger {
-    LHPullToRefreshViewStateHidden,
-    LHPullToRefreshViewStateNormal,
-    LHPullToRefreshViewStateTriggled,
-} LHPullToRefreshViewState;
-
 static const CGFloat kPullToRefreshThreshod = 100;
 static const NSInteger kMagicCount = 5;
 
@@ -111,8 +105,9 @@ static const NSInteger kMagicCount = 5;
 
 - (void)setPullToRefreshState:(LHPullToRefreshViewState)pullToRefreshState
 {
-     NSArray *states = @[@"隐藏状态", @"正常状态", @"触发刷新"];
+     NSArray *states = @[@"隐藏状态", @"正常状态", @"触发刷新", @"刷新进行中", @"刷新结束"];
     _pullToRefreshState = pullToRefreshState;
+    self.contentView.pullToRefreshState = pullToRefreshState;
     NSLog(@"%@", states[pullToRefreshState]);
 }
 
@@ -147,13 +142,26 @@ static const NSInteger kMagicCount = 5;
                 self.pullToRefreshState = LHPullToRefreshViewStateTriggled;
             }
             break;
+
         case LHPullToRefreshViewStateTriggled:
+            if (offset <= -50 && !self.scrollView.isDragging) {
+                self.pullToRefreshState = LHPullToRefreshViewStateLoading;
+                if (self.task) {
+                    self.task();
+                }
+            } else if (self.scrollView.isDragging && offset > -50) {
+                self.pullToRefreshState = LHPullToRefreshViewStateNormal;
+            }
+            break;
+
+            case LHPullToRefreshViewStateLoading:
             if (!self.scrollView.isDragging) {
                 UIEdgeInsets edgeInset = self.scrollView.contentInset;
-                NSLog(@"来了：%lf,", edgeInset.top);
                 edgeInset.top = offset < -50 ? edgeInset.top : self.originalContentEdgeInsetsTop + 50;
                 self.scrollView.contentInset = edgeInset;
+                self.pullToRefreshState = LHPullToRefreshViewStateLoading;
             }
+            case LHPullToRefreshViewStateLoadingFinished:
             break;
 
         default:
@@ -161,10 +169,18 @@ static const NSInteger kMagicCount = 5;
     }
 }
 
-//if (self.scrollView.contentInset.top != self.originalContentEdgeInsetsTop && self.scrollView.contentOffset.y + self.originalContentEdgeInsetsTop >= self.thresholdValue ) {
-//    UIEdgeInsets edgeInset = self.scrollView.contentInset;
-//    edgeInset.top = self.originalContentEdgeInsetsTop;
-//}
-
+- (void)finishPullToRefresh
+{
+    if (self.pullToRefreshState == LHPullToRefreshViewStateLoading) {
+        self.pullToRefreshState = LHPullToRefreshViewStateLoadingFinished;
+        UIEdgeInsets insets = self.scrollView.contentInset;
+        insets.top = self.originalContentEdgeInsetsTop;
+        [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            self.scrollView.contentInset = insets;
+        } completion:^(BOOL finished) {
+            self.pullToRefreshState = LHPullToRefreshViewStateHidden;
+        }];
+    }
+}
 
 @end

@@ -8,18 +8,29 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum : NSUInteger {
+    LHPullToRefreshViewStateHidden,
+    LHPullToRefreshViewStateNormal,
+    LHPullToRefreshViewStateTriggled,
+    LHPullToRefreshViewStateLoading,
+    LHPullToRefreshViewStateLoadingFinished,
+} LHPullToRefreshViewState;
+
 @protocol LHPullToRefreshViewPrococal <NSObject>
 
 @property (nonatomic, assign) CGFloat refreshViewHeight;
 
-
 @end
+
+typedef void(^taskBlock)();
 
 @interface LHPullToRefreshView : UIView <LHPullToRefreshViewPrococal>
 
 @property (nonatomic, assign) CGFloat refreshViewHeight;
 @property (nonatomic, assign) BOOL triggerPullToRefresh;
+@property (nonatomic, copy) taskBlock task;
 
 - (void)reframeRefreshView;
+- (void)finishPullToRefresh;
 
 @end

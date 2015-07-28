@@ -19,10 +19,17 @@
 - (instancetype)init
 {
     if (self = [super init]) {
-        self.infoTexts = @[@"松手刷新", @"正在刷新", @"下拉刷新"];
+        self.infoTexts = @[@"", @"松手刷新", @"松手刷新", @"正在刷新", @""];
         [self customInfoLabel];
     }
     return self;
+}
+
+- (void)setPullToRefreshState:(LHPullToRefreshViewState)pullToRefreshState
+{
+    _pullToRefreshState = pullToRefreshState;
+    self.infoLabel.text = self.infoTexts[pullToRefreshState];
+    
 }
 
 - (void)customInfoLabel

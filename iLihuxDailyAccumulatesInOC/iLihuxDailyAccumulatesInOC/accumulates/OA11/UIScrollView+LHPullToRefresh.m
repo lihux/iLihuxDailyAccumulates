@@ -31,6 +31,7 @@ static char kLHPullToRefreshView;
 {
     if (!self.pullToRefreshView) {
         LHPullToRefreshView *refreshView = [LHPullToRefreshView new];
+        refreshView.task = block;
         refreshView.translatesAutoresizingMaskIntoConstraints = NO;
         self.pullToRefreshView = refreshView;
         [self addSubview:self.pullToRefreshView];
@@ -41,6 +42,11 @@ static char kLHPullToRefreshView;
 - (void)triggerPullToRefresh
 {
     self.pullToRefreshView.triggerPullToRefresh = YES;
+}
+
+- (void)finishPullToRefresh
+{
+    [self.pullToRefreshView finishPullToRefresh];
 }
 
 @end

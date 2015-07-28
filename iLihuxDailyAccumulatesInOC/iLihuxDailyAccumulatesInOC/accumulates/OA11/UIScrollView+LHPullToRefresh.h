@@ -18,5 +18,6 @@ typedef void(^pullToRefreshBlock)();
 
 - (void)addPullToRefreshWithBlock:(pullToRefreshBlock)block;
 - (void)triggerPullToRefresh;
+- (void)finishPullToRefresh;
 
 @end
