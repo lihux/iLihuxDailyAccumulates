@@ -11,6 +11,8 @@
 #import "LHPullToRefreshView.h"
 #import "UIScrollView+LHPullToRefresh.h"
 
+#import "SVPullToRefresh.h"
+
 @interface OA11PullToRefreshViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -27,9 +29,23 @@
 
 - (void)configScrollView
 {
+//    [self.tableView addPullToRefreshWithActionHandler:^{
+//        [self insertRowAtTop];
+//        NSLog(@"下拉刷新进行中，我在干活，哈哈哈哈");
+//    }];
     [self.tableView addPullToRefreshWithBlock:^{
         NSLog(@"下拉刷新进行中，我在干活，哈哈哈哈");
     }];
+    [self.tableView triggerPullToRefresh];
+}
+
+- (void)insertRowAtTop {
+    __weak typeof(self) weakSelf = self;
+    int64_t delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [weakSelf.tableView.pullToRefreshView stopAnimating];
+    });
 }
 
 - (void)viewDidAppear:(BOOL)animated

@@ -52,6 +52,9 @@
 		9CEA9E171B441E3500075C66 /* OA09NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA9E161B441E3500075C66 /* OA09NotificationViewController.m */; };
 		9CECDCC71B58D04400291F45 /* OA11PullToRefreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CECDCC61B58D04400291F45 /* OA11PullToRefreshViewController.m */; };
 		9CECDCCA1B58DBDB00291F45 /* LHPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CECDCC91B58DBDB00291F45 /* LHPullToRefreshView.m */; };
+		9CEE0EB21B64828D00DE66A6 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE0EAF1B64828D00DE66A6 /* UIScrollView+SVInfiniteScrolling.m */; };
+		9CEE0EB31B64828D00DE66A6 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE0EB11B64828D00DE66A6 /* UIScrollView+SVPullToRefresh.m */; };
+		9CEEBC501B61CF5B002D6F2C /* LHPullToRefreshContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEEBC4F1B61CF5B002D6F2C /* LHPullToRefreshContentView.m */; };
 		9CF2E7661B44D91D00CFA63F /* OA10SDWebImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF2E7651B44D91D00CFA63F /* OA10SDWebImageViewController.m */; };
 		9CF304061B5C897900FDD6C1 /* UIScrollView+LHPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF304051B5C897900FDD6C1 /* UIScrollView+LHPullToRefresh.m */; };
 		9CF72DFA1B55DF9B00C2FFB5 /* OA11.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF72DF91B55DF9B00C2FFB5 /* OA11.storyboard */; };
@@ -155,6 +158,13 @@
 		9CECDCC61B58D04400291F45 /* OA11PullToRefreshViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA11PullToRefreshViewController.m; sourceTree = "<group>"; };
 		9CECDCC81B58DBDB00291F45 /* LHPullToRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHPullToRefreshView.h; sourceTree = "<group>"; };
 		9CECDCC91B58DBDB00291F45 /* LHPullToRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHPullToRefreshView.m; sourceTree = "<group>"; };
+		9CEE0EAD1B64828D00DE66A6 /* SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPullToRefresh.h; sourceTree = "<group>"; };
+		9CEE0EAE1B64828D00DE66A6 /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
+		9CEE0EAF1B64828D00DE66A6 /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
+		9CEE0EB01B64828D00DE66A6 /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
+		9CEE0EB11B64828D00DE66A6 /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
+		9CEEBC4E1B61CF5B002D6F2C /* LHPullToRefreshContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHPullToRefreshContentView.h; sourceTree = "<group>"; };
+		9CEEBC4F1B61CF5B002D6F2C /* LHPullToRefreshContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHPullToRefreshContentView.m; sourceTree = "<group>"; };
 		9CF2E7641B44D91D00CFA63F /* OA10SDWebImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA10SDWebImageViewController.h; sourceTree = "<group>"; };
 		9CF2E7651B44D91D00CFA63F /* OA10SDWebImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA10SDWebImageViewController.m; sourceTree = "<group>"; };
 		9CF304041B5C897900FDD6C1 /* UIScrollView+LHPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+LHPullToRefresh.h"; sourceTree = "<group>"; };
@@ -442,13 +452,28 @@
 			name = global;
 			sourceTree = "<group>";
 		};
+		9CEE0EAC1B64828D00DE66A6 /* SVPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				9CEE0EAD1B64828D00DE66A6 /* SVPullToRefresh.h */,
+				9CEE0EAE1B64828D00DE66A6 /* UIScrollView+SVInfiniteScrolling.h */,
+				9CEE0EAF1B64828D00DE66A6 /* UIScrollView+SVInfiniteScrolling.m */,
+				9CEE0EB01B64828D00DE66A6 /* UIScrollView+SVPullToRefresh.h */,
+				9CEE0EB11B64828D00DE66A6 /* UIScrollView+SVPullToRefresh.m */,
+			);
+			path = SVPullToRefresh;
+			sourceTree = "<group>";
+		};
 		9CF7513E1B5790ED00AC0BFA /* OA11-6 */ = {
 			isa = PBXGroup;
 			children = (
+				9CEE0EAC1B64828D00DE66A6 /* SVPullToRefresh */,
 				9CECDCC51B58D04400291F45 /* OA11PullToRefreshViewController.h */,
 				9CECDCC61B58D04400291F45 /* OA11PullToRefreshViewController.m */,
 				9CECDCC81B58DBDB00291F45 /* LHPullToRefreshView.h */,
 				9CECDCC91B58DBDB00291F45 /* LHPullToRefreshView.m */,
+				9CEEBC4E1B61CF5B002D6F2C /* LHPullToRefreshContentView.h */,
+				9CEEBC4F1B61CF5B002D6F2C /* LHPullToRefreshContentView.m */,
 				9CF304041B5C897900FDD6C1 /* UIScrollView+LHPullToRefresh.h */,
 				9CF304051B5C897900FDD6C1 /* UIScrollView+LHPullToRefresh.m */,
 			);
@@ -563,6 +588,7 @@
 				6DE967891A371D4300436817 /* AppDelegate.m in Sources */,
 				9CECDCCA1B58DBDB00291F45 /* LHPullToRefreshView.m in Sources */,
 				6D31B5021A6CD4880011E6C0 /* OA07Layer.m in Sources */,
+				9CEEBC501B61CF5B002D6F2C /* LHPullToRefreshContentView.m in Sources */,
 				6D31B5051A6CD4B00011E6C0 /* OA07ShapeLayer.m in Sources */,
 				6D3C057B1A60C85600491D31 /* OA05Task.m in Sources */,
 				6DE61AEE1A3EA8C70035C076 /* OA03TouchEventTableViewController.m in Sources */,
@@ -571,6 +597,7 @@
 				6DA68D201A5FBFAE009384A9 /* OA05TableViewCell.m in Sources */,
 				9C621C081B555596002A0D3E /* Utilities.m in Sources */,
 				6DBC0B401A61477900A17904 /* OA05CustomOperation.m in Sources */,
+				9CEE0EB31B64828D00DE66A6 /* UIScrollView+SVPullToRefresh.m in Sources */,
 				6DE61AF71A3EBC340035C076 /* OLHTouchView.m in Sources */,
 				6D31B5081A6CD4D00011E6C0 /* OA07BasicAnimation.m in Sources */,
 				6DE967DA1A371FD900436817 /* OLHMasterTableViewController.m in Sources */,
@@ -585,6 +612,7 @@
 				6DE61AF11A3EA8F70035C076 /* OLHTouchEventTableViewCell.m in Sources */,
 				9CF304061B5C897900FDD6C1 /* UIScrollView+LHPullToRefresh.m in Sources */,
 				9C0C8F3A1B55FC50003FC977 /* OA11AllAnimationViewController.m in Sources */,
+				9CEE0EB21B64828D00DE66A6 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				6D7AEFFB1A63568100ACBD85 /* OA06EventViewController.m in Sources */,
 				6D5A83551A4A3D86001DC86C /* OA04ArchiveViewController.m in Sources */,
 				6DE61AE11A3E64FA0035C076 /* OA02KVCViewController.m in Sources */,

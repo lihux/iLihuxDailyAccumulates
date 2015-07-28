@@ -10,20 +10,52 @@
 
 #import <objc/runtime.h>
 
+#import "LHPullToRefreshContentView.h"
+
 typedef enum : NSUInteger {
+    LHPullToRefreshViewStateHidden,
     LHPullToRefreshViewStateNormal,
-    LHPullToRefreshViewStateDragging,
-    LHPullToRefreshViewStateThreshold,
+    LHPullToRefreshViewStateTriggled,
 } LHPullToRefreshViewState;
+
+static const CGFloat kPullToRefreshThreshod = 100;
+static const NSInteger kMagicCount = 5;
 
 @interface LHPullToRefreshView ()
 
 @property (nonatomic, weak) UIScrollView *scrollView;
 @property (nonatomic, strong) NSLayoutConstraint *topConstraint;
-
+@property (nonatomic, assign) LHPullToRefreshViewState pullToRefreshState;
+@property (nonatomic, strong) LHPullToRefreshContentView *contentView;
+@property (nonatomic, assign) CGFloat originalContentEdgeInsetsTop;
+@property (nonatomic, assign) CGFloat thresholdValue;
+@property (nonatomic, assign) NSInteger magicCount;
+@property (nonatomic, assign) BOOL isAdjusting;
 @end
 
 @implementation LHPullToRefreshView
+
+- (instancetype)init
+{
+    if (self = [super init]) {
+        [self customContentView];
+        self.pullToRefreshState = LHPullToRefreshViewStateHidden;
+        self.thresholdValue = -kPullToRefreshThreshod;
+        self.magicCount = 0;
+        self.isAdjusting = NO;
+    }
+    return self;
+}
+
+- (void)customContentView
+{
+    self.contentView = [LHPullToRefreshContentView new];
+    self.contentView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self addSubview:self.contentView];
+    NSDictionary *views = @{@"contentView": self.contentView};
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[contentView]|" options:0 metrics:0 views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[contentView]|" options:0 metrics:0 views:views]];
+}
 
 - (CGFloat)refreshViewHeight
 {
@@ -77,11 +109,62 @@ typedef enum : NSUInteger {
     }
 }
 
+- (void)setPullToRefreshState:(LHPullToRefreshViewState)pullToRefreshState
+{
+     NSArray *states = @[@"隐藏状态", @"正常状态", @"触发刷新"];
+    _pullToRefreshState = pullToRefreshState;
+    NSLog(@"%@", states[pullToRefreshState]);
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    self.topConstraint.constant = scrollView.contentOffset.y + scrollView.contentInset.top;
-    NSLog(@"\n\n\n\n%@, contentInset = %@\n%@\n\n", self, [NSValue valueWithUIEdgeInsets:self.scrollView.contentInset], self);
-    return;
+    if (self.magicCount < kMagicCount) {
+        self.magicCount ++;
+        return;
+    }
+
+    CGFloat offset = scrollView.contentOffset.y + scrollView.contentInset.top;
+    self.topConstraint.constant = offset;
+    [self updateRefreshStateUsingOffset:offset];
 }
+
+- (void)updateRefreshStateUsingOffset:(CGFloat)offset
+{
+    if (self.isAdjusting) {
+        self.isAdjusting = NO;
+        return;
+    }
+//    NSLog(@"漂移：%lf", offset);
+    switch (self.pullToRefreshState) {
+        case LHPullToRefreshViewStateHidden:
+            self.pullToRefreshState = offset < 0 ? LHPullToRefreshViewStateNormal : LHPullToRefreshViewStateHidden;
+            break;
+        case LHPullToRefreshViewStateNormal:
+            if (offset >= 0) {
+                self.pullToRefreshState = LHPullToRefreshViewStateHidden;
+            } else if (offset < -50) {
+                self.originalContentEdgeInsetsTop = self.scrollView.contentInset.top;
+                self.pullToRefreshState = LHPullToRefreshViewStateTriggled;
+            }
+            break;
+        case LHPullToRefreshViewStateTriggled:
+            if (!self.scrollView.isDragging) {
+                UIEdgeInsets edgeInset = self.scrollView.contentInset;
+                NSLog(@"来了：%lf,", edgeInset.top);
+                edgeInset.top = offset < -50 ? edgeInset.top : self.originalContentEdgeInsetsTop + 50;
+                self.scrollView.contentInset = edgeInset;
+            }
+            break;
+
+        default:
+            break;
+    }
+}
+
+//if (self.scrollView.contentInset.top != self.originalContentEdgeInsetsTop && self.scrollView.contentOffset.y + self.originalContentEdgeInsetsTop >= self.thresholdValue ) {
+//    UIEdgeInsets edgeInset = self.scrollView.contentInset;
+//    edgeInset.top = self.originalContentEdgeInsetsTop;
+//}
+
 
 @end

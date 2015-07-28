@@ -18,6 +18,7 @@
 @interface LHPullToRefreshView : UIView <LHPullToRefreshViewPrococal>
 
 @property (nonatomic, assign) CGFloat refreshViewHeight;
+@property (nonatomic, assign) BOOL triggerPullToRefresh;
 
 - (void)reframeRefreshView;
 

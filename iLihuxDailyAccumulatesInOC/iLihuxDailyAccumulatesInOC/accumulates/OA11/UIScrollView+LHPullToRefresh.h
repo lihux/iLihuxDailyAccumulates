@@ -17,5 +17,6 @@ typedef void(^pullToRefreshBlock)();
 @property (nonatomic, strong, readonly) LHPullToRefreshView *pullToRefreshView;
 
 - (void)addPullToRefreshWithBlock:(pullToRefreshBlock)block;
+- (void)triggerPullToRefresh;
 
 @end

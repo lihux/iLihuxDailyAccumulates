@@ -38,4 +38,9 @@ static char kLHPullToRefreshView;
     }
 }
 
+- (void)triggerPullToRefresh
+{
+    self.pullToRefreshView.triggerPullToRefresh = YES;
+}
+
 @end
