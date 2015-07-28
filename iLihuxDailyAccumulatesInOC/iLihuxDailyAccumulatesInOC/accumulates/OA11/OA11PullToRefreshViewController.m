@@ -64,8 +64,12 @@
 {
     //使用纯代码的方式测试下拉刷新view的布局是否有问题：
     UITableViewController *tableViewController = [UITableViewController new];
+    __weak UITableViewController *weakTableViewController = tableViewController;
     [tableViewController.tableView addPullToRefreshWithBlock:^{
         NSLog(@"我欲乘风归去");
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakTableViewController.tableView finishPullToRefresh];
+        });
     }];
     [self.navigationController pushViewController:tableViewController animated:YES];
 }
