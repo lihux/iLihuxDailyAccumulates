@@ -10,6 +10,8 @@
 
 @interface LHPullToRefreshContentView ()
 
+@property (nonatomic, strong) UILabel *infoLabel;
+
 @property (nonatomic, strong) NSArray *infoTexts;
 
 @end
@@ -19,7 +21,7 @@
 - (instancetype)init
 {
     if (self = [super init]) {
-        self.infoTexts = @[@"", @"松手刷新", @"松手刷新", @"正在刷新", @""];
+        self.infoTexts = @[@"", @"松手刷新", @"松手刷新", @"正在刷新", @"刷新完成"];
         [self customInfoLabel];
     }
     return self;

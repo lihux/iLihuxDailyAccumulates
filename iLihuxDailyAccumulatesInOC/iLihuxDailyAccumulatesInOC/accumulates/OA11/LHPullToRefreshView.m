@@ -24,7 +24,9 @@ static const NSInteger kMagicCount = 5;
 @property (nonatomic, assign) CGFloat originalContentEdgeInsetsTop;
 @property (nonatomic, assign) CGFloat thresholdValue;
 @property (nonatomic, assign) NSInteger magicCount;
-@property (nonatomic, assign) BOOL isAdjusting;
+@property (nonatomic, assign) BOOL isFinishedButUserIsDragging;
+@property (nonatomic, assign) BOOL lastIsDragging;
+
 @end
 
 @implementation LHPullToRefreshView
@@ -36,7 +38,8 @@ static const NSInteger kMagicCount = 5;
         self.pullToRefreshState = LHPullToRefreshViewStateHidden;
         self.thresholdValue = -kPullToRefreshThreshod;
         self.magicCount = 0;
-        self.isAdjusting = NO;
+        self.isFinishedButUserIsDragging = NO;
+        self.lastIsDragging = NO;
     }
     return self;
 }
@@ -99,22 +102,40 @@ static const NSInteger kMagicCount = 5;
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if ([keyPath isEqualToString:@"contentOffset"]) {
+        if (self.lastIsDragging && !self.scrollView.isDragging) {
+            [self scrollViewDidEndDragging:self.scrollView];
+        }
+        self.lastIsDragging = self.scrollView.isDragging;
         [self scrollViewDidScroll:self.scrollView];
     }
 }
 
 - (void)setPullToRefreshState:(LHPullToRefreshViewState)pullToRefreshState
 {
-     NSArray *states = @[@"隐藏状态", @"正常状态", @"触发刷新", @"刷新进行中", @"刷新结束"];
-    _pullToRefreshState = pullToRefreshState;
-    self.contentView.pullToRefreshState = pullToRefreshState;
-    NSLog(@"%@", states[pullToRefreshState]);
+    if (_pullToRefreshState != pullToRefreshState) {
+        NSArray *states = @[@"隐藏状态", @"正常状态", @"触发刷新", @"刷新进行中", @"刷新结束"];
+        _pullToRefreshState = pullToRefreshState;
+        self.contentView.pullToRefreshState = pullToRefreshState;
+        NSLog(@"%@", states[pullToRefreshState]);
+    }
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView
+{
+    NSLog(@"松手了！");
+    if (self.isFinishedButUserIsDragging) {
+        [self finishPullToRefresh];
+    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     if (self.magicCount < kMagicCount) {
         self.magicCount ++;
+        return;
+    }
+
+    if (self.isFinishedButUserIsDragging) {
         return;
     }
 
@@ -125,10 +146,6 @@ static const NSInteger kMagicCount = 5;
 
 - (void)updateRefreshStateUsingOffset:(CGFloat)offset
 {
-    if (self.isAdjusting) {
-        self.isAdjusting = NO;
-        return;
-    }
 //    NSLog(@"漂移：%lf", offset);
     switch (self.pullToRefreshState) {
         case LHPullToRefreshViewStateHidden:
@@ -172,14 +189,20 @@ static const NSInteger kMagicCount = 5;
 - (void)finishPullToRefresh
 {
     if (self.pullToRefreshState == LHPullToRefreshViewStateLoading) {
-        self.pullToRefreshState = LHPullToRefreshViewStateLoadingFinished;
-        UIEdgeInsets insets = self.scrollView.contentInset;
-        insets.top = self.originalContentEdgeInsetsTop;
-        [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-            self.scrollView.contentInset = insets;
-        } completion:^(BOOL finished) {
-            self.pullToRefreshState = LHPullToRefreshViewStateHidden;
-        }];
+        if (self.scrollView.isDragging) {
+            self.isFinishedButUserIsDragging = YES;
+            self.contentView.pullToRefreshState = LHPullToRefreshViewStateLoadingFinished;
+        } else {
+            self.pullToRefreshState = LHPullToRefreshViewStateLoadingFinished;
+            UIEdgeInsets insets = self.scrollView.contentInset;
+            insets.top = self.originalContentEdgeInsetsTop;
+            [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                self.scrollView.contentInset = insets;
+            } completion:^(BOOL finished) {
+                self.pullToRefreshState = LHPullToRefreshViewStateHidden;
+                self.isFinishedButUserIsDragging = NO;
+            }];
+        }
     }
 }
 
