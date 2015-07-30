@@ -16,7 +16,75 @@
                     <view key="view" contentMode="scaleToFill" id="2IO-h2-j0O">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhF-8A-P7B" customClass="LHRoundCornerButton">
+                                <rect key="frame" x="85" y="30" width="205" height="30"/>
+                                <color key="backgroundColor" red="0.1647058874" green="0.97254908080000002" blue="0.53725492949999998" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dGg-eK-Jy6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
+                                <state key="normal" title=" [class method]字符串转换为类 ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapOnButton:" destination="NEi-gd-6c0" eventType="touchUpInside" id="WyD-ct-gpd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLx-os-u8W" customClass="LHRoundCornerButton">
+                                <rect key="frame" x="100" y="80" width="175" height="30"/>
+                                <color key="backgroundColor" red="0.1647058874" green="0.97254908080000002" blue="0.53725492949999998" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qXM-bo-fMh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
+                                <state key="normal" title=" 将方法替换为新的实现函数 ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapOnButton:" destination="NEi-gd-6c0" eventType="touchUpInside" id="voO-2t-OI7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAy-Vn-ziK" customClass="LHRoundCornerButton">
+                                <rect key="frame" x="107" y="130" width="161" height="30"/>
+                                <color key="backgroundColor" red="0.1647058874" green="0.97254908080000002" blue="0.53725492949999998" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="m2g-hw-gGS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
+                                <state key="normal" title=" 注册一个类添加新的方法 ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapOnButton:" destination="NEi-gd-6c0" eventType="touchUpInside" id="nho-Ze-uUY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkV-bu-BtS" customClass="LHRoundCornerButton">
+                                <rect key="frame" x="135" y="180" width="105" height="30"/>
+                                <color key="backgroundColor" red="0.1647058874" green="0.97254908080000002" blue="0.53725492949999998" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dfu-hL-h8f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
+                                <state key="normal" title=" 方法的掉包游戏 ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapOnButton:" destination="NEi-gd-6c0" eventType="touchUpInside" id="FeH-vC-MXT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="BLx-os-u8W" secondAttribute="centerX" id="6iK-3E-WnU"/>
+                            <constraint firstAttribute="centerX" secondItem="NhF-8A-P7B" secondAttribute="centerX" id="CK7-zN-Euf"/>
+                            <constraint firstItem="NhF-8A-P7B" firstAttribute="top" secondItem="t8G-cA-HXd" secondAttribute="bottom" constant="10" id="Fet-dF-OzI"/>
+                            <constraint firstItem="BLx-os-u8W" firstAttribute="top" secondItem="NhF-8A-P7B" secondAttribute="bottom" constant="20" id="KB5-Gc-DeA"/>
+                            <constraint firstAttribute="centerX" secondItem="IkV-bu-BtS" secondAttribute="centerX" id="dkM-qU-bnH"/>
+                            <constraint firstItem="cAy-Vn-ziK" firstAttribute="top" secondItem="BLx-os-u8W" secondAttribute="bottom" constant="20" id="e1j-Vp-8qT"/>
+                            <constraint firstItem="IkV-bu-BtS" firstAttribute="top" secondItem="cAy-Vn-ziK" secondAttribute="bottom" constant="20" id="otR-ZM-z1n"/>
+                            <constraint firstAttribute="centerX" secondItem="cAy-Vn-ziK" secondAttribute="centerX" id="sQF-6q-tEd"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>

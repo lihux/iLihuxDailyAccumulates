@@ -53,6 +53,7 @@
 		9CE78F3D1B69C5660029F562 /* OA12.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CE78F3C1B69C5660029F562 /* OA12.plist */; };
 		9CE78F3F1B69C5B80029F562 /* OA12.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE78F3E1B69C5B80029F562 /* OA12.storyboard */; };
 		9CE78F431B69C6310029F562 /* OA12OCRuntimeBasicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE78F421B69C6310029F562 /* OA12OCRuntimeBasicsViewController.m */; };
+		9CE78F4D1B69CC040029F562 /* LHRoundCornerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE78F4C1B69CC040029F562 /* LHRoundCornerButton.m */; };
 		9CEA9E171B441E3500075C66 /* OA09NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA9E161B441E3500075C66 /* OA09NotificationViewController.m */; };
 		9CECDCC71B58D04400291F45 /* OA11PullToRefreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CECDCC61B58D04400291F45 /* OA11PullToRefreshViewController.m */; };
 		9CECDCCA1B58DBDB00291F45 /* LHPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CECDCC91B58DBDB00291F45 /* LHPullToRefreshView.m */; };
@@ -162,6 +163,8 @@
 		9CE78F3E1B69C5B80029F562 /* OA12.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OA12.storyboard; sourceTree = "<group>"; };
 		9CE78F411B69C6310029F562 /* OA12OCRuntimeBasicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OA12OCRuntimeBasicsViewController.h; path = "OA12/OA12-1/OA12OCRuntimeBasicsViewController.h"; sourceTree = "<group>"; };
 		9CE78F421B69C6310029F562 /* OA12OCRuntimeBasicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OA12OCRuntimeBasicsViewController.m; path = "OA12/OA12-1/OA12OCRuntimeBasicsViewController.m"; sourceTree = "<group>"; };
+		9CE78F4B1B69CC040029F562 /* LHRoundCornerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHRoundCornerButton.h; path = global/UI/LHRoundCornerButton.h; sourceTree = "<group>"; };
+		9CE78F4C1B69CC040029F562 /* LHRoundCornerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LHRoundCornerButton.m; path = global/UI/LHRoundCornerButton.m; sourceTree = "<group>"; };
 		9CEA9E151B441E3500075C66 /* OA09NotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA09NotificationViewController.h; sourceTree = "<group>"; };
 		9CEA9E161B441E3500075C66 /* OA09NotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA09NotificationViewController.m; sourceTree = "<group>"; };
 		9CECDCC51B58D04400291F45 /* OA11PullToRefreshViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA11PullToRefreshViewController.h; sourceTree = "<group>"; };
@@ -451,6 +454,7 @@
 		9C621C051B55550E002A0D3E /* global */ = {
 			isa = PBXGroup;
 			children = (
+				9CE78F441B69CBB50029F562 /* UI */,
 				9C0C8F351B55F522003FC977 /* OAAccumulateTableViewController.h */,
 				9C0C8F361B55F522003FC977 /* OAAccumulateTableViewController.m */,
 				9C621C091B555853002A0D3E /* OAccumulate.h */,
@@ -482,6 +486,15 @@
 				9CE78F421B69C6310029F562 /* OA12OCRuntimeBasicsViewController.m */,
 			);
 			name = "OA12-1";
+			sourceTree = "<group>";
+		};
+		9CE78F441B69CBB50029F562 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9CE78F4B1B69CC040029F562 /* LHRoundCornerButton.h */,
+				9CE78F4C1B69CC040029F562 /* LHRoundCornerButton.m */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 		9CEE0EAC1B64828D00DE66A6 /* SVPullToRefresh */ = {
@@ -621,6 +634,7 @@
 			files = (
 				6DE967891A371D4300436817 /* AppDelegate.m in Sources */,
 				9CECDCCA1B58DBDB00291F45 /* LHPullToRefreshView.m in Sources */,
+				9CE78F4D1B69CC040029F562 /* LHRoundCornerButton.m in Sources */,
 				6D31B5021A6CD4880011E6C0 /* OA07Layer.m in Sources */,
 				9CE78F431B69C6310029F562 /* OA12OCRuntimeBasicsViewController.m in Sources */,
 				9CEEBC501B61CF5B002D6F2C /* LHPullToRefreshContentView.m in Sources */,
