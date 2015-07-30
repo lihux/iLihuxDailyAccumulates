@@ -90,5 +90,13 @@
 		<key>storyboardID</key>
 		<string>OA11AllAnimationViewController</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>12JSPatch调研</string>
+		<key>content</key>
+		<string>12JSPatch调研</string>
+		<key>storyboardID</key>
+		<string>OA12JSPatchViewController</string>
+	</dict>
 </array>
 </plist>

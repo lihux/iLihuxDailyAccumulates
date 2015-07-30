@@ -49,6 +49,10 @@
 		9C621C081B555596002A0D3E /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C621C071B555596002A0D3E /* Utilities.m */; };
 		9C621C0B1B555853002A0D3E /* OAccumulate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C621C0A1B555853002A0D3E /* OAccumulate.m */; };
 		9C621C0E1B555880002A0D3E /* OAccumulatesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C621C0D1B555880002A0D3E /* OAccumulatesManager.m */; };
+		9CE78F3B1B69C3250029F562 /* OA12JSPatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE78F3A1B69C3250029F562 /* OA12JSPatchViewController.m */; };
+		9CE78F3D1B69C5660029F562 /* OA12.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CE78F3C1B69C5660029F562 /* OA12.plist */; };
+		9CE78F3F1B69C5B80029F562 /* OA12.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE78F3E1B69C5B80029F562 /* OA12.storyboard */; };
+		9CE78F431B69C6310029F562 /* OA12OCRuntimeBasicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE78F421B69C6310029F562 /* OA12OCRuntimeBasicsViewController.m */; };
 		9CEA9E171B441E3500075C66 /* OA09NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA9E161B441E3500075C66 /* OA09NotificationViewController.m */; };
 		9CECDCC71B58D04400291F45 /* OA11PullToRefreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CECDCC61B58D04400291F45 /* OA11PullToRefreshViewController.m */; };
 		9CECDCCA1B58DBDB00291F45 /* LHPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CECDCC91B58DBDB00291F45 /* LHPullToRefreshView.m */; };
@@ -152,6 +156,12 @@
 		9C621C0A1B555853002A0D3E /* OAccumulate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAccumulate.m; path = global/OAccumulate.m; sourceTree = "<group>"; };
 		9C621C0C1B555880002A0D3E /* OAccumulatesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAccumulatesManager.h; path = global/OAccumulatesManager.h; sourceTree = "<group>"; };
 		9C621C0D1B555880002A0D3E /* OAccumulatesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAccumulatesManager.m; path = global/OAccumulatesManager.m; sourceTree = "<group>"; };
+		9CE78F391B69C3250029F562 /* OA12JSPatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OA12JSPatchViewController.h; path = OA12/OA12JSPatchViewController.h; sourceTree = "<group>"; };
+		9CE78F3A1B69C3250029F562 /* OA12JSPatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OA12JSPatchViewController.m; path = OA12/OA12JSPatchViewController.m; sourceTree = "<group>"; };
+		9CE78F3C1B69C5660029F562 /* OA12.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = OA12.plist; path = OA12/OA12.plist; sourceTree = "<group>"; };
+		9CE78F3E1B69C5B80029F562 /* OA12.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OA12.storyboard; sourceTree = "<group>"; };
+		9CE78F411B69C6310029F562 /* OA12OCRuntimeBasicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OA12OCRuntimeBasicsViewController.h; path = "OA12/OA12-1/OA12OCRuntimeBasicsViewController.h"; sourceTree = "<group>"; };
+		9CE78F421B69C6310029F562 /* OA12OCRuntimeBasicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OA12OCRuntimeBasicsViewController.m; path = "OA12/OA12-1/OA12OCRuntimeBasicsViewController.m"; sourceTree = "<group>"; };
 		9CEA9E151B441E3500075C66 /* OA09NotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA09NotificationViewController.h; sourceTree = "<group>"; };
 		9CEA9E161B441E3500075C66 /* OA09NotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA09NotificationViewController.m; sourceTree = "<group>"; };
 		9CECDCC51B58D04400291F45 /* OA11PullToRefreshViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA11PullToRefreshViewController.h; sourceTree = "<group>"; };
@@ -419,6 +429,7 @@
 				6D5A834E1A4A3CFE001DC86C /* OA09 */,
 				6D5A834F1A4A3CFE001DC86C /* OA10 */,
 				6D5A83501A4A3CFE001DC86C /* OA11 */,
+				9CE78F381B69C2D20029F562 /* OA12 */,
 				6D8BAA741A37C9F700CDBA33 /* A001 */,
 				6D8BAA771A37C9F700CDBA33 /* A002 */,
 				6D8BAA781A37C9F700CDBA33 /* A003 */,
@@ -450,6 +461,27 @@
 				9C621C0D1B555880002A0D3E /* OAccumulatesManager.m */,
 			);
 			name = global;
+			sourceTree = "<group>";
+		};
+		9CE78F381B69C2D20029F562 /* OA12 */ = {
+			isa = PBXGroup;
+			children = (
+				9CE78F401B69C5E70029F562 /* OA12-1 */,
+				9CE78F391B69C3250029F562 /* OA12JSPatchViewController.h */,
+				9CE78F3A1B69C3250029F562 /* OA12JSPatchViewController.m */,
+				9CE78F3C1B69C5660029F562 /* OA12.plist */,
+				9CE78F3E1B69C5B80029F562 /* OA12.storyboard */,
+			);
+			name = OA12;
+			sourceTree = "<group>";
+		};
+		9CE78F401B69C5E70029F562 /* OA12-1 */ = {
+			isa = PBXGroup;
+			children = (
+				9CE78F411B69C6310029F562 /* OA12OCRuntimeBasicsViewController.h */,
+				9CE78F421B69C6310029F562 /* OA12OCRuntimeBasicsViewController.m */,
+			);
+			name = "OA12-1";
 			sourceTree = "<group>";
 		};
 		9CEE0EAC1B64828D00DE66A6 /* SVPullToRefresh */ = {
@@ -568,6 +600,8 @@
 				6DE967911A371D4300436817 /* Images.xcassets in Resources */,
 				9CF72DFC1B55DFFF00C2FFB5 /* OA11.plist in Resources */,
 				9CF72DFA1B55DF9B00C2FFB5 /* OA11.storyboard in Resources */,
+				9CE78F3D1B69C5660029F562 /* OA12.plist in Resources */,
+				9CE78F3F1B69C5B80029F562 /* OA12.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,12 +622,14 @@
 				6DE967891A371D4300436817 /* AppDelegate.m in Sources */,
 				9CECDCCA1B58DBDB00291F45 /* LHPullToRefreshView.m in Sources */,
 				6D31B5021A6CD4880011E6C0 /* OA07Layer.m in Sources */,
+				9CE78F431B69C6310029F562 /* OA12OCRuntimeBasicsViewController.m in Sources */,
 				9CEEBC501B61CF5B002D6F2C /* LHPullToRefreshContentView.m in Sources */,
 				6D31B5051A6CD4B00011E6C0 /* OA07ShapeLayer.m in Sources */,
 				6D3C057B1A60C85600491D31 /* OA05Task.m in Sources */,
 				6DE61AEE1A3EA8C70035C076 /* OA03TouchEventTableViewController.m in Sources */,
 				9C0C8F411B5607A7003FC977 /* OA11AnimatedTransitioningObject.m in Sources */,
 				9CECDCC71B58D04400291F45 /* OA11PullToRefreshViewController.m in Sources */,
+				9CE78F3B1B69C3250029F562 /* OA12JSPatchViewController.m in Sources */,
 				6DA68D201A5FBFAE009384A9 /* OA05TableViewCell.m in Sources */,
 				9C621C081B555596002A0D3E /* Utilities.m in Sources */,
 				6DBC0B401A61477900A17904 /* OA05CustomOperation.m in Sources */,

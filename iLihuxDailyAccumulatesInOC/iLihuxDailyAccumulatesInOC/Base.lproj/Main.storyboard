@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="82C-DL-DuK">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -511,10 +512,10 @@
             </objects>
             <point key="canvasLocation" x="666.5" y="1756.5"/>
         </scene>
-        <!--Web Image View Controller-->
+        <!--OA10-->
         <scene sceneID="SIp-Hx-Rn4">
             <objects>
-                <viewController storyboardIdentifier="OA10SDWebImageViewController" id="uTM-yz-Fvq" customClass="OA10SDWebImageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OA10SDWebImageViewController" id="uTM-yz-Fvq" userLabel="OA10" customClass="OA10SDWebImageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x60-ET-1vH"/>
                         <viewControllerLayoutGuide type="bottom" id="TEm-5Q-DRx"/>
@@ -826,10 +827,10 @@
             </objects>
             <point key="canvasLocation" x="666.5" y="306.5"/>
         </scene>
-        <!--日积月累-->
+        <!--OA11-->
         <scene sceneID="6Nf-Id-SbZ">
             <objects>
-                <tableViewController storyboardIdentifier="OA11AllAnimationViewController" title="日积月累" id="AMJ-c7-9S6" customClass="OA11AllAnimationViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="OA11AllAnimationViewController" title="日积月累" id="AMJ-c7-9S6" userLabel="OA11" customClass="OA11AllAnimationViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xcS-fl-FYg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -856,6 +857,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jEX-3k-4ck" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1536.5" y="1756.5"/>
+        </scene>
+        <!--OA12-->
+        <scene sceneID="YVA-fV-yX0">
+            <objects>
+                <tableViewController storyboardIdentifier="OA12JSPatchViewController" id="rLT-ge-2g0" userLabel="OA12" customClass="OA12JSPatchViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eD6-32-pEW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="accumulateCell" id="Lif-Kf-21J">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lif-Kf-21J" id="8bp-ZV-bcS">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rLT-ge-2g0" id="j9o-wH-tM9"/>
+                            <outlet property="delegate" destination="rLT-ge-2g0" id="N5r-o6-KGQ"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frR-Vs-Vxc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1949.5" y="1756.5"/>
         </scene>
     </scenes>
     <resources>

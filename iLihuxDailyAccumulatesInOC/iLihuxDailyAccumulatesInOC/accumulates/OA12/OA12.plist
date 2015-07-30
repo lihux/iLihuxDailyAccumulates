@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>OA12-1OCRuntime基础练习</string>
+		<key>content</key>
+		<string>OA12-1OCRuntime基础练习</string>
+		<key>storyboardID</key>
+		<string>OA12OCRuntimeBasicsViewController</string>
+	</dict>
+</array>
+</plist>
