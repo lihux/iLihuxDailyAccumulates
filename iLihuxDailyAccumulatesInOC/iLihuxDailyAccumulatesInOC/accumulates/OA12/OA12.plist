@@ -4,11 +4,19 @@
 <array>
 	<dict>
 		<key>title</key>
-		<string>OA12-1OCRuntime基础练习</string>
+		<string>OCRuntime基础练习</string>
 		<key>content</key>
-		<string>OA12-1OCRuntime基础练习</string>
+		<string>OCRuntime基础练习</string>
 		<key>storyboardID</key>
 		<string>OA12OCRuntimeBasicsViewController</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>JSPatch从服务端加载JS文件创建本地文件</string>
+		<key>content</key>
+		<string>JSPatch从服务端加载JS文件创建本地文件</string>
+		<key>storyboardID</key>
+		<string>OA12JSPatchFromServerDemoViewController</string>
 	</dict>
 </array>
 </plist>

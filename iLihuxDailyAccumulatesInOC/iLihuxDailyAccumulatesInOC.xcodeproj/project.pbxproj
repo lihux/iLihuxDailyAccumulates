@@ -54,6 +54,11 @@
 		9CE78F3F1B69C5B80029F562 /* OA12.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE78F3E1B69C5B80029F562 /* OA12.storyboard */; };
 		9CE78F431B69C6310029F562 /* OA12OCRuntimeBasicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE78F421B69C6310029F562 /* OA12OCRuntimeBasicsViewController.m */; };
 		9CE78F4D1B69CC040029F562 /* LHRoundCornerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE78F4C1B69CC040029F562 /* LHRoundCornerButton.m */; };
+		9CE78F511B6A14F70029F562 /* OA12JSPatchFromServerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE78F501B6A14F70029F562 /* OA12JSPatchFromServerDemoViewController.m */; };
+		9CE78F561B6A152C0029F562 /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE78F541B6A152C0029F562 /* JPEngine.m */; };
+		9CE78F571B6A152C0029F562 /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = 9CE78F551B6A152C0029F562 /* JSPatch.js */; };
+		9CE78F5C1B6A18870029F562 /* MBHUDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE78F591B6A18870029F562 /* MBHUDHelper.m */; };
+		9CE78F5D1B6A18870029F562 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE78F5B1B6A18870029F562 /* MBProgressHUD.m */; };
 		9CEA9E171B441E3500075C66 /* OA09NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA9E161B441E3500075C66 /* OA09NotificationViewController.m */; };
 		9CECDCC71B58D04400291F45 /* OA11PullToRefreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CECDCC61B58D04400291F45 /* OA11PullToRefreshViewController.m */; };
 		9CECDCCA1B58DBDB00291F45 /* LHPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CECDCC91B58DBDB00291F45 /* LHPullToRefreshView.m */; };
@@ -165,6 +170,15 @@
 		9CE78F421B69C6310029F562 /* OA12OCRuntimeBasicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OA12OCRuntimeBasicsViewController.m; path = "OA12/OA12-1/OA12OCRuntimeBasicsViewController.m"; sourceTree = "<group>"; };
 		9CE78F4B1B69CC040029F562 /* LHRoundCornerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHRoundCornerButton.h; path = global/UI/LHRoundCornerButton.h; sourceTree = "<group>"; };
 		9CE78F4C1B69CC040029F562 /* LHRoundCornerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LHRoundCornerButton.m; path = global/UI/LHRoundCornerButton.m; sourceTree = "<group>"; };
+		9CE78F4F1B6A14F70029F562 /* OA12JSPatchFromServerDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OA12JSPatchFromServerDemoViewController.h; path = "OA12/OA12-2/OA12JSPatchFromServerDemoViewController.h"; sourceTree = "<group>"; };
+		9CE78F501B6A14F70029F562 /* OA12JSPatchFromServerDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OA12JSPatchFromServerDemoViewController.m; path = "OA12/OA12-2/OA12JSPatchFromServerDemoViewController.m"; sourceTree = "<group>"; };
+		9CE78F531B6A152C0029F562 /* JPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPEngine.h; sourceTree = "<group>"; };
+		9CE78F541B6A152C0029F562 /* JPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPEngine.m; sourceTree = "<group>"; };
+		9CE78F551B6A152C0029F562 /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
+		9CE78F581B6A18870029F562 /* MBHUDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBHUDHelper.h; path = global/UI/MBHUDHelper.h; sourceTree = "<group>"; };
+		9CE78F591B6A18870029F562 /* MBHUDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBHUDHelper.m; path = global/UI/MBHUDHelper.m; sourceTree = "<group>"; };
+		9CE78F5A1B6A18870029F562 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = global/UI/MBProgressHUD.h; sourceTree = "<group>"; };
+		9CE78F5B1B6A18870029F562 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = global/UI/MBProgressHUD.m; sourceTree = "<group>"; };
 		9CEA9E151B441E3500075C66 /* OA09NotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA09NotificationViewController.h; sourceTree = "<group>"; };
 		9CEA9E161B441E3500075C66 /* OA09NotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA09NotificationViewController.m; sourceTree = "<group>"; };
 		9CECDCC51B58D04400291F45 /* OA11PullToRefreshViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA11PullToRefreshViewController.h; sourceTree = "<group>"; };
@@ -470,6 +484,7 @@
 		9CE78F381B69C2D20029F562 /* OA12 */ = {
 			isa = PBXGroup;
 			children = (
+				9CE78F4E1B6A14AC0029F562 /* OA12-2 */,
 				9CE78F401B69C5E70029F562 /* OA12-1 */,
 				9CE78F391B69C3250029F562 /* OA12JSPatchViewController.h */,
 				9CE78F3A1B69C3250029F562 /* OA12JSPatchViewController.m */,
@@ -491,10 +506,35 @@
 		9CE78F441B69CBB50029F562 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				9CE78F581B6A18870029F562 /* MBHUDHelper.h */,
+				9CE78F591B6A18870029F562 /* MBHUDHelper.m */,
+				9CE78F5A1B6A18870029F562 /* MBProgressHUD.h */,
+				9CE78F5B1B6A18870029F562 /* MBProgressHUD.m */,
 				9CE78F4B1B69CC040029F562 /* LHRoundCornerButton.h */,
 				9CE78F4C1B69CC040029F562 /* LHRoundCornerButton.m */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		9CE78F4E1B6A14AC0029F562 /* OA12-2 */ = {
+			isa = PBXGroup;
+			children = (
+				9CE78F521B6A152C0029F562 /* JSPatch */,
+				9CE78F4F1B6A14F70029F562 /* OA12JSPatchFromServerDemoViewController.h */,
+				9CE78F501B6A14F70029F562 /* OA12JSPatchFromServerDemoViewController.m */,
+			);
+			name = "OA12-2";
+			sourceTree = "<group>";
+		};
+		9CE78F521B6A152C0029F562 /* JSPatch */ = {
+			isa = PBXGroup;
+			children = (
+				9CE78F531B6A152C0029F562 /* JPEngine.h */,
+				9CE78F541B6A152C0029F562 /* JPEngine.m */,
+				9CE78F551B6A152C0029F562 /* JSPatch.js */,
+			);
+			name = JSPatch;
+			path = "OA12/OA12-2/JSPatch";
 			sourceTree = "<group>";
 		};
 		9CEE0EAC1B64828D00DE66A6 /* SVPullToRefresh */ = {
@@ -613,6 +653,7 @@
 				6DE967911A371D4300436817 /* Images.xcassets in Resources */,
 				9CF72DFC1B55DFFF00C2FFB5 /* OA11.plist in Resources */,
 				9CF72DFA1B55DF9B00C2FFB5 /* OA11.storyboard in Resources */,
+				9CE78F571B6A152C0029F562 /* JSPatch.js in Resources */,
 				9CE78F3D1B69C5660029F562 /* OA12.plist in Resources */,
 				9CE78F3F1B69C5B80029F562 /* OA12.storyboard in Resources */,
 			);
@@ -637,6 +678,7 @@
 				9CE78F4D1B69CC040029F562 /* LHRoundCornerButton.m in Sources */,
 				6D31B5021A6CD4880011E6C0 /* OA07Layer.m in Sources */,
 				9CE78F431B69C6310029F562 /* OA12OCRuntimeBasicsViewController.m in Sources */,
+				9CE78F5C1B6A18870029F562 /* MBHUDHelper.m in Sources */,
 				9CEEBC501B61CF5B002D6F2C /* LHPullToRefreshContentView.m in Sources */,
 				6D31B5051A6CD4B00011E6C0 /* OA07ShapeLayer.m in Sources */,
 				6D3C057B1A60C85600491D31 /* OA05Task.m in Sources */,
@@ -648,11 +690,13 @@
 				9C621C081B555596002A0D3E /* Utilities.m in Sources */,
 				6DBC0B401A61477900A17904 /* OA05CustomOperation.m in Sources */,
 				9CEE0EB31B64828D00DE66A6 /* UIScrollView+SVPullToRefresh.m in Sources */,
+				9CE78F5D1B6A18870029F562 /* MBProgressHUD.m in Sources */,
 				6DE61AF71A3EBC340035C076 /* OLHTouchView.m in Sources */,
 				6D31B5081A6CD4D00011E6C0 /* OA07BasicAnimation.m in Sources */,
 				6DE967DA1A371FD900436817 /* OLHMasterTableViewController.m in Sources */,
 				6D8B63221A5E0F9A00735E2E /* OA05GCDViewController.m in Sources */,
 				6D8FEC361A65FEE000F23585 /* OA06ChildViewViewController.m in Sources */,
+				9CE78F561B6A152C0029F562 /* JPEngine.m in Sources */,
 				6DB068091A7140BD0029C8E6 /* OA08LayerAnimationViewController.m in Sources */,
 				9CEA9E171B441E3500075C66 /* OA09NotificationViewController.m in Sources */,
 				6DE967861A371D4300436817 /* main.m in Sources */,
@@ -664,6 +708,7 @@
 				9C0C8F3A1B55FC50003FC977 /* OA11AllAnimationViewController.m in Sources */,
 				9CEE0EB21B64828D00DE66A6 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				6D7AEFFB1A63568100ACBD85 /* OA06EventViewController.m in Sources */,
+				9CE78F511B6A14F70029F562 /* OA12JSPatchFromServerDemoViewController.m in Sources */,
 				6D5A83551A4A3D86001DC86C /* OA04ArchiveViewController.m in Sources */,
 				6DE61AE11A3E64FA0035C076 /* OA02KVCViewController.m in Sources */,
 				6DE61AE41A3E6E190035C076 /* OLHKVCPeople.m in Sources */,
