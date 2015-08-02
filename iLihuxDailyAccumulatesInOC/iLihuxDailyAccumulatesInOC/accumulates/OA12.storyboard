@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--12-1-->
@@ -105,7 +106,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZX-WK-eCm" customClass="LHRoundCornerButton">
-                                <rect key="frame" x="45" y="60" width="285" height="30"/>
+                                <rect key="frame" x="45" y="101" width="285" height="30"/>
                                 <color key="backgroundColor" red="0.1647058874" green="0.97254908080000002" blue="0.53725492949999998" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="E1I-8T-uS5"/>
@@ -119,20 +120,43 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATj-8u-nf6">
-                                <rect key="frame" x="20" y="120" width="335" height="527"/>
+                                <rect key="frame" x="20" y="161" width="335" height="486"/>
                                 <color key="backgroundColor" red="0.99607843139999996" green="0.7725490196" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Lb-Vv-SVQ" customClass="LHRoundCornerButton">
+                                <rect key="frame" x="158" y="45" width="59" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="y04-nk-GiD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="13"/>
+                                <state key="normal" title=" 一点就崩 ">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapOnCrashButton:" destination="Gif-a0-iUm" eventType="touchUpInside" id="OFx-gc-Pw9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="8Lb-Vv-SVQ" firstAttribute="top" secondItem="lY6-mC-hVz" secondAttribute="topMargin" constant="25" id="7Oi-pu-Hxc"/>
+                            <constraint firstAttribute="centerX" secondItem="8Lb-Vv-SVQ" secondAttribute="centerX" id="7nX-h4-W6Q"/>
                             <constraint firstAttribute="centerX" secondItem="AZX-WK-eCm" secondAttribute="centerX" id="G2E-mk-GBX"/>
+                            <constraint firstItem="8Lb-Vv-SVQ" firstAttribute="top" secondItem="hx4-zu-T3k" secondAttribute="bottom" constant="25" id="Mcf-dx-tFD"/>
                             <constraint firstItem="0oV-4v-4KN" firstAttribute="top" secondItem="ATj-8u-nf6" secondAttribute="bottom" constant="20" id="Tgw-rs-sWc"/>
                             <constraint firstItem="ATj-8u-nf6" firstAttribute="leading" secondItem="lY6-mC-hVz" secondAttribute="leading" constant="20" id="Y6k-xM-Dbi"/>
+                            <constraint firstItem="AZX-WK-eCm" firstAttribute="top" secondItem="8Lb-Vv-SVQ" secondAttribute="bottom" constant="26" id="Yug-aW-6yw"/>
                             <constraint firstItem="ATj-8u-nf6" firstAttribute="top" secondItem="AZX-WK-eCm" secondAttribute="bottom" constant="30" id="cz8-2m-Bq2"/>
-                            <constraint firstItem="AZX-WK-eCm" firstAttribute="top" secondItem="hx4-zu-T3k" secondAttribute="bottom" constant="40" id="i1b-Rg-Q1J"/>
                             <constraint firstAttribute="centerX" secondItem="ATj-8u-nf6" secondAttribute="centerX" id="tyJ-rR-kZU"/>
                             <constraint firstAttribute="trailing" secondItem="ATj-8u-nf6" secondAttribute="trailing" constant="20" id="v6U-UP-S0f"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7Oi-pu-Hxc"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>

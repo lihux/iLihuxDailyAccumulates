@@ -5,10 +5,15 @@ var global = this
   var callbacks = {}
   var callbackID = 0
   
+  /*
+   lihux:
+   input: hello:world:
+   output: hello_world
+   */
   var _methodNameOCToJS = function(name) {
     name = name.replace(/\:/g, '_')
     if (name[name.length - 1] == '_') {
-      return name.substr(0, name.length - 1)
+      return name.substr(0, name.length - 1)//lihux:如果是：hello:world:,将会转化为：hello_world_，并且返回hello_world，切掉最后一个'_'
     }
     return name
   }

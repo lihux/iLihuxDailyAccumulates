@@ -9,6 +9,7 @@
 #import "OA12OCRuntimeBasicsViewController.h"
 
 #import <objc/runtime.h>
+#import <objc/message.h>
 
 @interface OA12OCRuntimeBasicsViewController ()
 
@@ -28,7 +29,7 @@
 - (IBAction)didTapOnButton:(UIButton *)sender
 {
     NSInteger tag = sender.tag;
-    NSArray *methods = @[@"stringChangeToMethod", @"exchangeMethods", @"createNewClassRuntime", @"stringChangeToMethod", @"stringChangeToMethod"];
+    NSArray *methods = @[@"stringChangeToMethod", @"exchangeMethods", @"createNewClassRuntime", @"forceMessageForward", @"stringChangeToMethod"];
     NSString * method = methods[tag];
     SEL selector = NSSelectorFromString(method);
     IMP imp = [self methodForSelector:selector];
@@ -65,9 +66,12 @@
     [alihux wopei];
 }
 
-- (void)haha
+
+//4.掉包一个已有函数的IMP为直接消息派遣（message forward）
+- (void)forceMessageForward
 {
-    class_replaceMethod([self class], @selector(wopei), [self methodForSelector:@selector(hello)], "");
+    IMP messageForward = _objc_msgForward;
+    class_replaceMethod([self class], @selector(wopei), messageForward, nil);
     [self wopei];
 }
 
@@ -79,6 +83,17 @@
 - (void)hello
 {
     NSLog(@"细心观战，好好反思");
+}
+
+//OC Runtime 中消息的发送流程：
+//
+- (void)forwardInvocation:(NSInvocation *)anInvocation
+{
+    if (anInvocation.selector == @selector(wopei)) {
+        NSLog(@"哇塞，果然走到这儿了");
+    } else {
+        [super forwardInvocation:anInvocation];
+    }
 }
 
 @end

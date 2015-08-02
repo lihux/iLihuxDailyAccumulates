@@ -648,10 +648,13 @@ static void overrideMethod(Class cls, NSString *selectorName, JSValue *function,
         }
     #endif
 
+    //lihux:替换掉原有的函数实现为消息发射（message forward or forwardInvocation），直接跳转到消息分派的最后一步
     class_replaceMethod(cls, selector, msgForwardIMP, typeDescription);
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
+    //lihux:接着替换掉forwardInvocation为自己的JPForwardInvocation，为后续的定制化的消息发射提供中转中心
+    //并将原有的forwardInvocation改名为ORIGforwardInvocation添加到类的新方法中；
     if (class_getMethodImplementation(cls, @selector(forwardInvocation:)) != (IMP)JPForwardInvocation) {
         IMP originalForwardImp = class_replaceMethod(cls, @selector(forwardInvocation:), (IMP)JPForwardInvocation, "v@:@");
         class_addMethod(cls, @selector(ORIGforwardInvocation:), originalForwardImp, "v@:@");
@@ -662,10 +665,11 @@ static void overrideMethod(Class cls, NSString *selectorName, JSValue *function,
         NSString *originalSelectorName = [NSString stringWithFormat:@"ORIG%@", selectorName];
         SEL originalSelector = NSSelectorFromString(originalSelectorName);
         if(!class_respondsToSelector(cls, originalSelector)) {
+            //lihux: 将原有的方法改名为ORIG...添加当前类中
             class_addMethod(cls, originalSelector, originalImp, typeDescription);
         }
     }
-    
+    //lihux: 替换后的方法名字添加JP前缀，并将其添加到类中
     NSString *JPSelectorName = [NSString stringWithFormat:@"_JP%@", selectorName];
     SEL JPSelector = NSSelectorFromString(JPSelectorName);
     NSString *clsName = NSStringFromClass(cls);
@@ -682,9 +686,9 @@ static void overrideMethod(Class cls, NSString *selectorName, JSValue *function,
                 JPImplementation = (IMP)JPMETHOD_IMPLEMENTATION_NAME(_type); \
                 break;  \
             }
-            JP_OVERRIDE_RET_CASE(v, 'v')
-            JP_OVERRIDE_RET_CASE(id, '@')
-            JP_OVERRIDE_RET_CASE(c, 'c')
+            JP_OVERRIDE_RET_CASE(v, 'v') //lihux:JPImplementation = JPImplementation_v
+            JP_OVERRIDE_RET_CASE(id, '@') //lihux:JPImplementation = JPImplementation_id
+            JP_OVERRIDE_RET_CASE(c, 'c') //......
             JP_OVERRIDE_RET_CASE(C, 'C')
             JP_OVERRIDE_RET_CASE(s, 's')
             JP_OVERRIDE_RET_CASE(S, 'S')
@@ -721,6 +725,8 @@ static void overrideMethod(Class cls, NSString *selectorName, JSValue *function,
                 break;
             }
         }
+        //lihux: JPImplementation = JPImplementation_id，实际上没有这个函数，
+        //因此OC Runtime就会走到消息转发环节，在那儿再调用替换的方法
         class_addMethod(cls, JPSelector, JPImplementation, typeDescription);
     }
 }
