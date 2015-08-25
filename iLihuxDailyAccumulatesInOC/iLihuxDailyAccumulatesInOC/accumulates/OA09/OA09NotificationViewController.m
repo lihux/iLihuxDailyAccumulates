@@ -8,6 +8,8 @@
 
 #import "OA09NotificationViewController.h"
 
+#import <SystemConfiguration/CaptiveNetwork.h>
+
 @interface OA09NotificationViewController () <NSMachPortDelegate>
 
 @property (nonatomic, strong) NSMutableArray *notifications;
@@ -31,6 +33,21 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [[NSNotificationCenter defaultCenter] postNotificationName:@"kOhMyGodNotification" object:nil userInfo:nil];
     });
+    NSDictionary *dic = [self getWIFIDic];
+    NSLog(@"获取WiFi：%@", dic);
+}
+
+- (NSDictionary *)getWIFIDic
+{
+    CFArrayRef myArray = CNCopySupportedInterfaces();
+    if (myArray != nil) {
+        CFDictionaryRef myDict = CNCopyCurrentNetworkInfo(CFArrayGetValueAtIndex(myArray, 0));
+        if (myDict != nil) {
+            NSDictionary *dic = (NSDictionary*)CFBridgingRelease(myDict);
+            return dic;
+        }
+    }
+    return nil;
 }
 
 #pragma mark - NSMachPortDelegate

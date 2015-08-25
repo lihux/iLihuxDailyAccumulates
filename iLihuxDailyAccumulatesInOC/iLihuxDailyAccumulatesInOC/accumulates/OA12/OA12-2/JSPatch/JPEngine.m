@@ -178,8 +178,10 @@ NSMutableArray *registeredStructExtensions;
     };
     
     context[@"_OC_callI"] = ^id(JSValue *obj, NSString *selectorName, JSValue *arguments, BOOL isSuper) {
+        //lh9:
         return callSelector(nil, selectorName, arguments, obj, isSuper);
     };
+    //lh4
     context[@"_OC_callC"] = ^id(NSString *className, NSString *selectorName, JSValue *arguments) {
         return callSelector(className, selectorName, arguments, nil, NO);
     };
@@ -928,6 +930,7 @@ static id callSelector(NSString *className, NSString *selectorName, JSValue *arg
             } else {
                 returnValue = (__bridge id)result;
             }
+            //lh5
             return formatOCToJS(returnValue);
             
         } else {
@@ -1096,6 +1099,7 @@ id formatOCToJS(id obj)
     if ([obj isKindOfClass:[NSNumber class]] || [obj isKindOfClass:NSClassFromString(@"NSBlock")] || [obj isKindOfClass:[JSValue class]]) {
         return obj;
     }
+    //lh6
     return _wrapObj(obj);
 }
 
@@ -1142,6 +1146,7 @@ static NSDictionary *_wrapObj(id obj)
     if (!obj || obj == _nilObj) {
         return @{@"__isNull": @(YES)};
     }
+    //lh7
     return @{@"__clsName": NSStringFromClass([obj class]), @"__obj": obj};
 }
 

@@ -65,6 +65,7 @@
 		9CEE0EB21B64828D00DE66A6 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE0EAF1B64828D00DE66A6 /* UIScrollView+SVInfiniteScrolling.m */; };
 		9CEE0EB31B64828D00DE66A6 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE0EB11B64828D00DE66A6 /* UIScrollView+SVPullToRefresh.m */; };
 		9CEEBC501B61CF5B002D6F2C /* LHPullToRefreshContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEEBC4F1B61CF5B002D6F2C /* LHPullToRefreshContentView.m */; };
+		9CEEE1881B8AA8C900B673FA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CEEE1871B8AA8C900B673FA /* SystemConfiguration.framework */; };
 		9CF2E7661B44D91D00CFA63F /* OA10SDWebImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF2E7651B44D91D00CFA63F /* OA10SDWebImageViewController.m */; };
 		9CF304061B5C897900FDD6C1 /* UIScrollView+LHPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF304051B5C897900FDD6C1 /* UIScrollView+LHPullToRefresh.m */; };
 		9CF72DFA1B55DF9B00C2FFB5 /* OA11.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF72DF91B55DF9B00C2FFB5 /* OA11.storyboard */; };
@@ -192,6 +193,7 @@
 		9CEE0EB11B64828D00DE66A6 /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
 		9CEEBC4E1B61CF5B002D6F2C /* LHPullToRefreshContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHPullToRefreshContentView.h; sourceTree = "<group>"; };
 		9CEEBC4F1B61CF5B002D6F2C /* LHPullToRefreshContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHPullToRefreshContentView.m; sourceTree = "<group>"; };
+		9CEEE1871B8AA8C900B673FA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9CF2E7641B44D91D00CFA63F /* OA10SDWebImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA10SDWebImageViewController.h; sourceTree = "<group>"; };
 		9CF2E7651B44D91D00CFA63F /* OA10SDWebImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA10SDWebImageViewController.m; sourceTree = "<group>"; };
 		9CF304041B5C897900FDD6C1 /* UIScrollView+LHPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+LHPullToRefresh.h"; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CEEE1881B8AA8C900B673FA /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +377,7 @@
 		6DE967771A371D4300436817 = {
 			isa = PBXGroup;
 			children = (
+				9CEEE1871B8AA8C900B673FA /* SystemConfiguration.framework */,
 				6DE967821A371D4300436817 /* iLihuxDailyAccumulatesInOC */,
 				6DE9679C1A371D4300436817 /* iLihuxDailyAccumulatesInOCTests */,
 				6DE967811A371D4300436817 /* Products */,

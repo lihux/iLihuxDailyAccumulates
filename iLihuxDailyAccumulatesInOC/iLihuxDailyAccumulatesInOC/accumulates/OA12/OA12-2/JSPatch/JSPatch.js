@@ -63,6 +63,7 @@ var global = this
     if (args.length > numOfArgs) {
       selectorName += ":"
     }
+  //lh3
     var ret = instance ? _OC_callI(instance, selectorName, args, isSuper):
                          _OC_callC(clsName, selectorName, args)
 
@@ -87,11 +88,17 @@ var global = this
       }
     }
     return function(){
+  //lh7   UIView.alloc()返回的JSValue：接着链式调用：init()
+  //  return @{@"__clsName": NSStringFromClass([obj class]), @"__obj": obj};
+
+  //lh2
       var args = Array.prototype.slice.call(arguments)
+  //lh8 _methodFunc(view, UIView, init, ..., nil)
       return _methodFunc(self.__obj, self.__clsName, methodName, args, self.__isSuper)
     }
   }
 
+  //lh1
   var _require = function(clsName) {
     if (!global[clsName]) {
       global[clsName] = {
