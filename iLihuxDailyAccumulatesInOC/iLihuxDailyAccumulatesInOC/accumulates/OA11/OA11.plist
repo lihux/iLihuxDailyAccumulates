@@ -50,5 +50,13 @@
 		<key>storyboardID</key>
 		<string>OA11PullToRefreshViewController</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>OA11-7定制化的滚筒View</string>
+		<key>content</key>
+		<string>OA11-7定制化的滚筒View</string>
+		<key>storyboardID</key>
+		<string>OA11CircleScrollViewController</string>
+	</dict>
 </array>
 </plist>
