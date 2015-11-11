@@ -98,5 +98,13 @@
 		<key>storyboardID</key>
 		<string>OA12JSPatchViewController</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>13AsyncDisplayKit调研</string>
+		<key>content</key>
+		<string>13AsyncDisplayKit调研</string>
+		<key>storyboardID</key>
+		<string>OA13AsyncDemoViewController</string>
+	</dict>
 </array>
 </plist>
