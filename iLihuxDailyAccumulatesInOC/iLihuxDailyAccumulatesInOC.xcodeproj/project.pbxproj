@@ -74,6 +74,7 @@
 		9CB22FB01BF37B3200F6992D /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB22FAF1BF37B3200F6992D /* UIImage+ImageEffects.m */; settings = {ASSET_TAGS = (); }; };
 		9CB22FB21BF37B7E00F6992D /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB22FB11BF37B7E00F6992D /* Accelerate.framework */; };
 		9CB22FB41BF37B8900F6992D /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB22FB31BF37B8900F6992D /* GLKit.framework */; };
+		9CB22FB71BF39A1D00F6992D /* OA13Demo3CollectionViewCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB22FB61BF39A1D00F6992D /* OA13Demo3CollectionViewCellNode.m */; settings = {ASSET_TAGS = (); }; };
 		9CE78F3B1B69C3250029F562 /* OA12JSPatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE78F3A1B69C3250029F562 /* OA12JSPatchViewController.m */; };
 		9CE78F3D1B69C5660029F562 /* OA12.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CE78F3C1B69C5660029F562 /* OA12.plist */; };
 		9CE78F3F1B69C5B80029F562 /* OA12.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE78F3E1B69C5B80029F562 /* OA12.storyboard */; };
@@ -226,6 +227,8 @@
 		9CB22FAF1BF37B3200F6992D /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		9CB22FB11BF37B7E00F6992D /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		9CB22FB31BF37B8900F6992D /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		9CB22FB51BF39A1D00F6992D /* OA13Demo3CollectionViewCellNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OA13Demo3CollectionViewCellNode.h; sourceTree = "<group>"; };
+		9CB22FB61BF39A1D00F6992D /* OA13Demo3CollectionViewCellNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OA13Demo3CollectionViewCellNode.m; sourceTree = "<group>"; };
 		9CE78F391B69C3250029F562 /* OA12JSPatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OA12JSPatchViewController.h; path = OA12/OA12JSPatchViewController.h; sourceTree = "<group>"; };
 		9CE78F3A1B69C3250029F562 /* OA12JSPatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OA12JSPatchViewController.m; path = OA12/OA12JSPatchViewController.m; sourceTree = "<group>"; };
 		9CE78F3C1B69C5660029F562 /* OA12.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = OA12.plist; path = OA12/OA12.plist; sourceTree = "<group>"; };
@@ -616,6 +619,8 @@
 			children = (
 				9CB22F811BF329CD00F6992D /* OA13Demo3ViewController.h */,
 				9CB22F821BF329CD00F6992D /* OA13Demo3ViewController.m */,
+				9CB22FB51BF39A1D00F6992D /* OA13Demo3CollectionViewCellNode.h */,
+				9CB22FB61BF39A1D00F6992D /* OA13Demo3CollectionViewCellNode.m */,
 			);
 			path = OA13Demo3;
 			sourceTree = "<group>";
@@ -899,6 +904,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DE967891A371D4300436817 /* AppDelegate.m in Sources */,
+				9CB22FB71BF39A1D00F6992D /* OA13Demo3CollectionViewCellNode.m in Sources */,
 				9CB22F861BF3390400F6992D /* OA13Demo1CollectionViewCell.m in Sources */,
 				9CECDCCA1B58DBDB00291F45 /* LHPullToRefreshView.m in Sources */,
 				9CE78F4D1B69CC040029F562 /* LHRoundCornerButton.m in Sources */,
