@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.datas = [OA13GlobalHelper storyObjectsFromPlist];
-    self.collectionView.backgroundColor = [UIColor grayColor];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     self.cellSize = CGSizeMake([UIScreen mainScreen].bounds.size.width / 2 - 1, [UIScreen mainScreen].bounds.size.width);
 }
 

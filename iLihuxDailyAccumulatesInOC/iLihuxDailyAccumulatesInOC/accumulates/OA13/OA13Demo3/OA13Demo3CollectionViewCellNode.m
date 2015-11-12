@@ -40,15 +40,13 @@
         self.backgroundImageNode.frame = CGRectMake(0, 0, cellWidth, cellWidth * 2);
         self.contentImageNode.frame = CGRectMake(0, 0, cellWidth, cellWidth);
         self.titleTextNode.frame = CGRectMake(10, cellWidth + 5, cellWidth - 20, 15);
-        self.contentTextNode.frame = CGRectMake(10, cellWidth + 25, cellWidth - 20, 10);
+        self.contentTextNode.frame = CGRectMake(10, cellWidth + 25, cellWidth - 20, 100);
     }
     return self;
 }
 
 - (void)configCellWithStoryObject:(OA13StoryObject *)storyObject
 {
-//    self.titleTextNode.text = storyObject.title;
-//    self.contentLabel.text = storyObject.content;
     NSDictionary *titleAttributesDic = @{
                                          NSForegroundColorAttributeName: [UIColor whiteColor],
                                          NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:15]

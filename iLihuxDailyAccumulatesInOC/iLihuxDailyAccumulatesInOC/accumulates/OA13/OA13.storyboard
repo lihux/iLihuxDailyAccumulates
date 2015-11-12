@@ -45,13 +45,16 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="牛" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1Y-4w-6N6" userLabel="title">
-                                                            <rect key="frame" x="10" y="105" width="15" height="17.5"/>
+                                                            <rect key="frame" x="10" y="105" width="15" height="15"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="15" id="5sd-sB-HMA"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="牛" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVd-gf-2xv" userLabel="content">
-                                                            <rect key="frame" x="10" y="127.5" width="12" height="14"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="牛" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVd-gf-2xv" userLabel="content">
+                                                            <rect key="frame" x="10" y="125" width="85" height="71"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -63,11 +66,13 @@
                                                         <constraint firstItem="HSh-Ub-mAC" firstAttribute="top" secondItem="jN2-m0-ekk" secondAttribute="top" id="3Ws-pg-LZC"/>
                                                         <constraint firstItem="p1Y-4w-6N6" firstAttribute="top" secondItem="HSh-Ub-mAC" secondAttribute="bottom" constant="5" id="7xN-LM-Hvq"/>
                                                         <constraint firstItem="mdQ-jm-87h" firstAttribute="leading" secondItem="jN2-m0-ekk" secondAttribute="leading" id="DN5-Ye-GSB"/>
+                                                        <constraint firstAttribute="trailing" secondItem="OVd-gf-2xv" secondAttribute="trailing" constant="5" id="E7A-YR-EB3"/>
                                                         <constraint firstAttribute="bottom" secondItem="mdQ-jm-87h" secondAttribute="bottom" id="GrA-D4-XW1"/>
                                                         <constraint firstItem="HSh-Ub-mAC" firstAttribute="leading" secondItem="jN2-m0-ekk" secondAttribute="leading" id="LDg-O0-yqL"/>
                                                         <constraint firstItem="OVd-gf-2xv" firstAttribute="leading" secondItem="jN2-m0-ekk" secondAttribute="leading" constant="10" id="PE0-7g-rmj"/>
                                                         <constraint firstAttribute="trailing" secondItem="mdQ-jm-87h" secondAttribute="trailing" id="UjA-4r-RTZ"/>
                                                         <constraint firstItem="OVd-gf-2xv" firstAttribute="top" secondItem="p1Y-4w-6N6" secondAttribute="bottom" constant="5" id="ckC-PK-Xpm"/>
+                                                        <constraint firstAttribute="bottom" secondItem="OVd-gf-2xv" secondAttribute="bottom" constant="4" id="enK-QJ-yUB"/>
                                                         <constraint firstAttribute="trailing" secondItem="HSh-Ub-mAC" secondAttribute="trailing" id="fiP-CJ-E9X"/>
                                                         <constraint firstItem="mdQ-jm-87h" firstAttribute="top" secondItem="jN2-m0-ekk" secondAttribute="top" id="iA4-sP-8lo"/>
                                                         <constraint firstItem="p1Y-4w-6N6" firstAttribute="leading" secondItem="jN2-m0-ekk" secondAttribute="leading" constant="10" id="mlc-gj-yNj"/>
@@ -149,7 +154,7 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="牛" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZK-01-2KH" userLabel="content">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="牛" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZK-01-2KH" userLabel="content">
                                                     <rect key="frame" x="44" y="93" width="12" height="14"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -221,6 +226,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0z-QH-TcR" userLabel="First Responder" sceneMemberID="firstResponder"/>

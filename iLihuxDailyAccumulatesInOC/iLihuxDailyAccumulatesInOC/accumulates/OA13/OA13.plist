@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>content</key>
-		<string>老鼠，最怕猫的动物</string>
+		<string>老鼠偷吃粮食，证明“仓鼠有余粮”，说明这户富足，家中鼠多象征富裕。</string>
 		<key>image</key>
 		<string>animal1</string>
 		<key>title</key>
@@ -12,7 +12,7 @@
 	</dict>
 	<dict>
 		<key>content</key>
-		<string>牛，最任劳任怨的一种动物</string>
+		<string>因为牛耕，中国人对牛感情渐深，把诸如憨厚勤劳，不求回报等优秀品质附在牛身上，鲁迅就以“俯首甘为孺子牛”言志。</string>
 		<key>image</key>
 		<string>animal2</string>
 		<key>title</key>
@@ -20,7 +20,7 @@
 	</dict>
 	<dict>
 		<key>content</key>
-		<string>虎，百兽之王</string>
+		<string>虎是百兽之王，寅虎相配，甲骨文“寅”字如箭矢状，《说文》中“寅”意为“阳气上升，虽上有冻土，必破土而出”，与虎的凶猛刚阳之气契合。如果说商代铜器虎食人卣反映古人对虎的畏惧，那在战争的虎烙印，则代表对征服的渴望，行军打白虎幡旗，晓勇者为“虎将”，调兵用虎符，兵器有虎纹。</string>
 		<key>image</key>
 		<string>animal3</string>
 		<key>title</key>
@@ -28,7 +28,7 @@
 	</dict>
 	<dict>
 		<key>content</key>
-		<string>兔子，最可爱的动物</string>
+		<string>嫦娥奔月传说源于《淮南子.览冥训》，嫦娥在月中有玉兔相伴。兔是月的象征。《春秋运斗枢》说：“行失瑶光，则月出兔”。《乐府诗集》有“白兔常跪捣药虾蟆九”的诗句，晋朝傅玄在《拟天问》中吟：“月中何有?白免捣药。”</string>
 		<key>image</key>
 		<string>animal4</string>
 		<key>title</key>
@@ -36,7 +36,7 @@
 	</dict>
 	<dict>
 		<key>content</key>
-		<string>龙，皇权的象征</string>
+		<string>龙的来历说法颇多，以闻一多推断，蛇为图腾的氏族先后兼并许多别的图腾氏族，形成“以大蛇为主体，兼有马的头、鬣的尾，鹿的角，狗的爪，鱼的鳞和须混合而成的龙图腾”</string>
 		<key>image</key>
 		<string>animal5</string>
 		<key>title</key>
@@ -44,7 +44,7 @@
 	</dict>
 	<dict>
 		<key>content</key>
-		<string>蛇，小龙也</string>
+		<string>蛇多以负面形象出现。“人心不足蛇吞象”形容蛇的贪婪；《农夫和蛇》写出蛇的狡猾和冷血；狠毒之人被形容为“蛇蝎心肠”。</string>
 		<key>image</key>
 		<string>animal6</string>
 		<key>title</key>
@@ -52,7 +52,7 @@
 	</dict>
 	<dict>
 		<key>content</key>
-		<string>马，将军之最爱</string>
+		<string>作为六畜之首，马除用作交通运输，还是强大的军事装备。战国以“万乘之国”，“千乘之国”等马拉战车的数量来形容国力强弱。</string>
 		<key>image</key>
 		<string>animal7</string>
 		<key>title</key>
@@ -60,7 +60,7 @@
 	</dict>
 	<dict>
 		<key>content</key>
-		<string>羊，羊毛都快被你们给薅死了</string>
+		<string>古人视羊为“德畜”，善群、好仁、死义、知礼。善群，羊喜欢聚群。好仁指羊善良，有角但不好斗。死义指羊被宰杀时安静，视死如归，故有宣王“以羊易牛”的故事。知礼指羊知恩，羊羔跪乳象征孝道。</string>
 		<key>image</key>
 		<string>animal8</string>
 		<key>title</key>
@@ -68,7 +68,7 @@
 	</dict>
 	<dict>
 		<key>content</key>
-		<string>猴子的烦恼，你不懂</string>
+		<string>猴与”侯“同音，猴子骑马寓意马上封侯；猴向枫树上挂印寓意封侯挂印；一只猴子骑在另一只猴子背上寓意辈辈封侯。猴爱吃桃，桃子象征长寿，民间剪纸也常见“猴桃瑞寿”图案，取长寿之意。</string>
 		<key>image</key>
 		<string>animal9</string>
 		<key>title</key>
@@ -76,7 +76,7 @@
 	</dict>
 	<dict>
 		<key>content</key>
-		<string>母鸡，能下蛋的是母鸡</string>
+		<string>《韩诗外传》概括鸡的“五德”，“头戴冠，文也；足搏距，武也；见敌敢干，勇也；见食相呼，义也；守夜不失时，信也”。故鸡有德禽的雅号</string>
 		<key>image</key>
 		<string>animal10</string>
 		<key>title</key>
@@ -84,7 +84,7 @@
 	</dict>
 	<dict>
 		<key>content</key>
-		<string>狗，人类最好的朋友</string>
+		<string>狗是司风之神。甲骨文载“于帝史风二犬”；《山海经》有黑白犬祭祀风神。古人认为狗能止风，《风俗通义》载，“戌之神为风伯，故以丙戌日祭于西北”。狗还能扬风，《墨子》载 “烧黑狗皮扬灰风即起”。</string>
 		<key>image</key>
 		<string>animal11</string>
 		<key>title</key>
@@ -92,7 +92,7 @@
 	</dict>
 	<dict>
 		<key>content</key>
-		<string>猪，杀猪菜什么的最好吃了</string>
+		<string>猪有“乌金”之名，父系氏族公社时期，猪是财富标志，临夏大何庄的墓葬有三十六块猪骨陪葬。豕是士庶以下平民的祭品，以豕为之，陈豕于室，合家而祀，即“家”字</string>
 		<key>image</key>
 		<string>animal12</string>
 		<key>title</key>

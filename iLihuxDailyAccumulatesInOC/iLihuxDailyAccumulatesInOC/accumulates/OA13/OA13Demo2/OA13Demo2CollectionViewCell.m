@@ -39,7 +39,7 @@
     [self.contentView bringSubviewToFront:self.titleLabel];
     [self.contentView bringSubviewToFront:self.contentLabel];
     self.titleLabel.frame = CGRectMake(10, cellWidth + 5, cellWidth - 20, 15);
-    self.contentLabel.frame = CGRectMake(10, cellWidth + 25, cellWidth - 20, 10);
+    self.contentLabel.frame = CGRectMake(10, cellWidth + 25, cellWidth - 20, 100);
 }
 
 - (void)prepareForReuse
