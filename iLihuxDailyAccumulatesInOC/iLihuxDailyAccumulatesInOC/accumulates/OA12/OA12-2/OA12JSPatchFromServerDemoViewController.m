@@ -22,21 +22,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.data = @[@"天", @"地", @"人和"];
+    self.data = @[@"天苍苍", @"野茫茫", @"风吹草低见牛羊"];
 }
 
-- (IBAction)didTapOnCrashButton:(id)sender
+//defineClass('OA12JSPatchFromServerDemoViewController', {
+//didTapOnCrashButton: function(sender) {
+//    if (sender.tag() > 2) {
+//        require("MBHUDHelper").showWarningWithText("对不起，我已才思枯竭了，不要再点了");
+//    } else {
+//        self.ORIGdidTapOnCrashButton(sender);
+//    }
+//}
+//})
+
+- (IBAction)didTapOnCrashButton:(UIButton *)sender
 {
-    NSLog(@"数据源是：%@", self.data[4]);
+    NSString *text = self.data[sender.tag];
+    [MBHUDHelper showWarningWithText:text delay:1.0];
+    NSLog(@"数据源是：%@", text);
+    sender.tag ++;
 }
 
 - (IBAction)didTapOnLoadingButton:(id)sender
 {
     [JPEngine startEngine];
     [MBHUDHelper showWarningWithText:@"正在尝试从Lihux的阿里云服务器请求JS文件"];
-    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://120.24.70.94:4000/superCarPhotos/lihuxJSPatch.js"]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://139.129.20.85:4414"]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         NSString *script = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        [JPEngine evaluateScript:script];
+        if (script) {
+            [JPEngine evaluateScript:script];
+        }
     }];
 }
 
