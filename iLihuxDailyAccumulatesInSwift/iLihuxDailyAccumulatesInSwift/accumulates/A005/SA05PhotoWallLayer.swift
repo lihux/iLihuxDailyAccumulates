@@ -10,14 +10,14 @@ import UIKit
 
 class SA05PhotoWallLayer: CALayer {
     
-    override func addSublayer(layer: CALayer) {
+    override func addSublayer(_ layer: CALayer) {
         layer.position = self.randomPosition()
         super.addSublayer(layer)
     }
 
     func randomPosition() -> CGPoint
     {
-        return CGPointZero
+        return CGPoint.zero
     }
    
 }

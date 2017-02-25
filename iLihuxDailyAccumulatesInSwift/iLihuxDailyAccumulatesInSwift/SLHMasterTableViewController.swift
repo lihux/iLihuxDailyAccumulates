@@ -36,7 +36,7 @@ class SLHMasterTableViewController: UITableViewController {
 
     func loadAccumulatesFromPlist()
     {
-        let plistPath = NSBundle.mainBundle().pathForResource("SAccumulates", ofType: "plist")
+        let plistPath = Bundle.main.path(forResource: "SAccumulates", ofType: "plist")
         let tempArray = NSArray(contentsOfFile: plistPath!)
         if let temp = tempArray {
             var tempAccumulates = [SAccumulate]()
@@ -60,25 +60,25 @@ class SLHMasterTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.accumulates.count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell!
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell") as UITableViewCell!
         let accumulate = self.accumulates[indexPath.row]
-        cell.textLabel?.text = accumulate.title
-        return cell
+        cell?.textLabel?.text = accumulate.title
+        return cell!
     }
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let accumulate = self.accumulates[indexPath.row]
-        let accumulateViewController = self.storyboard!.instantiateViewControllerWithIdentifier(accumulate.storyboardID) as UIViewController
+        let accumulateViewController = self.storyboard!.instantiateViewController(withIdentifier: accumulate.storyboardID) as UIViewController
         accumulateViewController.title = accumulate.title
         self.navigationController?.pushViewController(accumulateViewController, animated: true)
     }

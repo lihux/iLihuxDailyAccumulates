@@ -8,9 +8,9 @@
 
 import UIKit
 
-class SA03CustomOperation: NSOperation {
+class SA03CustomOperation: Operation {
     override func start() {
-        if self.cancelled {
+        if self.isCancelled {
         }
     }
 }

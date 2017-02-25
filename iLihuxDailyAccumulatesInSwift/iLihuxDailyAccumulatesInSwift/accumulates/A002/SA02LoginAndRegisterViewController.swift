@@ -30,7 +30,7 @@ class SA02LoginAndRegisterViewController: UIViewController, UITextFieldDelegate 
         super.viewDidLoad()
     }
 
-    @IBAction func editingDidChanged(sender: AnyObject)
+    @IBAction func editingDidChanged(_ sender: AnyObject)
     {
         self.updateInfoLabel(sender)
         let textField = sender as! UITextField
@@ -58,7 +58,7 @@ class SA02LoginAndRegisterViewController: UIViewController, UITextFieldDelegate 
         }
     }
 
-    func updateInfoLabel(sender: AnyObject)
+    func updateInfoLabel(_ sender: AnyObject)
     {
         if sender as! NSObject == self.userNameTextField {
             self.infoLabel.text = "\(self.userNameInfo[0])\n\(self.userNameInfo[1])\n\(self.userNameInfo[2])\n\(self.userNameInfo[3])"
@@ -71,18 +71,18 @@ class SA02LoginAndRegisterViewController: UIViewController, UITextFieldDelegate 
         super.didReceiveMemoryWarning()
     }
 
-    func stringIsValidUserName(string: String) -> Bool
+    func stringIsValidUserName(_ string: String) -> Bool
     {
         return string.stringIsAlphabet() || string.stringIsArabicNumberals() || string.stringIsChineseCharacters()
     }
 
-    func stringIsValidPassword(string: String) -> Bool
+    func stringIsValidPassword(_ string: String) -> Bool
     {
         return string.stringIsASCII()
     }
 
     //统计用户名字符数，规则是：中文占2字符、英文1字符
-    func userNameStringCount(string: String) -> Int
+    func userNameStringCount(_ string: String) -> Int
     {
         return 0;
         //warning :countElements已被swift2删除，最新的替代函数暂未找到，此处逻辑被破坏，择日修复
@@ -90,7 +90,7 @@ class SA02LoginAndRegisterViewController: UIViewController, UITextFieldDelegate 
     }
 
     //program mark - UITextFieldDelegate
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         print("标记：\(textField.markedTextRange)")
         self.hasUserNameChecked = false
         if string == "" {

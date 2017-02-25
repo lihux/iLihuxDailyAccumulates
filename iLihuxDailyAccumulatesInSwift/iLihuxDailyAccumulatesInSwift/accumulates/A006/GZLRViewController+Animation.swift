@@ -28,7 +28,7 @@ extension GZLRViewController {
 
     func prepareViewsForAnimatingShow()
     {
-        let transform = CGAffineTransformMakeScale(0.1, 0.1)
+        let transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
         for view in self.midViews {
             view.transform = transform
             view.alpha = 0
@@ -36,7 +36,7 @@ extension GZLRViewController {
         for constraint in self.midViewsTopConstraints {
             constraint.constant += self.kConstraintConstantOffsetForHiden
         }
-        self.topViews[1].transform = CGAffineTransformMakeScale(0.8, 0.8)
+        self.topViews[1].transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
 
         self.view.layoutIfNeeded()
     }
@@ -49,12 +49,12 @@ extension GZLRViewController {
 
     func bounceOutSlogonView()
     {
-        UIView.animateWithDuration(self.animationDuratin, animations: { () -> Void in
+        UIView.animate(withDuration: self.animationDuratin, animations: { () -> Void in
             for constraint in self.logoSizeConstraints {
                 constraint.constant = self.kLogoAfterAnimationWidth
             }
             self.logoViewCenterXConstraint.constant = self.kLogonAfterAnimationCenterXConstraintOffset
-            self.topViews[1].transform = CGAffineTransformIdentity
+            self.topViews[1].transform = CGAffineTransform.identity
             self.topViews[1].alpha = 1
             self.view.layoutIfNeeded()
         })
@@ -63,21 +63,21 @@ extension GZLRViewController {
     func bounceUpBottomView()
     {
         var animationDelay = 0.1
-        for (var i = 0 as Int; i < self.bottomViewsBottomConstraintConstants.count; i++) {
+        for (i in 0 as Int ..< self.bottomViewsBottomConstraintConstants.count) {
             self.animatingConstraint(self.bottomViewsBottomConstraints[i], constant: self.bottomViewsBottomConstraintConstants[i], duration: self.animationDuratin, delay: animationDelay)
             animationDelay = animationDelay + 0.1
         }
     }
 
-    func animatingConstraint(constrait: NSLayoutConstraint, constant: CGFloat, duration: NSTimeInterval, delay:NSTimeInterval)
+    func animatingConstraint(_ constrait: NSLayoutConstraint, constant: CGFloat, duration: TimeInterval, delay:TimeInterval)
     {
-        UIView.animateWithDuration(self.animationDuratin, animations: { () -> Void in
+        UIView.animate(withDuration: self.animationDuratin, animations: { () -> Void in
             constrait.constant = constant
             self.view.layoutIfNeeded()
         })
     }
 
-    func animatingLoginAndRegisterViews(hidding: Bool, isLogin: Bool)
+    func animatingLoginAndRegisterViews(_ hidding: Bool, isLogin: Bool)
     {
         if !hidding {
             self.titleLabel.text = isLogin ? "友拍账号登录" : "友拍注册"
@@ -88,16 +88,16 @@ extension GZLRViewController {
         self.animatingBottomViews(!hidding, isLogin: isLogin)
     }
 
-    func animatingBlurView(hiding: Bool)
+    func animatingBlurView(_ hiding: Bool)
     {
         var alpha: CGFloat = 1
-        var transform = CGAffineTransformMakeScale(self.kTransformScaleMax, self.kTransformScaleMax)
+        var transform = CGAffineTransform(scaleX: self.kTransformScaleMax, y: self.kTransformScaleMax)
         if hiding {
             alpha = 0
-            transform = CGAffineTransformIdentity
+            transform = CGAffineTransform.identity
         }
 
-        UIView.animateWithDuration(self.animationDuratin , animations: { () -> Void in
+        UIView.animate(withDuration: self.animationDuratin , animations: { () -> Void in
             self.blurContainerView.alpha = alpha
             self.blurContainerView.transform = transform
             self.coverContainerView.transform = transform
@@ -105,25 +105,25 @@ extension GZLRViewController {
         })
     }
 
-    func animatingTopViews(hiding: Bool)
+    func animatingTopViews(_ hiding: Bool)
     {
         for constraint in self.topViewsTopConstraints {
             constraint.constant = hiding ? -self.topViews[0].bounds.size.height : self.topViewsTopConstraintConstants[0]
         }
-        UIView.animateWithDuration(self.animationDuratin, animations: { () -> Void in
+        UIView.animate(withDuration: self.animationDuratin, animations: { () -> Void in
             self.view.layoutIfNeeded()
         })
     }
 
-    func animatingBottomViews(hiding: Bool, isLogin: Bool)
+    func animatingBottomViews(_ hiding: Bool, isLogin: Bool)
     {
-        UIView.animateWithDuration(self.animationDuratin, animations: { () -> Void in
+        UIView.animate(withDuration: self.animationDuratin, animations: { () -> Void in
             if isLogin {
                 self.bottomViewsTopConstraints[0].constant = hiding ? self.bottomViewsTopConstraintConstants[0] : 1000
                 self.changeBottomView(1, hiding: hiding)
             } else {
                 self.bottomViewsTopConstraints[1].constant = hiding ? self.bottomViewsTopConstraintConstants[1] : 1000
-                self.switchRegisterButton.setTitle((hiding ? "下一步" : "注册"), forState: UIControlState.Normal)
+                self.switchRegisterButton.setTitle((hiding ? "下一步" : "注册"), for: UIControlState())
                 self.changeBottomView(0, hiding: hiding)
             }
             self.changeBottomView(2, hiding: hiding)
@@ -132,25 +132,25 @@ extension GZLRViewController {
         })
     }
 
-    func changeBottomView(index: Int, hiding: Bool)
+    func changeBottomView(_ index: Int, hiding: Bool)
     {
         let constantOffset: CGFloat = hiding ? kConstraintConstantOffsetForHiden : 0
         self.bottomViewsBottomConstraints[index].constant = self.bottomViewsBottomConstraintConstants[index] + constantOffset
         self.bottomViews[index].alpha = hiding ? 0 : 1
-        self.bottomViews[index].transform = hiding ? CGAffineTransformMakeScale(0.1, 0.1) : CGAffineTransformIdentity
+        self.bottomViews[index].transform = hiding ? CGAffineTransform(scaleX: 0.1, y: 0.1) : CGAffineTransform.identity
     }
 
-    func animatingMidViews(hiding: Bool, isLogin: Bool)
+    func animatingMidViews(_ hiding: Bool, isLogin: Bool)
     {
         if isLogin {
-            UIView.animateWithDuration(self.animationDuratin, animations: { () -> Void in
-                for var i = 0; i < 4; i++ {
+            UIView.animate(withDuration: self.animationDuratin, animations: { () -> Void in
+                for i in 0 ..< 4 {
                     self.changeMidView(i, hiding: hiding)
                 }
                 self.view.layoutIfNeeded()
             })
         } else {
-            UIView.animateWithDuration(self.animationDuratin, animations: { () -> Void in
+            UIView.animate(withDuration: self.animationDuratin, animations: { () -> Void in
                 self.changeMidView(0, hiding: hiding)
                 self.changeMidView(4, hiding: hiding)
                 self.view.layoutIfNeeded()
@@ -158,12 +158,12 @@ extension GZLRViewController {
         }
     }
 
-    func changeMidView(index: Int, hiding: Bool)
+    func changeMidView(_ index: Int, hiding: Bool)
     {
         let constantOffset: CGFloat = hiding ? kConstraintConstantOffsetForHiden : 0
         self.midViewsTopConstraints[index].constant = self.midViewsTopConstraintConstants[index] + constantOffset
         self.midViews[index].alpha = hiding ? 0 : 1
-        self.midViews[index].transform = hiding ? CGAffineTransformMakeScale(0.1, 0.1) : CGAffineTransformIdentity
+        self.midViews[index].transform = hiding ? CGAffineTransform(scaleX: 0.1, y: 0.1) : CGAffineTransform.identity
     }
 
 }

@@ -25,11 +25,11 @@ class ViewController: UIViewController {
     {
         let s:NSString = "假如给我三天光明\n我将要用它来寻找希望\\n加入给我十年，我就会用它来颓废\\\n多么讽刺的事实啊！"
         print("出事前：\(s)")
-        let b = s.stringByReplacingOccurrencesOfString("\\n", withString: "\n")
+        let b = s.replacingOccurrences(of: "\\n", with: "\n")
         print("出事后：\(b)")
     }
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("***************************")
         print("\(self.textView.layoutMargins.left) \(self.textView.layoutMargins.top)")
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     {
         var paragraphStyle = NSMutableParagraphStyle()
 //        paragraphStyle.lineSpacing = 17
-        var dic = NSDictionary(objectsAndKeys:UIFont(name: "STHeitiSC-Medium", size: 14)!, NSFontAttributeName, paragraphStyle, NSParagraphStyleAttributeName)
+        var dic = NSDictionary(dictionaryLiteral:UIFont(name: "STHeitiSC-Medium", size: 14)!, NSFontAttributeName, paragraphStyle, NSParagraphStyleAttributeName)
         var string = "聚合徐小平、牛文文、吴声、孟醒（雕爷）、蔡明等资本、营销、电商三大领域的顶级专家现场坐台，深精百战，弹无虚发。\n"
         var attributeString1 = NSMutableAttributedString(string: string, attributes: dic as! [String : AnyObject])
         

@@ -10,11 +10,11 @@ import UIKit
 
 class SA04View: UIView {
 
-    override class func layerClass() -> AnyClass {
+    override class var layerClass : AnyClass {
         return SA04Layer.self
     }
 
-    override func actionForLayer(layer: CALayer, forKey event: String) -> CAAction? {
+    override func actionForLayer(_ layer: CALayer, forKey event: String) -> CAAction? {
         let action = super.actionForLayer(layer, forKey: event)
         print("\n面SA04View：\nactionForLayer(layer: \(layer), forKey event: \(event)) -> \(action)\n")
         return action

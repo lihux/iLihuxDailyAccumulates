@@ -24,12 +24,12 @@ class SA05LayerAnimationViewController: UIViewController {
 //    UIGraphicsEndImageContext();
 //    self.originalImage = image;
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.customUI()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 //        self.customUI()
     }
@@ -37,10 +37,10 @@ class SA05LayerAnimationViewController: UIViewController {
     {
         self.photoView.imageView.image = UIImage(named: "weixin")
         UIGraphicsBeginImageContext(self.photoView.bounds.size)
-        self.photoView.drawViewHierarchyInRect(self.photoView.bounds, afterScreenUpdates: false)
+        self.photoView.drawHierarchy(in: self.photoView.bounds, afterScreenUpdates: false)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        self.photoView.imageView.image = image.applyLightEffect()
+        self.photoView.imageView.image = image?.applyLightEffect()
     }
 
     

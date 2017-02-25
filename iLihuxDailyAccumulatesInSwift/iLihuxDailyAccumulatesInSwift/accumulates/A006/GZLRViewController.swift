@@ -62,13 +62,13 @@ class GZLRViewController: UIViewController {
     func customUI()
     {
         self.switchRegisterButton.layer.borderWidth = 1
-        self.switchRegisterButton.layer.borderColor = UIColor.whiteColor().CGColor
-        let blurImage = self.coverImageView.image!.applyBlurWithRadius(18, tintColor: UIColor.clearColor(), saturationDeltaFactor: 1, maskImage: nil)
+        self.switchRegisterButton.layer.borderColor = UIColor.white.cgColor
+        let blurImage = self.coverImageView.image!.applyBlur(withRadius: 18, tintColor: UIColor.clear, saturationDeltaFactor: 1, maskImage: nil)
         self.blurImageView.image = blurImage
         self.blurContainerView.alpha = 0
     }
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if !self.hasAnimatedShowBottomViews {
             self.hasAnimatedShowBottomViews = true
@@ -76,11 +76,11 @@ class GZLRViewController: UIViewController {
         }
     }
 
-    @IBAction func didTapOnBlurView(sender: AnyObject)
+    @IBAction func didTapOnBlurView(_ sender: AnyObject)
     {
     }
 
-    @IBAction func didTapOnLoginButton(sender: UIButton)
+    @IBAction func didTapOnLoginButton(_ sender: UIButton)
     {
         if sender.tag == 0 {
             self.cancerButton.tag = 0
@@ -88,7 +88,7 @@ class GZLRViewController: UIViewController {
         }
     }
 
-    @IBAction func didTapOnRegisterButton(sender: UIButton)
+    @IBAction func didTapOnRegisterButton(_ sender: UIButton)
     {
         if sender.tag == 0 {
             self.cancerButton.tag = 1
@@ -96,16 +96,16 @@ class GZLRViewController: UIViewController {
         }
     }
 
-    @IBAction func didTapOnCancelButton(sender: AnyObject)
+    @IBAction func didTapOnCancelButton(_ sender: AnyObject)
     {
         self.animatingLoginAndRegisterViews(true, isLogin: (sender.tag == 0 ? true : false))
     }
     
-    @IBAction func didTapOnBackButton(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func didTapOnBackButton(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
 
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
 

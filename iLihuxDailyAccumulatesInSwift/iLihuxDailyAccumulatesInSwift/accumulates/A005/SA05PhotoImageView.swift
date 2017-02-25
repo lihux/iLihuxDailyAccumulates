@@ -26,14 +26,14 @@ import UIKit
     }
 
     func addObserverForImageChange() {
-        self.addObserver(self, forKeyPath: "image", options: NSKeyValueObservingOptions.New, context: nil)
+        self.addObserver(self, forKeyPath: "image", options: NSKeyValueObservingOptions.new, context: nil)
     }
 
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [NSObject : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+    override func observeValue(forKeyPath keyPath: String?, of object: AnyObject?, change: [AnyHashable: Any]?, context: UnsafeMutableRawPointer) {
         if keyPath == "image" {
-            if let image = change![NSKeyValueChangeNewKey] as? UIImage {
+            if let image = change![NSKeyValueChangeKey.newKey] as? UIImage {
                 print("我靠，进来了")
-                image.resizableImageWithCapInsets(UIEdgeInsets(top: 10, left: 10, bottom: 20, right: 10))
+                image.resizableImage(withCapInsets: UIEdgeInsets(top: 10, left: 10, bottom: 20, right: 10))
             }
         }
     }
