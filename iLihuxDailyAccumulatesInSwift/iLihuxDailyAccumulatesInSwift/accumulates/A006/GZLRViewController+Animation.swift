@@ -63,7 +63,7 @@ extension GZLRViewController {
     func bounceUpBottomView()
     {
         var animationDelay = 0.1
-        for (i in 0 as Int ..< self.bottomViewsBottomConstraintConstants.count) {
+        for i in 0 as Int ..< self.bottomViewsBottomConstraintConstants.count {
             self.animatingConstraint(self.bottomViewsBottomConstraints[i], constant: self.bottomViewsBottomConstraintConstants[i], duration: self.animationDuratin, delay: animationDelay)
             animationDelay = animationDelay + 0.1
         }

@@ -14,9 +14,9 @@ class SA04View: UIView {
         return SA04Layer.self
     }
 
-    override func actionForLayer(_ layer: CALayer, forKey event: String) -> CAAction? {
-        let action = super.actionForLayer(layer, forKey: event)
-        print("\n面SA04View：\nactionForLayer(layer: \(layer), forKey event: \(event)) -> \(action)\n")
-        return action
-    }
+//    override func actionForLayer(_ layer: CALayer, forKey event: String) -> CAAction? {
+//        let action = super.actionForLayer(layer, forKey: event)
+//        print("\n面SA04View：\nactionForLayer(layer: \(layer), forKey event: \(event)) -> \(action)\n")
+//        return nil;
+//    }
 }

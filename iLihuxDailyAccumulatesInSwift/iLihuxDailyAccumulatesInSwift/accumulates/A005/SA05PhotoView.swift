@@ -11,7 +11,7 @@ import UIKit
 class SA05PhotoView: UIView {
 
     var imageView = UIImageView()
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.adjustImageViewFrame()
     }
