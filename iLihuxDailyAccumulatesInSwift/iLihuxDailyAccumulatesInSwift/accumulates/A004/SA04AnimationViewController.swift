@@ -136,8 +136,9 @@ class SA04AnimationViewController: UIViewController {
     {
         let kAnimationDuration = 1.35
         var animationDelay = 0.1
-        for i in 0 as Int ..< self.bottomConstraints.count {
-            self.test(self.bottomConstraints[3 - i], constant: self.bottomConstraintConstants[3 - i], duration: kAnimationDuration, delay: animationDelay)
+        let constraintCount = self.bottomConstraints.count
+        for i in 0 as Int ..< constraintCount {
+            self.test(self.bottomConstraints[constraintCount - 1 - i], constant: self.bottomConstraintConstants[constraintCount - 1 - i], duration: kAnimationDuration, delay: animationDelay)
             animationDelay = animationDelay + 0.1
         }
     }
